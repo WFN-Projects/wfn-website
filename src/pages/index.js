@@ -7,7 +7,7 @@ import "../css/background-image.css";
 const theme = {
   font: 'sans-serif',
   fontLarge: '54px',
-  fontMedium: '35px',
+  fontMedium: '36px',
   fontButton: '24px',
   fontSmall: '16px',
 };
@@ -16,6 +16,13 @@ const H1 = styled.h1`
   font-size: ${(props) => props.theme.fontLarge};
   font-family: ${(props) => props.theme.font};
   font-weight: bold;
+  margin: 0em;
+`
+
+const H2 = styled.h2`
+  font-size: ${(props) => props.theme.fontMedium};
+  font-family: ${(props) => props.theme.font};
+  font-weight: normal;
 `
 
 const P = styled.p`
@@ -40,6 +47,14 @@ const Button = styled.button`
   font-size: ${(props) => props.theme.fontButton};
 `;
 
+const WhoWeAre = styled.div`
+  display: flex;
+  padding: 12em;
+  P {
+    padding-right: 10em;
+  }
+`
+
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -58,12 +73,23 @@ const IndexPage = () => {
       <BackgroundImage className="indexPage" fluid={data.image.childImageSharp.fluid}>
         <Banner>
           <H1>Western Founders Network</H1>
-          <P>The largest technology, business, and entrepreneurship club at Western University.</P>
+          <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
         </Banner>
       </BackgroundImage>
-      <H1>Who We Are 🚀</H1>
-      <P>Western Founders Network is a community of creatives and innovators. Wielding the forces of technology, entrepreneurship, and business, our members convert long-term goals into practical and creative plans for action. Our club enables those with a drive, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
-      <Button>Our Initiatives</Button>
+      <WhoWeAre>
+        <div>
+          <H1>Who We Are 🚀</H1>
+          <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
+          <Button>Our Initiatives</Button>
+        </div>
+        <iframe 
+          width="2000" 
+          height="300" 
+          src="https://www.youtube.com/embed/hkdnz3mQoAg" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen/>
+      </WhoWeAre>
     </ThemeProvider>
   )
 }
