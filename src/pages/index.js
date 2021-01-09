@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import "../css/background-image.css";
 
 const theme = {
-  font: 'sans-serif',
   fontLarge: '54px',
   fontMedium: '36px',
   fontButton: '24px',
@@ -14,14 +13,12 @@ const theme = {
 
 const H1 = styled.h1`
   font-size: ${(props) => props.theme.fontLarge};
-  font-family: ${(props) => props.theme.font};
   font-weight: bold;
   margin: 0em;
 `
 
 const H2 = styled.h2`
   font-size: ${(props) => props.theme.fontMedium};
-  font-family: ${(props) => props.theme.font};
   font-weight: normal;
 `
 
