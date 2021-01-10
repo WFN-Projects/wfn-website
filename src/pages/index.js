@@ -3,6 +3,9 @@ import styled, { ThemeProvider } from 'styled-components';
 import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
 import "../css/background-image.css";
+import "../css/global.css";
+import Button from '../components/button'
+import Header from '../components/header'
 
 const theme = {
   font: 'sans-serif',
@@ -36,17 +39,6 @@ const Banner = styled.section`
   color: white;
 `;
 
-const Button = styled.button`
-  width: 8em;
-  height: 2em;
-  border: none;
-  background: linear-gradient(141.67deg, #FFE9B3 -3.1%, #C54E9E 77.92%);
-  border-radius: 8px;
-  //font
-  color: white;
-  font-size: ${(props) => props.theme.fontButton};
-`;
-
 const WhoWeAre = styled.div`
   display: flex;
   padding: 12em;
@@ -71,6 +63,7 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <BackgroundImage className="indexPage" fluid={data.image.childImageSharp.fluid}>
+        <Header/>
         <Banner>
           <H1>Western Founders Network</H1>
           <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
@@ -80,15 +73,15 @@ const IndexPage = () => {
         <div>
           <H1>Who We Are 🚀</H1>
           <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
-          <Button>Our Initiatives</Button>
+          <Button text="Our Initiatives"/>
         </div>
-        <iframe 
+        {/* <iframe 
           width="2000" 
           height="300" 
           src="https://www.youtube.com/embed/hkdnz3mQoAg" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen/>
+          allowfullscreen/> */}
       </WhoWeAre>
     </ThemeProvider>
   )
