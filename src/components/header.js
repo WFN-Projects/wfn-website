@@ -35,7 +35,7 @@ class Hamburger extends React.Component {
   render() {
     return (
       <HamburgerContainer id="hamburgerContainer">
-        <div style={{position: "absolute", top: 0, right: 0, paddingTop: "34px", paddingRight: "4vw"}}>
+        <div style={{cursor: "pointer", position: "absolute", top: 0, right: 0, paddingTop: "34px", paddingRight: "4vw"}}>
           <HamburgerMenu
             isOpen={this.state.isOpen}
             menuClicked={this.handleClick.bind(this)}
@@ -78,8 +78,8 @@ const Header = () => {
               {matches.desktop && 
                 <>
                   <NavButtonContainer>
-                    <Link to="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>About</p></NavButton></Link>
-                    <Link to="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>Initiatives</p></NavButton></Link>
+                    <Link to="/about" style={{textDecoration: 'none'}}><NavButton><p>About</p></NavButton></Link>
+                    <Link to="/initiatives" style={{textDecoration: 'none'}}><NavButton><p>Initiatives</p></NavButton></Link>
                     <Link to="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>Blog</p></NavButton></Link>
                   </NavButtonContainer>
                   <Button text="Become a Member"/>
@@ -143,7 +143,7 @@ const NavButton = styled.div`
 const HamburgerContainer = styled.div`
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 101vh;
   top: 0; 
   left: 0;
   right: 0;
