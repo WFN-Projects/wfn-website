@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import Button from './button'
 import Media from 'react-media'
 import HamburgerMenu from 'react-hamburger-menu'
-import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
+import { gsap } from 'gsap';
 
 class Hamburger extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Hamburger extends React.Component {
   componentDidUpdate() {
     var tl = gsap.timeline()
     if (this.state.isOpen) { 
-      window.scrollTo(0, 0)
+      window.scroll(0, 0)
       document.body.style.height = "100vh"
       document.body.style.overflow = "hidden"
       tl.to("#hamburgerContainer", {duration: 0.15, backgroundColor: "rgba(0,0,0,0.95)"})
