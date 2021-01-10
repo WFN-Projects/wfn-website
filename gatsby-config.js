@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "western-founders-network",
+    siteUrl: "http://www.joe.com",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
