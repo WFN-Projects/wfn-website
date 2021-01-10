@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Button = (props) => {
   return (
     <StyledButton>
-      <a href={props.link ? props.link : ""} style={{textDecoration: "none", color: "white", margin: "auto"}}>
+      <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white", margin: "auto"}}>
         {props.text}
-      </a>
+      </Link>
     </StyledButton>
   )
 }

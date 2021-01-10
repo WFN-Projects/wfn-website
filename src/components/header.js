@@ -4,6 +4,7 @@ import Button from './button'
 import Media from 'react-media'
 import HamburgerMenu from 'react-hamburger-menu'
 import { gsap } from 'gsap';
+import { Link } from 'gatsby'
 
 class Hamburger extends React.Component {
   constructor(props) {
@@ -50,9 +51,9 @@ class Hamburger extends React.Component {
         {this.state.isOpen && 
           <>
             <div id="hamburgerOptions">
-              <a href="https://www.google.com/" style={{textDecoration: "none", color: "white"}}><p>About</p></a>
-              <a href="https://www.google.com/" style={{textDecoration: "none", color: "white"}}><p>Initiatives</p></a> 
-              <a href="https://www.google.com/" style={{textDecoration: "none", color: "white"}}><p>Blog</p></a>
+              <Link to="/about" style={{textDecoration: "none", color: "white"}}><p>About</p></Link>
+              <Link to="/initiatives" style={{textDecoration: "none", color: "white"}}><p>Initiatives</p></Link> 
+              <Link to="https://www.google.com/" style={{textDecoration: "none", color: "white"}}><p>Blog</p></Link> 
               <Button text="Become a Member"/>
             </div>
           </>
@@ -77,9 +78,9 @@ const Header = () => {
               {matches.desktop && 
                 <>
                   <NavButtonContainer>
-                    <a href="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>About</p></NavButton></a>
-                    <a href="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>Initiatives</p></NavButton></a> 
-                    <a href="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>Blog</p></NavButton></a>
+                    <Link to="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>About</p></NavButton></Link>
+                    <Link to="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>Initiatives</p></NavButton></Link>
+                    <Link to="https://www.google.com/" style={{textDecoration: 'none'}}><NavButton><p>Blog</p></NavButton></Link>
                   </NavButtonContainer>
                   <Button text="Become a Member"/>
                 </>
