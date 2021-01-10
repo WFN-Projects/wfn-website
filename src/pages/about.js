@@ -9,7 +9,7 @@ import "../css/global.css";
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query AboutImage {
-      image: file(relativePath: {eq: "homepage-banner.png"}) {
+      image: file(relativePath: {eq: "test.jpg"}) {
         id
         childImageSharp {
           fluid(quality:99) {
