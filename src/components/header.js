@@ -34,8 +34,8 @@ class Hamburger extends React.Component {
 
   render() {
     return (
-      <HamburgerContainer id="hamburgerContainer">
-        <div style={{cursor: "pointer", position: "absolute", top: 0, right: 0, paddingTop: "34px", paddingRight: "4vw"}}>
+      <>
+        <div style={{zIndex: 3, cursor: "pointer", position: "absolute", top: 0, right: 0, paddingTop: "34px", paddingRight: "4vw"}}>
           <HamburgerMenu
             isOpen={this.state.isOpen}
             menuClicked={this.handleClick.bind(this)}
@@ -48,17 +48,17 @@ class Hamburger extends React.Component {
             animationDuration={0.5}
           />
         </div>
-        {this.state.isOpen && 
-          <>
+        <HamburgerContainer id="hamburgerContainer">
+          {this.state.isOpen &&
             <div id="hamburgerOptions">
               <Link to="/about" style={{textDecoration: "none", color: "white"}}><p>About</p></Link>
               <Link to="/initiatives" style={{textDecoration: "none", color: "white"}}><p>Initiatives</p></Link> 
               <Link to="https://www.google.com/" style={{textDecoration: "none", color: "white"}}><p>Blog</p></Link> 
               <Button text="Become a Member"/>
             </div>
-          </>
-        }
-      </HamburgerContainer>
+          }
+        </HamburgerContainer>
+      </>
     )
   }
 }
@@ -141,7 +141,7 @@ const NavButton = styled.div`
 `;
 
 const HamburgerContainer = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 101vh;
   top: 0; 
