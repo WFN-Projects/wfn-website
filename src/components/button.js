@@ -22,8 +22,8 @@ const StyledButton = styled.div`
   border-radius: 8px;
   color: white;
   font-size: ${(props) => props.theme.fontButton};
-  padding-left: 21px;
-  padding-right: 21px;
+  padding-left: 15px;
+  padding-right: 15px;
   display: inline-block;
   line-height: 2em;
   text-align: center;

@@ -109,8 +109,8 @@ const Container = styled.div`
   max-height: 65px;
   padding-top: 30px;
   padding-bottom: 10px;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
   background: none;
   display: flex;
   align-items: center;
