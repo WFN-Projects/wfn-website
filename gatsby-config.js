@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "western-founders-network",
+    siteUrl: "http://www.joe.com",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -8,8 +9,8 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
-    "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",
       options: {
