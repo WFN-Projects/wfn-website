@@ -6,6 +6,40 @@ import HamburgerMenu from 'react-hamburger-menu'
 import { gsap, TimelineMax } from 'gsap';
 import { Link } from 'gatsby'
 
+
+const Header = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Container>
+        <img src={"/logo_gradientbold-04 1.png"} alt=""/>
+        <Media queries={{
+          mobile: "(max-width: 680px)",
+          desktop: "(min-width: 681px)", 
+        }}>
+          {matches => (
+            <Fragment>
+              {matches.desktop && 
+                <>
+                  <NavButtonContainer>
+                    <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
+                    <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
+                    <NavButton mainOption="Blog"/> 
+                  </NavButtonContainer>
+                  <Button text="Become a Member"/>
+                </>
+              }
+              {matches.mobile && <Hamburger/>} 
+            </Fragment>
+          )} 
+        </Media>
+      </Container>
+    </ThemeProvider>
+  )
+}
+
+export default Header
+
+
 class Hamburger extends React.Component {
   constructor(props) {
     super(props)
@@ -23,16 +57,16 @@ class Hamburger extends React.Component {
       document.body.style.height = "100vh"
       document.body.style.overflow = "hidden"
       tl.to("#hamburgerContainer", {duration: 0.15, backgroundColor: "rgba(0,0,0,0.95)"})
-      tl.to("hamburgerOptions", {duration: 0.25, opacity: "100%"}) 
     } else {
       document.body.style.height = null
       document.body.style.overflow = null
-      tl.to("hamburgerOptions", {duration: 0.15, opacity: "0%"})
       tl.to("#hamburgerContainer", {duration: 0.25, backgroundColor: "rgba(0,0,0,0)"}) 
     }
   }
 
   render() {
+    const linkStyle = {textDecoration: "none", color: "white"}
+
     return (
       <>
         <HamburgerButtonContainer>
@@ -51,9 +85,9 @@ class Hamburger extends React.Component {
         <HamburgerContainer id="hamburgerContainer">
           {this.state.isOpen &&
             <div id="hamburgerOptions">
-              <Link to="/about" style={{textDecoration: "none", color: "white"}}><p>About</p></Link>
-              <Link to="/initiatives" style={{textDecoration: "none", color: "white"}}><p>Initiatives</p></Link> 
-              <Link to="https://www.google.com/" style={{textDecoration: "none", color: "white"}}><p>Blog</p></Link> 
+              <Link to="/about" style={linkStyle}><p>About</p></Link>
+              <Link to="/initiatives" style={linkStyle}><p>Initiatives</p></Link> 
+              <Link to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link> 
               <Button text="Become a Member"/>
             </div>
           }
@@ -123,39 +157,6 @@ class NavButton extends React.Component {
   }
 }
 
-
-const Header = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <img src={"/logo_gradientbold-04 1.png"} alt=""/>
-        <Media queries={{
-          mobile: "(max-width: 680px)",
-          desktop: "(min-width: 681px)", 
-        }}>
-          {matches => (
-            <Fragment>
-              {matches.desktop && 
-                <>
-                  <NavButtonContainer>
-                    <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
-                    <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
-                    <NavButton mainOption="Blog"/> 
-                  </NavButtonContainer>
-                  <Button text="Become a Member"/>
-                </>
-              }
-              {matches.mobile && <Hamburger/>} 
-            </Fragment>
-          )} 
-        </Media>
-      </Container>
-    </ThemeProvider>
-  )
-}
-
-export default Header
-
 const theme = {
   font: 'sans-serif',
   fontLarge: '54px',
@@ -182,6 +183,9 @@ const Container = styled.div`
     }
   }
 `;
+
+
+// NORMAL HEADER (DESKTOPS)
 
 const NavButtonContainer = styled.div`
   margin-left: auto;
@@ -217,6 +221,8 @@ const SubMenuTable = styled.table`
 const SubMenuRow = styled.tr`
   cursor: pointer;
 `;
+
+// HAMBURGER MENU (MOBILE AND SMALL SCREENS)
 
 const HamburgerButtonContainer = styled.div`
   z-index: 3;
