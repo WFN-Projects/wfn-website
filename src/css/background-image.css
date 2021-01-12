@@ -11,3 +11,16 @@
     height: 120vh;
     margin-top: -1vh;
 }
+
+.overlay {
+    display: -webkit-flex;
+    display: flex;
+    height:100%;
+    align-items: center;
+    color: white;
+}
+
+.contentBox {
+    margin: 0 auto;
+    text-align: center;
+}
