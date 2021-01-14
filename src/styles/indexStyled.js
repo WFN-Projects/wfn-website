@@ -30,3 +30,8 @@ export const WhoWeAre = styled.div`
       padding-right: 10em;
     }
 `
+
+export const JoinTheNetwork = styled.div`
+    padding: 12em;
+    display: block;
+`

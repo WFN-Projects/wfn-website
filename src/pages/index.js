@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Button from '../components/button';
 import ButtonInverted from '../components/buttonInverted';
 import Header from '../components/header';
-import { Theme, H1, H2, P, Banner, WhoWeAre } from "../styles/indexStyled.js";
+import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/indexStyled.js";
 import "../css/background-image.css";
 import "../css/global.css";
 
@@ -42,14 +42,24 @@ const IndexPage = () => {
             <ButtonInverted text="Meet the Team" />
           </div>
         </div>
-        <iframe 
-          width="2000" 
-          height="300" 
-          src="https://www.youtube.com/embed/hkdnz3mQoAg" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen/>
+        <iframe
+          width="2000"
+          height="300"
+          src="https://www.youtube.com/embed/hkdnz3mQoAg"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen />
       </WhoWeAre>
+      <JoinTheNetwork>
+        <H1>Join the Network 💡</H1>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
+        <div style={{"padding-bottom": "1em"}}>
+          <Button text="Become a Members" />
+        </div>
+        <Button text="Join Our Discord" />
+        
+      </JoinTheNetwork>
+
     </ThemeProvider>
   )
 }
