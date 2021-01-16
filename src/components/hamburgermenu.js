@@ -56,10 +56,10 @@ class Hamburger extends React.Component {
         <HamburgerContainer id="hamburgerContainer">
           {this.state.isOpen &&
             <div id="hamburgerOptions">
-              <Link onClick={this.clickedLink} to="/about" style={linkStyle}><p>About</p></Link>
-              <Link onClick={this.clickedLink} to="/initiatives" style={linkStyle}><p>Initiatives</p></Link> 
-              <Link onClick={this.clickedLink} to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link> 
-              <Button text="Become a Member"/>
+              <div onClick={this.clickedLink}><Link to="/about" style={linkStyle}><p>About</p></Link></div>
+              <div onClick={this.clickedLink}><Link to="/initiatives" style={linkStyle}><p>Initiatives</p></Link></div>
+              <div onClick={this.clickedLink}><Link to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link></div>
+              <div onClick={this.clickedLink}><Button text="Become a Member"/></div>
             </div>
           }
         </HamburgerContainer>
