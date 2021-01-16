@@ -16,6 +16,11 @@ class Hamburger extends React.Component {
     this.setState({isOpen: !this.state.isOpen})
   }
 
+  clickedLink() {
+    document.body.style.height = null
+    document.body.style.overflow = null
+  }
+
   componentDidUpdate() {
     var tl = gsap.timeline()
     if (this.state.isOpen) { 
@@ -51,9 +56,9 @@ class Hamburger extends React.Component {
         <HamburgerContainer id="hamburgerContainer">
           {this.state.isOpen &&
             <div id="hamburgerOptions">
-              <Link to="/about" style={linkStyle}><p>About</p></Link>
-              <Link to="/initiatives" style={linkStyle}><p>Initiatives</p></Link> 
-              <Link to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link> 
+              <Link onClick={this.clickedLink} to="/about" style={linkStyle}><p>About</p></Link>
+              <Link onClick={this.clickedLink} to="/initiatives" style={linkStyle}><p>Initiatives</p></Link> 
+              <Link onClick={this.clickedLink} to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link> 
               <Button text="Become a Member"/>
             </div>
           }
