@@ -3,7 +3,8 @@ import React, { Fragment } from 'react'
 import Button from './button'
 import Media from 'react-media'
 import Hamburger from './hamburgermenu'
-import NavButton from './navbutton' 
+import NavButton from './navbutton'
+import ClientOnly from './clientOnly' 
 
 
 const Header = () => {
@@ -11,26 +12,28 @@ const Header = () => {
     <ThemeProvider theme={theme}>
       <Container>
         <img src={"/logo_gradientbold-04 1.png"} width="100" height="34" alt=""/>
-        <Media queries={{
-          mobile: "(max-width: 680px)",
-          desktop: "(min-width: 681px)", 
-        }}>
-          {matches => (
-            <Fragment>
-              {matches.desktop && 
-                <>
-                  <NavButtonContainer>
-                    <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
-                    <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
-                    <NavButton mainOption="Blog"/> 
-                  </NavButtonContainer>
-                  <Button text="Become a Member"/>
-                </>
-              }
-              {matches.mobile && <Hamburger/>} 
-            </Fragment>
-          )} 
-        </Media>
+        <ClientOnly>
+          <Media queries={{
+            mobile: "(max-width: 680px)",
+            desktop: "(min-width: 690px)", 
+          }}>
+            {matches => (
+              <Fragment>
+                {matches.desktop && 
+                  <>
+                    <NavButtonContainer>
+                      <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
+                      <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
+                      <NavButton mainOption="Blog"/> 
+                    </NavButtonContainer>
+                    <Button text="Become a Member"/>
+                  </>
+                }
+                {matches.mobile && <Hamburger/>} 
+              </Fragment>
+            )} 
+          </Media>
+        </ClientOnly>
       </Container>
     </ThemeProvider>
   )
