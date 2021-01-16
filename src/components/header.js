@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <img src={"/logo_gradientbold-04 1.svg"} alt=""/>
+        <img src={"/logo_gradientbold-04 1.png"} width="100" height="34" alt=""/>
         <Media queries={{
           mobile: "(max-width: 680px)",
           desktop: "(min-width: 681px)", 
