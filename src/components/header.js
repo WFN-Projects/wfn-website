@@ -16,7 +16,7 @@ const Header = () => {
         <ClientOnly>
           <Media queries={{
             mobile: "(max-width: 680px)",
-            desktop: "(min-width: 690px)", 
+            desktop: "(min-width: 680.01px)", 
           }}>
             {matches => (
               <Fragment>
