@@ -2,6 +2,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import React, { Fragment } from 'react'
 import Button from './button'
 import Media from 'react-media'
+import { Link } from 'gatsby'
 import Hamburger from './hamburgermenu'
 import NavButton from './navbutton'
 import ClientOnly from './clientOnly' 
@@ -11,7 +12,7 @@ const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <img src={"/logo_gradientbold-04 1.png"} width="100" height="34" alt=""/>
+        <Link to="/"><img src={"/logo_gradientbold-04 1.png"} width="100" height="34" alt=""/></Link>
         <ClientOnly>
           <Media queries={{
             mobile: "(max-width: 680px)",
