@@ -4,13 +4,13 @@ import { Link } from 'gatsby'
 
 const ButtonInverted = (props) => {
   return (
-    <Outer>
-      <Inner>
-        <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "black", margin: "auto"}}>
+    <Link to={props.link ? props.link : "/"} style={{textDecoration: "none"}}>
+      <Outer>
+        <Inner>
           <Text>{props.text}</Text>
-        </Link>
-      </Inner>
-    </Outer>
+        </Inner>
+      </Outer>
+    </Link>
   )
 }
 
@@ -48,6 +48,10 @@ const Inner = styled.div`
 
 const Text = styled.div`
 	background: linear-gradient(160.67deg, #FFE9B3 -3.1%, #C54E9E 77.92%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
