@@ -92,9 +92,10 @@ const WhyWfnContainer = styled.div`
 `;
 
 const WhyWfnCard = styled.div`
-  width: 25%;
+  width: 30%;
   min-width: 300px;
   margin-bottom: 20px;
+  padding: 0px 10px 0px 10px;
 
   @media only screen and (max-width: 664px) {
     width: 80%;
