@@ -10,29 +10,28 @@ class Hamburger extends React.Component {
   constructor(props) {
     super(props)
     this.state = {isOpen: false}
+    this.isOpen = false
   }
 
   handleClick() {
-    this.setState({isOpen: !this.state.isOpen})
+    var tl = gsap.timeline()
+    if (!this.state.isOpen) { 
+      window.scroll(0, 0)
+      document.body.style.height = "100vh"
+      document.body.style.overflow = "hidden"
+      tl.to("#hamburgerContainer", {duration: 0.15, autoAlpha: 1})
+      this.setState({isOpen: true})
+    } else {
+      document.body.style.height = null
+      document.body.style.overflow = null
+      tl.to("#hamburgerContainer", {duration: 0.25, autoAlpha: 0})
+      this.setState({isOpen: false})
+    }
   }
 
   clickedLink() {
     document.body.style.height = null
     document.body.style.overflow = null
-  }
-
-  componentDidUpdate() {
-    var tl = gsap.timeline()
-    if (this.state.isOpen) { 
-      window.scroll(0, 0)
-      document.body.style.height = "100vh"
-      document.body.style.overflow = "hidden"
-      tl.to("#hamburgerContainer", {duration: 0.15, backgroundColor: "rgba(0,0,0,0.95)"})
-    } else {
-      document.body.style.height = null
-      document.body.style.overflow = null
-      tl.to("#hamburgerContainer", {duration: 0.25, backgroundColor: "rgba(0,0,0,0)"}) 
-    }
   }
 
   render() {
@@ -54,14 +53,12 @@ class Hamburger extends React.Component {
           />
         </HamburgerButtonContainer>
         <HamburgerContainer id="hamburgerContainer">
-          {this.state.isOpen &&
-            <div id="hamburgerOptions">
-              <div onClick={this.clickedLink}><Link to="/about" style={linkStyle}><p>About</p></Link></div>
-              <div onClick={this.clickedLink}><Link to="/initiatives" style={linkStyle}><p>Initiatives</p></Link></div>
-              <div onClick={this.clickedLink}><Link to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link></div>
-              <div onClick={this.clickedLink}><Button text="Become a Member"/></div>
-            </div>
-          }
+          <div id="hamburgerOptions">
+            <div onClick={this.clickedLink}><Link to="/about" style={linkStyle}><p>About</p></Link></div>
+            <div onClick={this.clickedLink}><Link to="/initiatives" style={linkStyle}><p>Initiatives</p></Link></div>
+            <div onClick={this.clickedLink}><Link to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link></div>
+            <div onClick={this.clickedLink}><Button link="/join" text="Become a Member"/></div>
+          </div>
         </HamburgerContainer>
       </>
     )
@@ -93,4 +90,6 @@ const HamburgerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgba(0,0,0,0.95);
+  visibility: hidden;
 `;
