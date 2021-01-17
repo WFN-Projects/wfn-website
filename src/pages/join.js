@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image'
 import Button from '../components/button';
 import Header from '../components/header';
-import { Theme, H1, H2 } from "../styles/indexStyled.js";
+import { Theme, H1 } from "../styles/indexStyled.js";
 import "../css/background-image.css";
 import "../css/global.css";
 
@@ -31,7 +31,7 @@ const JoinUs = () => {
         <div className="overlay">
           <div className="contentBox">
             <H1>Become a Member</H1>
-            <H2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. </H2>
+            <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
             <Button text="Get Your Membership" />
           </div>
         </div>
@@ -65,6 +65,16 @@ const JoinUs = () => {
 }
 
 export default JoinUs
+
+const PageSubTitle = styled.p`
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  max-width: 787px;
+`;
 
 const SectionTitle = styled.h1`
   font-family: Archivo;
