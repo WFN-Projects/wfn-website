@@ -26,7 +26,7 @@ const Header = () => {
                       <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
                       <NavButton mainOption="Blog"/> 
                     </NavButtonContainer>
-                    <Button text="Become a Member"/>
+                    <Button link="/join" text="Become a Member"/>
                   </>
                 }
                 {matches.mobile && <Hamburger/>} 
