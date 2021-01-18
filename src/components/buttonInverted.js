@@ -39,6 +39,7 @@ const Inner = styled.div`
   border-radius: 5px;
   font-size: ${(props) => props.theme.fontButton};
   display: flex;
+  align-items: center;
   vertical-align: middle;
   padding-left: 15px;
   padding-right: 15px;
@@ -50,8 +51,5 @@ const Text = styled.div`
 	background: linear-gradient(160.67deg, #FFE9B3 -3.1%, #C54E9E 77.92%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 `;
