@@ -32,6 +32,6 @@ export const WhoWeAre = styled.div`
 `
 
 export const JoinTheNetwork = styled.div`
+    display: flex;  
     padding: 12em;
-    display: block;
 `
