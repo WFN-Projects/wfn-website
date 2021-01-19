@@ -4,11 +4,11 @@ import { Link } from 'gatsby'
 
 const Button = (props) => {
   return (
-    <StyledButton>
-      <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white", margin: "auto"}}>
+    <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}}>
+      <StyledButton>
         {props.text}
-      </Link>
-    </StyledButton>
+      </StyledButton>
+    </Link>
   )
 }
 

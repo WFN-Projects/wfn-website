@@ -2,35 +2,39 @@ import styled, { ThemeProvider } from 'styled-components';
 import React, { Fragment } from 'react'
 import Button from './button'
 import Media from 'react-media'
+import { Link } from 'gatsby'
 import Hamburger from './hamburgermenu'
-import NavButton from './navbutton' 
+import NavButton from './navbutton'
+import ClientOnly from './clientOnly' 
 
 
 const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <img src={"/logo_gradientbold-04 1.png"} alt=""/>
-        <Media queries={{
-          mobile: "(max-width: 680px)",
-          desktop: "(min-width: 681px)", 
-        }}>
-          {matches => (
-            <Fragment>
-              {matches.desktop && 
-                <>
-                  <NavButtonContainer>
-                    <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
-                    <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
-                    <NavButton mainOption="Blog"/> 
-                  </NavButtonContainer>
-                  <Button text="Become a Member"/>
-                </>
-              }
-              {matches.mobile && <Hamburger/>} 
-            </Fragment>
-          )} 
-        </Media>
+        <Link to="/"><img src={"/logo_gradientbold-04 1.png"} width="100" height="34" alt=""/></Link>
+        <ClientOnly>
+          <Media queries={{
+            mobile: "(max-width: 680px)",
+            desktop: "(min-width: 680.01px)", 
+          }}>
+            {matches => (
+              <Fragment>
+                {matches.desktop && 
+                  <>
+                    <NavButtonContainer>
+                      <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
+                      <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
+                      <NavButton mainOption="Blog"/> 
+                    </NavButtonContainer>
+                    <Button link="/join" text="Become a Member"/>
+                  </>
+                }
+                {matches.mobile && <Hamburger/>} 
+              </Fragment>
+            )} 
+          </Media>
+        </ClientOnly>
       </Container>
     </ThemeProvider>
   )
