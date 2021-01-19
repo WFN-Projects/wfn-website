@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Button from '../components/button';
 import ButtonInverted from '../components/buttonInverted';
 import Header from '../components/header';
+import Footer from '../components/footer'
 import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/indexStyled.js";
 import "../css/background-image.css";
 import "../css/global.css";
@@ -59,6 +60,7 @@ const IndexPage = () => {
         <Button text="Join Our Discord" />
         
       </JoinTheNetwork>
+      <Footer />
 
     </ThemeProvider>
   )
