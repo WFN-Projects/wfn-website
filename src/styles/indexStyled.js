@@ -25,7 +25,7 @@ export const P = styled.p`
 
 export const WhoWeAre = styled.div`
     display: flex;
-    padding: 12em;
+    padding: 12em 12em 8em 12em;
     P {
       padding-right: 10em;
     }
@@ -33,5 +33,5 @@ export const WhoWeAre = styled.div`
 
 export const JoinTheNetwork = styled.div`
     display: flex;  
-    padding: 12em;
+    padding: 0 15em 8em 12em
 `

@@ -1,5 +1,4 @@
 import BackgroundImage from "gatsby-background-image";
-import styled, { ThemeProvider } from 'styled-components';
 import { graphql, useStaticQuery } from "gatsby";
 import Header from '../components/header'
 import React from 'react'
