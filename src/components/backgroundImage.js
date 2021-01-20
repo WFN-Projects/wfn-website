@@ -4,11 +4,12 @@ import Img from 'gatsby-image'
 import Header from '../components/header'
 
 const BackgroundImage = (props) => {
+  const color = props.headerColor ? props.headerColor : "white"
   return(
     <div>
       <CustomImage fluid={props.fluid}/>
       <Overlay>
-        <Header textColor="white" />
+        <Header textColor={color} />
         <TextBoxContainer>
           <TextBox>
             {props.children}
