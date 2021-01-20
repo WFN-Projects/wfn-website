@@ -1,11 +1,10 @@
 import * as React from "react";
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components';
-import BackgroundImage from "gatsby-background-image";
+import BackgroundImage from '../components/backgroundImage';
 import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image'
 import Button from '../components/button';
-import Header from '../components/header';
 import { Theme, H1 } from "../styles/indexStyled.js";
 import "../css/background-image.css";
 import "../css/global.css";
@@ -26,15 +25,10 @@ const JoinUs = () => {
 
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage className="indexPage" fluid={data.image.childImageSharp.fluid}>
-        <Header textColor="white" />
-        <div className="overlay">
-          <div className="contentBox">
-            <H1>Become a Member</H1>
-            <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
-            <Button text="Get Your Membership" />
-          </div>
-        </div>
+      <BackgroundImage fluid={data.image.childImageSharp.fluid}>
+        <H1>Become a Member</H1>
+        <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
+        <Button text="Get Your Membership" />
       </BackgroundImage>
       <SectionTitle>Why WFN?</SectionTitle>
       <WhyWfnContainer>
