@@ -34,6 +34,6 @@ export const WhoWeAre = styled.div`
 export const JoinTheNetwork = styled.div`
     position: absolute;
     padding: 0 0 0 12em;
-    bottom: 50%;
+    bottom: 55%;
     width: 30%;
 `
