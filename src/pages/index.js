@@ -13,7 +13,7 @@ import "../css/global.css";
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query Images {
-      image: file(relativePath: {eq: "homepage-banner.png"}) {
+      headerBackground: file(relativePath: {eq: "headerBackground.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -21,7 +21,7 @@ const IndexPage = () => {
           }
         }
       }
-      network: file(relativePath: {eq: "join-the-network2.png"}) {
+      joinTheNetworkRight: file(relativePath: {eq: "joinTheNetworkRight.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -33,7 +33,7 @@ const IndexPage = () => {
 `)
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage className="indexPage" fluid={data.image.childImageSharp.fluid}>
+      <BackgroundImage className="indexPage" fluid={data.headerBackground.childImageSharp.fluid}>
         <Header textColor="white" />
         <div className="overlay">
           <div className="contentBox">
@@ -68,7 +68,7 @@ const IndexPage = () => {
           </div>
           <Button text="Join Our Discord" />
         </div>
-        <Img imgStyle={{objectFit:'contain'}} style={{"padding":"20em"}} fluid={data.network.childImageSharp.fluid} />
+        <Img imgStyle={{objectFit:'contain'}} style={{"padding":"20em"}} fluid={data.joinTheNetworkRight.childImageSharp.fluid} />
       </JoinTheNetwork>
     </ThemeProvider>
   )
