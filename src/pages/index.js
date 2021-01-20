@@ -60,7 +60,7 @@ const IndexPage = () => {
           allowfullscreen />
       </WhoWeAre>
       <JoinTheNetwork>
-        <div>
+        <div style={{paddingTop:"8em"}}>
           <H1>Join the Network 💡</H1>
           <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
           <div style={{ "padding-bottom": "1em" }}>
@@ -68,7 +68,7 @@ const IndexPage = () => {
           </div>
           <Button text="Join Our Discord" />
         </div>
-        <Img imgStyle={{objectFit:'contain'}} style={{"padding":"20em"}} fluid={data.joinTheNetworkRight.childImageSharp.fluid} />
+        <Img imgStyle={{objectFit:'contain'}} style={{"padding":"25em"}} draggable="false" fluid={data.joinTheNetworkRight.childImageSharp.fluid} />
       </JoinTheNetwork>
     </ThemeProvider>
   )
