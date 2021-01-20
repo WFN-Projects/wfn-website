@@ -29,14 +29,6 @@ const IndexPage = () => {
           }
         }
       }
-      joinTheNetworkRight: file(relativePath: {eq: "joinTheNetworkRight.png"}) {
-        id
-        childImageSharp {
-          fluid(quality:100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
 `)
   return (
