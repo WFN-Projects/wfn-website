@@ -12,20 +12,28 @@ import "../css/global.css";
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
     query Join {
-      image: file(relativePath: {eq: "homepage-banner.png"}) {
+      hero: file(relativePath: {eq: "test.jpg"}) {
         id
         childImageSharp {
           fluid(quality:100) {
             ...GatsbyImageSharpFluid
           }
-        }
+        },
+      }
+      image1: file(relativePath: {eq: "homepage-banner.png"}) {
+        id
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        },
       }
     }
   `)
 
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage fluid={data.image.childImageSharp.fluid}>
+      <BackgroundImage fluid={data.hero.childImageSharp.fluid}>
         <H1>Become a Member</H1>
         <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
         <Button text="Get Your Membership" />
@@ -33,21 +41,21 @@ const JoinUs = () => {
       <SectionTitle>Why WFN?</SectionTitle>
       <WhyWfnContainer>
         <WhyWfnCard>
-          <WhyWfnImg fluid={data.image.childImageSharp.fluid} />
+          <WhyWfnImg fluid={data.image1.childImageSharp.fluid} />
           <WhyWfnCardTitle>Community</WhyWfnCardTitle>
           <WhyWfnCardBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </WhyWfnCardBody>
         </WhyWfnCard>
         <WhyWfnCard>
-          <WhyWfnImg fluid={data.image.childImageSharp.fluid} />
+          <WhyWfnImg fluid={data.image1.childImageSharp.fluid} />
           <WhyWfnCardTitle>Learning</WhyWfnCardTitle>
           <WhyWfnCardBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </WhyWfnCardBody>
         </WhyWfnCard>
         <WhyWfnCard>
-          <WhyWfnImg fluid={data.image.childImageSharp.fluid} />
+          <WhyWfnImg fluid={data.image1.childImageSharp.fluid} />
           <WhyWfnCardTitle>Exclusive Access</WhyWfnCardTitle>
           <WhyWfnCardBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
@@ -116,8 +124,6 @@ const WhyWfnCardTitle = styled.p`
   font-weight: bold;
   font-size: 24px;
   line-height: 26px;
-
-  /* Shades/Black */
   color: #333333;
 `;
 
@@ -127,9 +133,5 @@ const WhyWfnCardBody = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
-  /* or 22px */
-
-  /* Shades/Black */
   color: #333333;
-
 `;
