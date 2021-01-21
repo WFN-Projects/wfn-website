@@ -5,13 +5,22 @@ import Button from '../components/button';
 import ButtonInverted from '../components/buttonInverted';
 import BackgroundImage from '../components/backgroundImage';
 import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/indexStyled.js";
+import Img from "gatsby-image";
 import "../css/background-image.css";
 import "../css/global.css";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query Images {
-      image: file(relativePath: {eq: "homepage-banner.png"}) {
+      headerBackground: file(relativePath: {eq: "headerBackground.png"}) {
+        id
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      joinTheNetwork: file(relativePath: {eq: "joinTheNetwork.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -44,15 +53,17 @@ const IndexPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen />
       </WhoWeAre>
-      <JoinTheNetwork>
-        <H1>Join the Network 💡</H1>
-        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
-        <div style={{"padding-bottom": "1em"}}>
-          <Button text="Become a Members" />
-        </div>
-        <Button text="Join Our Discord" />
-        
-      </JoinTheNetwork>
+      <div style={{position:'relative'}}>
+        <Img draggable="false" style={{transform: "translateX(10%)"}} imgStyle={{width:"80%", height:'auto'}}  fluid={data.joinTheNetwork.childImageSharp.fluid} />
+        <JoinTheNetwork>
+          <H1>Join the Network 💡</H1>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
+          <div style={{ "padding-bottom": "1em" }}>
+            <Button text="Become a Members" />
+          </div>
+          <Button text="Join Our Discord" />
+        </JoinTheNetwork>
+      </div>
 
     </ThemeProvider>
   )
