@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo:700");
 @import url("https://fonts.googleapis.com/css?family=Archivo");
 
-
 * {
     font-family: "Archivo";
+}
+
+body {
+    margin: 0 !important;
+    font-family: sans-serif;
 }
 
 .indexPage {
@@ -15,7 +19,7 @@
 .overlay {
     display: -webkit-flex;
     display: flex;
-    height:100vh;
+    height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -28,3 +32,4 @@
     margin: 0 auto;
     text-align: center;
 }
+

@@ -1,18 +1,19 @@
-import styled, { ThemeProvider } from 'styled-components';
-import React, { Fragment } from 'react'
-import Button from './button'
-import Media from 'react-media'
-import { Link } from 'gatsby'
-import Hamburger from './hamburgermenu'
-import NavButton from './navbutton'
-import ClientOnly from './clientOnly' 
+import styled, { ThemeProvider } from "styled-components"
+import React, { Fragment } from "react"
+import Button from "./Button"
+import Media from "react-media"
+import { Link } from "gatsby"
+import Hamburger from "./Hamburgermenu"
+import NavButton from "./Navbutton"
+import ClientOnly from "./ClientOnly"
+import Logo from "../images/Logo.png"
 
 
 const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Link to="/"><img src={"/logo_gradientbold-04 1.png"} width="100" height="34" alt=""/></Link>
+        <Link to="/"><img src={Logo} width="100" height="34" alt=""/></Link>
         <ClientOnly>
           <Media queries={{
             mobile: "(max-width: 680px)",
@@ -43,11 +44,11 @@ const Header = () => {
 export default Header
 
 const theme = {
-  font: 'sans-serif',
-  fontLarge: '54px',
-  fontMedium: '36px',
-  fontButton: '24px',
-  fontSmall: '16px',
+  font: "sans-serif",
+  fontLarge: "54px",
+  fontMedium: "36px",
+  fontButton: "24px",
+  fontSmall: "16px",
 };
 
 const Container = styled.div`

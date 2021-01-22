@@ -1,13 +1,13 @@
-import * as React from "react";
-import styled from 'styled-components'
-import { ThemeProvider } from 'styled-components';
-import BackgroundImage from '../components/backgroundImage';
-import { graphql, useStaticQuery } from "gatsby";
-import Img from 'gatsby-image'
-import Button from '../components/button';
-import { Theme, H1 } from "../styles/indexStyled.js";
-import "../css/background-image.css";
-import "../css/global.css";
+import * as React from "react"
+import styled from "styled-components"
+import { ThemeProvider } from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import Button from "../components/Button"
+import H1 from "../styles/H1"
+import { Theme } from "../styles/Global"
+import "../styles/Global.css"
+import BackgroundImage from "../components/BackgroundImage.js"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
@@ -20,7 +20,7 @@ const JoinUs = () => {
           }
         },
       }
-      image1: file(relativePath: {eq: "headerBackground.png"}) {
+      image1: file(relativePath: {eq: "HeaderBackground.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -34,11 +34,11 @@ const JoinUs = () => {
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.hero.childImageSharp.fluid}>
-        <H1>Become a Member</H1>
+        <H1 center>Become a Member</H1>
         <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
         <Button text="Get Your Membership" />
       </BackgroundImage>
-      <SectionTitle>Why WFN?</SectionTitle>
+      <H1 center>Why WFN?</H1>
       <WhyWfnContainer>
         <WhyWfnCard>
           <WhyWfnImg fluid={data.image1.childImageSharp.fluid} />

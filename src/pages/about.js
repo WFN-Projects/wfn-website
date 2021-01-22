@@ -1,10 +1,8 @@
-import BackgroundImage from '../components/backgroundImage';
-import styled, { ThemeProvider } from 'styled-components';
-import { graphql, useStaticQuery } from "gatsby";
-import React from 'react'
-import { gsap } from 'gsap';
-import "../css/background-image.css";
-import "../css/global.css";
+import BackgroundImage from "../components/BackgroundImage.js"
+import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
+import { gsap } from "gsap"
+import "../styles/Global.css"
 
 const Test = () => {
   const data = useStaticQuery(graphql`
