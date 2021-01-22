@@ -1,11 +1,11 @@
 import * as React from "react";
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
-import styled from 'styled-components'
-import Button from '../components/button';
-import ButtonInverted from '../components/buttonInverted';
-import Profile from '../components/profilePic';
-import BackgroundImage from '../components/backgroundImage';
+import styled from "styled-components"
+import Button from "../components/button";
+import ButtonInverted from "../components/buttonInverted";
+import Profile from "../components/profilePic";
+import BackgroundImage from "../components/backgroundImage";
 import { Theme, H1, H2, P } from "../styles/indexStyled.js";
 import Img from "gatsby-image";
 import "../css/background-image.css";
