@@ -6,7 +6,7 @@ const Profile = (props) => {
   return (
     <ProfileWrapper>
       <ProfileImageWrapper>
-        <ProfileImage loading="eager" fixed={props.fluid} />
+        <ProfileImage loading="eager" fixed={props.image} />
       </ProfileImageWrapper>
       <ProfileName>{props.name}</ProfileName>
       {props.position && <ProfilePosition>{props.position}</ProfilePosition>}

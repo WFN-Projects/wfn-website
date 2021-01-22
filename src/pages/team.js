@@ -114,21 +114,21 @@ const Team = () => {
       <Content>
         <SectionHeader>Co-Presidents</SectionHeader>
         <Presidents>
-          <Profile fluid={data.profile.childImageSharp.fixed} name="Amanda Adam" position="President" />
-          <Profile fluid={data.profile.childImageSharp.fixed} name="Amanda Adam" position="President" />
+          <Profile image={data.profile.childImageSharp.fixed} name="Amanda Adam" position="President" />
+          <Profile image={data.profile.childImageSharp.fixed} name="Amanda Adam" position="President" />
         </Presidents>
         <SectionHeader>Portfolios</SectionHeader>
         <SubHeader>Click to learn more!</SubHeader>
         <Portfolios>
-          <Profile fluid={data.futureview.childImageSharp.fixed} name="Future View" />
-          <Profile fluid={data.projects.childImageSharp.fixed} name="Projects" />
-          <Profile fluid={data.community.childImageSharp.fixed} name="Community" />
-          <Profile fluid={data.design.childImageSharp.fixed} name="Design" />
-          <Profile fluid={data.marketing.childImageSharp.fixed} name="Marketing" />
-          <Profile fluid={data.education.childImageSharp.fixed} name="Education" />
-          <Profile fluid={data.finance.childImageSharp.fixed} name="Finance" />
-          <Profile fluid={data.industry.childImageSharp.fixed} name="Industry" />
-          <Profile fluid={data.operations.childImageSharp.fixed} name="Operations" />
+          <Profile image={data.futureview.childImageSharp.fixed} name="Future View" />
+          <Profile image={data.projects.childImageSharp.fixed} name="Projects" />
+          <Profile image={data.community.childImageSharp.fixed} name="Community" />
+          <Profile image={data.design.childImageSharp.fixed} name="Design" />
+          <Profile image={data.marketing.childImageSharp.fixed} name="Marketing" />
+          <Profile image={data.education.childImageSharp.fixed} name="Education" />
+          <Profile image={data.finance.childImageSharp.fixed} name="Finance" />
+          <Profile image={data.industry.childImageSharp.fixed} name="Industry" />
+          <Profile image={data.operations.childImageSharp.fixed} name="Operations" />
         </Portfolios>
       </Content>
     </ThemeProvider>
