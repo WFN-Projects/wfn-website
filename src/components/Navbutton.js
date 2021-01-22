@@ -74,7 +74,7 @@ const NavButtonText = styled.div`
   margin-right: 25px;
   align-items: center;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.fontButton};
+  font-size: ${(props) => props.theme.fontMedium};
   text-decoration: none;
 `;
 

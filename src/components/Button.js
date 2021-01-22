@@ -21,7 +21,7 @@ const StyledButton = styled.div`
   background: linear-gradient(160.67deg, #FFE9B3 -3.1%, #C54E9E 77.92%);
   border-radius: 8px;
   color: white;
-  font-size: ${(props) => props.theme.fontButton};
+  font-size: ${(props) => props.theme.fontMedium};
   padding-left: 15px;
   padding-right: 15px;
   display: inline-block;

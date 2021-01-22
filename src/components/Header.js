@@ -45,9 +45,9 @@ export default Header
 
 const theme = {
   font: "sans-serif",
-  fontLarge: "54px",
-  fontMedium: "36px",
-  fontButton: "24px",
+  fontXLarge: "54px",
+  fontLarge: "36px",
+  fontMedium: "24px",
   fontSmall: "16px",
 };
 
