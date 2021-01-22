@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import Header from '../components/header'
+import Header from './Header'
 
 const BackgroundImage = (props) => {
   const color = props.headerColor ? props.headerColor : "white"

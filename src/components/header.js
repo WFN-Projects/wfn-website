@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import Button from './button'
 import Media from 'react-media'
 import { Link } from 'gatsby'
-import Hamburger from './hamburgermenu'
+import Hamburger from './HamburgerMenu'
 import NavButton from './navbutton'
 import ClientOnly from './clientOnly' 
 

@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { graphql, useStaticQuery } from "gatsby";
 import Button from '../components/button';
 import ButtonInverted from '../components/buttonInverted';
-import BackgroundImage from '../components/backgroundImage';
+import BackgroundImage from '../components/BackgroundImage';
 import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/indexStyled.js";
 import Img from "gatsby-image";
 import "../css/background-image.css";
