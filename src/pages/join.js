@@ -30,6 +30,7 @@ const JoinUs = () => {
       }
     }
   `)
+  
 
   return (
     <ThemeProvider theme={Theme}>
