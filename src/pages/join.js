@@ -20,7 +20,7 @@ const JoinUs = () => {
           }
         },
       }
-      image1: file(relativePath: {eq: "homepage-banner.png"}) {
+      image1: file(relativePath: {eq: "headerBackground.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
