@@ -1,13 +1,13 @@
 import * as React from "react"
 import styled from "styled-components"
 import { ThemeProvider } from "styled-components"
-import BackgroundImage from "../components/BackgroundImage"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Button from "../components/button"
 import H1 from "../styles/H1"
 import { Theme } from "../styles/Global"
 import "../styles/Global.css"
+import BackgroundImage from "../components/BackgroundImage"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
