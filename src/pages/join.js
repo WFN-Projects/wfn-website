@@ -38,7 +38,7 @@ const JoinUs = () => {
         <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
         <Button text="Get Your Membership" />
       </BackgroundImage>
-      <SectionTitle>Why WFN?</SectionTitle>
+      <H1 center>Why WFN?</H1>
       <WhyWfnContainer>
         <WhyWfnCard>
           <WhyWfnImg fluid={data.image1.childImageSharp.fluid} />
