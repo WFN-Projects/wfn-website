@@ -7,7 +7,7 @@ import Button from "../components/button"
 import H1 from "../styles/H1"
 import { Theme } from "../styles/Global"
 import "../styles/Global.css"
-import BackgroundImage from "../components/BackgroundImage"
+import BackgroundImage from "../components/BackgroundImage.js"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
