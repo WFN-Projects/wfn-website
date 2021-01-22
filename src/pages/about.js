@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from 'styled-components';
 import { graphql, useStaticQuery } from "gatsby";
 import React from 'react'
 import { gsap } from 'gsap';
-import "../css/background-image.css";
-import "../css/global.css";
+import "../css/BackgroundImage.css";
+import "../css/Global.css";
 
 const Test = () => {
   const data = useStaticQuery(graphql`

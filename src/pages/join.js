@@ -6,8 +6,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from 'gatsby-image'
 import Button from '../components/button';
 import { Theme, H1 } from "../styles/indexStyled.js";
-import "../css/background-image.css";
-import "../css/global.css";
+import "../css/BackgroundImage.css";
+import "../css/Global.css";
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`

@@ -6,8 +6,8 @@ import ButtonInverted from '../components/buttonInverted';
 import BackgroundImage from '../components/BackgroundImage';
 import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/IndexStyled.js";
 import Img from "gatsby-image";
-import "../css/background-image.css";
-import "../css/global.css";
+import "../css/BackgroundImage.css";
+import "../css/Global.css";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
