@@ -36,25 +36,35 @@ const IndexPage = () => {
       <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
         <H1 center white>Western Founders Network</H1>
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
-      </BackgroundImage> 
+      </BackgroundImage>
       <WhoWeAre>
-        <div>
+        <WhoWeAreText>
+          Hello
+        </WhoWeAreText>
+        <WhoWeAreVideo>
+          dlkfajsflaskdjfdkl;asdjflakjdfsalkdsahjf;salkhfkl
+        </WhoWeAreVideo>
+      </WhoWeAre>
+      <WhoWeAre>
+        <WhoWeAreText>
           <H1>Who We Are 🚀</H1>
           <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
           <WhoWeAreButtons>
             <Button text="Our Initiatives" />
             <ButtonInverted text="Meet the Team" />
           </WhoWeAreButtons>
-        </div>
-        <iframe
-          width="2000"
-          height="300"
-          src="https://www.youtube.com/embed/hkdnz3mQoAg"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen />
+        </WhoWeAreText>
+        <WhoWeAreVideo>
+          <iframe
+            width="500"
+            height="300"
+            src="https://www.youtube.com/embed/hkdnz3mQoAg"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen />
+        </WhoWeAreVideo>
       </WhoWeAre>
-      <JoinTheNetwork>
+      {/* <JoinTheNetwork>
         <Img draggable="false" style={{ transform: "translateX(10%)" }} imgStyle={{ width: "80%", height: "auto" }} fluid={data.joinTheNetwork.childImageSharp.fluid} />
         <JoinTheNetworkText>
           <H1>Join the Network 💡</H1>
@@ -64,13 +74,33 @@ const IndexPage = () => {
           </JoinTheNetworkButtons>
           <Button text="Join Our Discord" />
         </JoinTheNetworkText>
-      </JoinTheNetwork>
+      </JoinTheNetwork> */}
     </ThemeProvider >
   )
 }
 
 export default IndexPage
 
+const WhoWeAre = styled.div`
+  margin: 5em 5em 5em 5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: green;
+`
+const WhoWeAreText = styled.div`
+  margin: 0 0 3em 0;
+  flex: 50%;
+  background-color: blue;
+`
+const WhoWeAreVideo = styled.div`
+  margin: 0 0 3em 0;
+  flex: 50%;
+  background-color: red;
+`
 const WhoWeAreButtons = styled.div`
   display: flex;
   align-items: center;
@@ -81,13 +111,6 @@ const JoinTheNetwork = styled.div`
 `
 const JoinTheNetworkButtons = styled.div`
   padding-bottom: 1em;
-`
-const WhoWeAre = styled.div`
-  display: flex;
-  padding: 12em 12em 8em 12em;
-  P {
-    padding-right: 10em;
-  }
 `
 const JoinTheNetworkText = styled.div`
   position: absolute;
