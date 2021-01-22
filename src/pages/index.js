@@ -1,10 +1,9 @@
 import * as React from "react";
 import { ThemeProvider } from 'styled-components';
-import BackgroundImage from "gatsby-background-image";
 import { graphql, useStaticQuery } from "gatsby";
 import Button from '../components/button';
 import ButtonInverted from '../components/buttonInverted';
-import Header from '../components/header';
+import BackgroundImage from '../components/backgroundImage';
 import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/indexStyled.js";
 import Img from "gatsby-image";
 import "../css/background-image.css";
@@ -33,14 +32,9 @@ const IndexPage = () => {
 `)
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage className="indexPage" fluid={data.headerBackground.childImageSharp.fluid}>
-        <Header textColor="white" />
-        <div className="overlay">
-          <div className="contentBox">
-            <H1>Western Founders Network</H1>
-            <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
-          </div>
-        </div>
+      <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
+        <H1>Western Founders Network</H1>
+        <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
       <WhoWeAre>
         <div>

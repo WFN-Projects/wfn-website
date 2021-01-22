@@ -1,6 +1,6 @@
-import BackgroundImage from "gatsby-background-image";
+import BackgroundImage from '../components/backgroundImage';
+import styled, { ThemeProvider } from 'styled-components';
 import { graphql, useStaticQuery } from "gatsby";
-import Header from '../components/header'
 import React from 'react'
 import { gsap } from 'gsap';
 import "../css/background-image.css";
@@ -21,7 +21,7 @@ const Test = () => {
   `)
   return (
     <BackgroundImage className="indexPage" fluid={data.image.childImageSharp.fluid}>
-      <Header textColor="black"/>
+
     </BackgroundImage>
   )
 }
