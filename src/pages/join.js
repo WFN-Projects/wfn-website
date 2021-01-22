@@ -1,10 +1,10 @@
 import * as React from "react";
-import styled from 'styled-components'
-import { ThemeProvider } from 'styled-components';
-import BackgroundImage from '../components/backgroundImage';
+import styled from "styled-components"
+import { ThemeProvider } from "styled-components";
+import BackgroundImage from "../components/backgroundImage";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from 'gatsby-image'
-import Button from '../components/button';
+import Img from "gatsby-image"
+import Button from "../components/button";
 import { Theme, H1 } from "../styles/indexStyled.js";
 import "../css/BackgroundImage.css";
 import "../css/Global.css";

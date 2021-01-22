@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const Theme = {
-    fontLarge: '54px',
-    fontMedium: '36px',
-    fontButton: '24px',
-    fontSmall: '16px',
+    fontLarge: "54px",
+    fontMedium: "36px",
+    fontButton: "24px",
+    fontSmall: "16px",
 }
 
 export const H1 = styled.h1`
@@ -23,17 +23,4 @@ export const P = styled.p`
     font-family: ${(props) => props.theme.font};
 `
 
-export const WhoWeAre = styled.div`
-    display: flex;
-    padding: 12em 12em 8em 12em;
-    P {
-      padding-right: 10em;
-    }
-`
 
-export const JoinTheNetwork = styled.div`
-    position: absolute;
-    padding: 0 0 0 12em;
-    bottom: 55%;
-    width: 30%;
-`
