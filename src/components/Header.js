@@ -1,11 +1,11 @@
 import styled, { ThemeProvider } from "styled-components"
 import React, { Fragment } from "react"
-import Button from "./button"
+import Button from "./Button"
 import Media from "react-media"
 import { Link } from "gatsby"
-import Hamburger from "./HamburgerMenu"
-import NavButton from "./navbutton"
-import ClientOnly from "./clientOnly"
+import Hamburger from "./Hamburgermenu"
+import NavButton from "./Navbutton"
+import ClientOnly from "./ClientOnly"
 import Logo from "../images/Logo.png"
 
 

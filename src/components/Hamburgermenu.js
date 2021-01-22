@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import React from "react"
-import Button from "./button"
+import Button from "./Button"
 import HamburgerMenu from "react-hamburger-menu"
 import { gsap } from "gsap"
 import { Link } from "gatsby"
