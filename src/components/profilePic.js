@@ -26,11 +26,11 @@ const ProfileWrapper = styled.div`
 `;
 
 const ProfileImageWrapper = styled.div`
-  // filter: drop-shadow(0px 5px 7px #828282);
+  filter: drop-shadow(0px 5px 7px #828282);
 `;
 
 const ProfileImage = styled(Img)`
-  clip-path: circle();
+  // clip-path: circle(); // Should ask pics to be submitted as cicle PNGs
   width: 110px;         // Has to be set a bit wider to work properly in Safari
   height: 109.58px;
 `;
