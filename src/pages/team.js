@@ -8,6 +8,7 @@ import Profile from "../components/profilePic";
 import BackgroundImage from "../components/backgroundImage";
 import { Theme, H1, H2, P } from "../styles/indexStyled.js";
 import Img from "gatsby-image";
+import Portfolio from "../components/PortfolioSection"
 import "../css/background-image.css";
 import "../css/global.css";
 
@@ -120,7 +121,9 @@ const Team = () => {
         <SectionHeader>Portfolios</SectionHeader>
         <SubHeader>Click to learn more!</SubHeader>
         <Portfolios>
-          <Profile image={data.futureview.childImageSharp.fixed} name="Future View" />
+          <Portfolio image={data.futureview.childImageSharp.fixed} name="Future View">
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
           <Profile image={data.projects.childImageSharp.fixed} name="Projects" />
           <Profile image={data.community.childImageSharp.fixed} name="Community" />
           <Profile image={data.design.childImageSharp.fixed} name="Design" />
