@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components';
-import Img from 'gatsby-image'
-import Profile from './ProfilePic'
-import Modal from './Modal'
+import React from "react"
+import styled from "styled-components";
+import Img from "gatsby-image"
+import Profile from "./ProfilePic"
+import Modal from "./Modal"
 
 class Portfolio extends React.Component {
   constructor(props) {

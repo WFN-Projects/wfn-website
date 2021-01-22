@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components';
-import Img from 'gatsby-image'
-import ClientOnly from './ClientOnly'
-import HamburgerMenu from 'react-hamburger-menu'
+import React from "react"
+import styled from "styled-components";
+import Img from "gatsby-image"
+import ClientOnly from "./ClientOnly"
+import HamburgerMenu from "react-hamburger-menu"
+import gsap from "gsap"
 
 const Modal = (props) => {
   const closeModal = () => { console.log("closemodal") }
@@ -17,7 +18,7 @@ const Modal = (props) => {
             height={20}
             strokeWidth={3}
             rotate={0}
-            color='black'
+            color="black"
             borderRadius={0}
             animationDuration={0.5}
           />
