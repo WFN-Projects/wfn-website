@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Button from "../components/Button"
 import H1 from "../styles/H1"
-import { Theme , H3} from "../styles/Global"
+import { Theme , H3, P} from "../styles/Global"
 import "../styles/Global.css"
 import BackgroundImage from "../components/BackgroundImage.js"
 
@@ -43,23 +43,23 @@ const JoinUs = () => {
         <WhyWFNCard>
           <WhyWFMImg fluid={data.image1.childImageSharp.fluid} />
           <H3>Community</H3>
-          <WhyWfnCardBody>
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
-          </WhyWfnCardBody>
+          </P>
         </WhyWFNCard>
         <WhyWFNCard>
           <WhyWFMImg fluid={data.image1.childImageSharp.fluid} />
           <H3>Learning</H3>
-          <WhyWfnCardBody>
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
-          </WhyWfnCardBody>
+          </P>
         </WhyWFNCard>
         <WhyWFNCard>
           <WhyWFMImg fluid={data.image1.childImageSharp.fluid} />
           <H3>Exclusive Access</H3>
-          <WhyWfnCardBody>
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
-          </WhyWfnCardBody>
+          </P>
         </WhyWFNCard>
       </WhyWFN>
     </ThemeProvider>
@@ -116,13 +116,4 @@ const WhyWFNCard = styled.div`
 
 const WhyWFMImg = styled(Img)`
   border-radius: 8px;
-`;
-
-const WhyWfnCardBody = styled.p`
-  font-family: Archivo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 140%;
-  color: #333333;
 `;

@@ -20,6 +20,7 @@ export const H3 = styled.h3`
 export const P = styled.p`
     font-size: ${props => props.theme.fontSmall};
     font-family: ${props => props.theme.font};
+    line-height: 140%;
 `
 
 
