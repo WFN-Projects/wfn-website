@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo:700");
 @import url("https://fonts.googleapis.com/css?family=Archivo");
 
-
 * {
     font-family: "Archivo";
+}
+
+body {
+    margin: 0 !important;
+    font-family: sans-serif;
 }
 
 .indexPage {
@@ -29,16 +33,3 @@
     text-align: center;
 }
 
-.whoWeAreButtons {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-
-.joinTheNetwork {
-    position: relative;
-}
-
-.joinTheNetworkButtons {
-    padding-bottom: 1em;
-}

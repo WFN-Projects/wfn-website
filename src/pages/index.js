@@ -4,11 +4,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/button"
 import ButtonInverted from "../components/buttonInverted"
 import BackgroundImage from "../components/BackgroundImage"
-import { Theme, H1, H2, P } from "../styles/IndexStyled.js"
+import { Theme, H1, H2, P } from "../styles/Global.js"
 import Img from "gatsby-image"
-import "../css/BackgroundImage.css"
 import styled from "styled-components"
-import "../css/Global.css"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
