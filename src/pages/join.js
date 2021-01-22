@@ -78,24 +78,6 @@ const PageSubTitle = styled.p`
   max-width: 787px;
 `;
 
-const SectionTitle = styled.h1`
-  font-family: Archivo;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 54px;
-  margin-bottom: 0;
-  margin-top: 100px;
-  text-align: center;
-  letter-spacing: -0.03em;
-
-  /* Shades/Black */
-  color: #333333;
-
-  @media only screen and (max-width: 664px) {
-    font-size: xxx-large;
-  }
-`;
-
 const WhyWFN = styled.div`
   display: flex;
   flex-wrap: wrap;
