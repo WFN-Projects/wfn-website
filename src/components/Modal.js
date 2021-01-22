@@ -5,13 +5,14 @@ import ClientOnly from './ClientOnly'
 import HamburgerMenu from 'react-hamburger-menu'
 
 const Modal = (props) => {
+  const closeModal = () => { console.log("closemodal") }
   return (
     <ModalWrapper>
       <ModalContentWrapper>
         <HamburgerMenuContainer>
           <HamburgerMenu
             isOpen={true}
-            // menuClicked={}
+            menuClicked={closeModal}
             width={20}
             height={20}
             strokeWidth={3}
@@ -37,6 +38,7 @@ const HamburgerMenuContainer = styled.div`
   padding-right: 40px;
   top: 0;
   right: 0;
+  z-index: 99;
 `;
 
 const ModalWrapper = styled.div`
@@ -72,6 +74,7 @@ const ModalTitle = styled.p`
   line-height: 26px;
   margin: 0;
   color: #333333;
+  display: inline-block;
 `;
 
 const ModalContent = styled.p`

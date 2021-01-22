@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 const Profile = (props) => {
   return (
-    <ProfileWrapper>
+    <ProfileWrapper onClick={props.onClick}>
       <ProfileImageWrapper>
         <ProfileImage loading="eager" fixed={props.image} />
       </ProfileImageWrapper>

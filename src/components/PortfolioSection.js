@@ -10,13 +10,13 @@ class Portfolio extends React.Component {
   }
 
   openModal() {
-    console.log("clicked")
+    console.log("clicked", this.props.name)
   } 
 
   render() {
     return (
-      <PortfolioWrapper onClick={this.openModal.bind(this)}>
-        <Profile image={this.props.image} name={this.props.name} />
+      <PortfolioWrapper>
+        <Profile onClick={this.openModal.bind(this)} image={this.props.image} name={this.props.name} />
         <Modal name={this.props.name} content={this.props.children}/>
       </PortfolioWrapper>
     )
