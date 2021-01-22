@@ -34,7 +34,7 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
-        <H1>Western Founders Network</H1>
+        <H1 center>Western Founders Network</H1>
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
       <WhoWeAre>

@@ -34,7 +34,7 @@ const JoinUs = () => {
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.hero.childImageSharp.fluid}>
-        <H1>Become a Member</H1>
+        <H1 center>Become a Member</H1>
         <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
         <Button text="Get Your Membership" />
       </BackgroundImage>
