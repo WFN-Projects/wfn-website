@@ -8,6 +8,7 @@ import { Theme, H2, P } from "../styles/Global.js"
 import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import "../styles/Global.css"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
