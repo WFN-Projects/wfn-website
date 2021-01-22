@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import React from 'react'
-import Button from './button'
-import HamburgerMenu from 'react-hamburger-menu'
-import { gsap } from 'gsap';
-import { Link } from 'gatsby'
+import styled from "styled-components"
+import React from "react"
+import Button from "./button"
+import HamburgerMenu from "react-hamburger-menu"
+import { gsap } from "gsap"
+import { Link } from "gatsby"
 
 
 class Hamburger extends React.Component {
@@ -47,7 +47,7 @@ class Hamburger extends React.Component {
             height={20}
             strokeWidth={3}
             rotate={0}
-            color='white'
+            color="white"
             borderRadius={0}
             animationDuration={0.5}
           />

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import React from 'react'
-import { gsap, TimelineMax } from 'gsap';
-import { Link } from 'gatsby'
+import styled from "styled-components"
+import React from "react"
+import { gsap, TimelineMax } from "gsap"
+import { Link } from "gatsby"
 
 
 class NavButton extends React.Component {
@@ -28,7 +28,7 @@ class NavButton extends React.Component {
   }
 
   render() {
-    const linkStyle = {textDecoration: 'none', color: this.props.color ? this.props.color : "white"}
+    const linkStyle = {textDecoration: "none", color: this.props.color ? this.props.color : "white"}
     
     var subOptions = []
     if (this.props.subOptions) {
@@ -36,7 +36,7 @@ class NavButton extends React.Component {
         return (
           <SubMenuRow>
             <td>
-              <Link to={`/`} style={{textDecoration: 'none', color: "black"}}>
+              <Link to={`/`} style={{textDecoration: "none", color: "black"}}>
                 {element}
               </Link>
             </td>
