@@ -1,4 +1,4 @@
-import BackgroundImage from "../components/backgroundImage"
+import BackgroundImage from "../components/BackgroundImage"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { gsap } from "gsap"

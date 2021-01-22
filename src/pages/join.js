@@ -1,12 +1,13 @@
-import * as React from "react";
+import * as React from "react"
 import styled from "styled-components"
-import { ThemeProvider } from "styled-components";
-import BackgroundImage from "../components/backgroundImage";
-import { graphql, useStaticQuery } from "gatsby";
+import { ThemeProvider } from "styled-components"
+import BackgroundImage from "../components/BackgroundImage"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import Button from "../components/button";
-import { Theme, H1 } from "../styles/Global.js";
-import "../styles/Global.css";
+import Button from "../components/button"
+import H1 from "../styles/H1"
+import { Theme } from "../styles/Global"
+import "../styles/Global.css"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
@@ -19,7 +20,7 @@ const JoinUs = () => {
           }
         },
       }
-      image1: file(relativePath: {eq: "headerBackground.png"}) {
+      image1: file(relativePath: {eq: "HeaderBackground.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {

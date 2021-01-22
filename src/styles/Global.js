@@ -7,12 +7,6 @@ export const Theme = {
     fontSmall: "16px",
 }
 
-export const H1 = styled.h1`
-    font-size: ${(props) => props.theme.fontLarge};
-    font-weight: bold;
-    margin: 0em;
-`
-
 export const H2 = styled.h2`
     font-size: ${(props) => props.theme.fontMedium};
     font-weight: normal;
