@@ -28,7 +28,7 @@ const IndexPage = () => {
         }
       }
     }
-`)
+  `)
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
