@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Button from '../components/button';
 import ButtonInverted from '../components/buttonInverted';
 import BackgroundImage from '../components/BackgroundImage';
-import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/indexStyled.js";
+import { Theme, H1, H2, P, WhoWeAre, JoinTheNetwork } from "../styles/IndexStyled.js";
 import Img from "gatsby-image";
 import "../css/background-image.css";
 import "../css/global.css";
@@ -12,7 +12,7 @@ import "../css/global.css";
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query Images {
-      headerBackground: file(relativePath: {eq: "headerBackground.png"}) {
+      headerBackground: file(relativePath: {eq: "HeaderBackground.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -20,7 +20,7 @@ const IndexPage = () => {
           }
         }
       }
-      joinTheNetwork: file(relativePath: {eq: "joinTheNetwork.png"}) {
+      joinTheNetwork: file(relativePath: {eq: "JoinTheNetwork.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
