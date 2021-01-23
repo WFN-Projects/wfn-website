@@ -1,19 +1,16 @@
 import React from "react"
 import styled from "styled-components";
-import Img from "gatsby-image"
-import ClientOnly from "./ClientOnly"
 import HamburgerMenu from "react-hamburger-menu"
-import gsap from "gsap"
+import Profile from "./ProfilePic"
 
 const Modal = (props) => {
-  const closeModal = () => { console.log("closemodal") }
   return (
-    <ModalWrapper>
+    <ModalWrapper id={`${props.name}_modal`.replace(/\s/g, "")}>
       <ModalContentWrapper>
         <HamburgerMenuContainer>
           <HamburgerMenu
             isOpen={true}
-            menuClicked={closeModal}
+            menuClicked={props.closeModal}
             width={20}
             height={20}
             strokeWidth={3}
@@ -24,7 +21,20 @@ const Modal = (props) => {
           />
         </HamburgerMenuContainer>
         <ModalTitle>{props.name}</ModalTitle>
-        <ModalContent>{props.content}</ModalContent>
+        <ModalContent>
+          {props.content}
+          <ProfilesWrapper>
+            {props.teamMembers.edges.map(image => (
+              <ProfileBox>
+                <Profile
+                  image={image.node.childImageSharp.fixed}
+                  name={image.node.base.replace(/\.[^/.]+$/, "").split("_")[0]}
+                  position={image.node.base.replace(/\.[^/.]+$/, "").split("_")[1]}
+                />
+              </ProfileBox>
+            ))}
+          </ProfilesWrapper>
+        </ModalContent>
       </ModalContentWrapper>
     </ModalWrapper>
   )
@@ -54,6 +64,9 @@ const ModalWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: rgba(0,0,0,0.65);
+  visibility: hidden;
+  overflow: scroll;
+  z-index: 99;
 `;
 
 const ModalContentWrapper = styled.div`
@@ -84,4 +97,37 @@ const ModalContent = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
+  max-height: 98%;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  ::-webkit-scrollbar:vertical {
+    width: 11px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+  }
+`;
+
+const ProfilesWrapper = styled.div`
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: scroll;
+  width: 100%;
+  margin-top: 2vh;
+
+  p {
+    font-size: medium;
+  }
+`;
+
+const ProfileBox = styled.div`
+  // flex: 1 1 20%; 
 `;
