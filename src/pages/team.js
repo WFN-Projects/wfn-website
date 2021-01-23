@@ -95,9 +95,10 @@ const SubHeader = styled.p`
 
 const Presidents = styled.div`
   display: flex;
-  margin-bottom: 15vh;
   justify-content: space-evenly;
   align-items: center;
+  max-width: 1261px;
+  margin: 0vh auto 15vh auto;
   
   @media only screen and (max-width: 580px) {
     flex-direction: column;
@@ -106,4 +107,6 @@ const Presidents = styled.div`
 
 const Portfolios = styled(Presidents)`
   flex-wrap: wrap;
+  max-width: 1350px;
+  margin: auto;
 `;
