@@ -103,8 +103,163 @@ const Team = () => {
           }
         }
       }
+      OperationsTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "OperationsTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      MarketingTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "MarketingTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      IndustryTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "IndustryTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      FutureViewTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "FutureViewTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      FinanceTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "FinanceTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      EducationTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "EducationTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      ProjectsTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "ProjectsTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      DesignTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "DesignTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+      CommunityTeam: allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "CommunityTeam" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(quality:100, width: 100, height: 100, webpQuality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
     }
   `)
+
+  console.log(data)
 
   return (
     <ThemeProvider theme={Theme}>
@@ -121,17 +276,33 @@ const Team = () => {
         <SectionHeader>Portfolios</SectionHeader>
         <SubHeader>Click to learn more!</SubHeader>
         <Portfolios>
-          <Portfolio image={data.futureview.childImageSharp.fixed} name="Future View">
+          <Portfolio image={data.futureview.childImageSharp.fixed} name="Future View" teamMembers={data.FutureViewTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Profile image={data.projects.childImageSharp.fixed} name="Projects" />
-          <Profile image={data.community.childImageSharp.fixed} name="Community" />
-          <Profile image={data.design.childImageSharp.fixed} name="Design" />
-          <Profile image={data.marketing.childImageSharp.fixed} name="Marketing" />
-          <Profile image={data.education.childImageSharp.fixed} name="Education" />
-          <Profile image={data.finance.childImageSharp.fixed} name="Finance" />
-          <Profile image={data.industry.childImageSharp.fixed} name="Industry" />
-          <Profile image={data.operations.childImageSharp.fixed} name="Operations" />
+          <Portfolio image={data.projects.childImageSharp.fixed} name="Projects" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.community.childImageSharp.fixed} name="Community" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.design.childImageSharp.fixed} name="Design" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.marketing.childImageSharp.fixed} name="Marketing" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.education.childImageSharp.fixed} name="Education" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.finance.childImageSharp.fixed} name="Finance" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.industry.childImageSharp.fixed} name="Industry" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
+          <Portfolio image={data.operations.childImageSharp.fixed} name="Operations" teamMembers={data.FutureViewTeam}>
+            Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
+          </Portfolio>
         </Portfolios>
       </Content>
     </ThemeProvider>
