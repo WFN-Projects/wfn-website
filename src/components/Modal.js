@@ -129,5 +129,6 @@ const ProfilesWrapper = styled.div`
 `;
 
 const ProfileBox = styled.div`
-  // flex: 1 1 20%; 
+  width: 25%;
+  min-width: 130px;
 `;
