@@ -6,7 +6,7 @@ import Profile from "./ProfilePic"
 const Modal = (props) => {
   return (
     <ModalWrapper id={`${props.name}_modal`.replace(/\s/g, "")}>
-      <ModalContentWrapper>
+      <ModalContentWrapper id={`${props.name}_modalContent`.replace(/\s/g, "")}>
         <HamburgerMenuContainer>
           <HamburgerMenu
             isOpen={true}
@@ -78,6 +78,8 @@ const ModalContentWrapper = styled.div`
   border-radius: 8px;
   padding: 40px;
   position: relative;
+  opacity: 0;
+  transform: scale(0, 0);
 `;
 
 const ModalTitle = styled.p`

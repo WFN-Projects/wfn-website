@@ -17,13 +17,15 @@ class Portfolio extends React.Component {
     document.body.style.height = "100vh"
     document.body.style.overflow = "hidden"
     var tl = gsap.timeline()
-    tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.35, autoAlpha: 1})
+    tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 1})
+    tl.to(`#${this.props.name}_modalContent`.replace(/\s/g, ""), {duration: 0.25, opacity: 1, scale: 1, ease: "back"})
     this.setState({modalOpen: true})
   } 
 
   closeModal() {
     var tl = gsap.timeline()
-    tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.35, autoAlpha: 0})
+    tl.to(`#${this.props.name}_modalContent`.replace(/\s/g, ""), {duration: 0.25, opacity: 0, scale: 0, easy: "power4"})
+    tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 0})
     document.body.style.height = null
     document.body.style.overflow = null
     this.setState({modalOpen: false})
