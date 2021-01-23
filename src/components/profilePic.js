@@ -30,7 +30,7 @@ const ProfileImageWrapper = styled.div`
 `;
 
 const ProfileImage = styled(Img)`
-  // clip-path: circle(); // Should ask pics to be submitted as cicle PNGs
+  clip-path: circle(); // Should ask pics to be submitted as cicle PNGs
   width: 110px;         // Has to be set a bit wider to work properly in Safari
   height: 109.58px;
 `;
