@@ -24,7 +24,7 @@ class Portfolio extends React.Component {
 
   closeModal() {
     var tl = gsap.timeline()
-    tl.to(`#${this.props.name}_modalContent`.replace(/\s/g, ""), {duration: 0.25, opacity: 0, scale: 0, easy: "power4"})
+    tl.to(`#${this.props.name}_modalContent`.replace(/\s/g, ""), {duration: 0.25, opacity: 0, scale: 0, ease: "power2"})
     tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 0})
     document.body.style.height = null
     document.body.style.overflow = null
