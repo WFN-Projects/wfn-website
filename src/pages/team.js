@@ -31,7 +31,7 @@ const Team = () => {
           }
         }
       }
-      futureview: file(relativePath: {eq: "marbles/futureview.png"}) {
+      futureview: file(relativePath: {eq: "marbles/Future View.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -39,7 +39,7 @@ const Team = () => {
           }
         }
       }
-      projects: file(relativePath: {eq: "marbles/projects.png"}) {
+      projects: file(relativePath: {eq: "marbles/Projects.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -47,7 +47,7 @@ const Team = () => {
           }
         }
       }
-      community: file(relativePath: {eq: "marbles/community.png"}) {
+      community: file(relativePath: {eq: "marbles/Community.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -55,7 +55,7 @@ const Team = () => {
           }
         }
       }
-      design: file(relativePath: {eq: "marbles/design.png"}) {
+      design: file(relativePath: {eq: "marbles/Design.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -63,7 +63,7 @@ const Team = () => {
           }
         }
       }
-      marketing: file(relativePath: {eq: "marbles/marketing.png"}) {
+      marketing: file(relativePath: {eq: "marbles/Marketing.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -71,7 +71,7 @@ const Team = () => {
           }
         }
       }
-      education: file(relativePath: {eq: "marbles/education.png"}) {
+      education: file(relativePath: {eq: "marbles/Education.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -79,7 +79,7 @@ const Team = () => {
           }
         }
       }
-      finance: file(relativePath: {eq: "marbles/finance.png"}) {
+      finance: file(relativePath: {eq: "marbles/Finance.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -87,7 +87,7 @@ const Team = () => {
           }
         }
       }
-      industry: file(relativePath: {eq: "marbles/industry.png"}) {
+      industry: file(relativePath: {eq: "marbles/Industry.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, webpQuality: 100) {
@@ -95,7 +95,7 @@ const Team = () => {
           }
         }
       }
-      operations: file(relativePath: {eq: "marbles/operations.png"}) {
+      operations: file(relativePath: {eq: "marbles/Operations.png"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
@@ -109,7 +109,7 @@ const Team = () => {
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
-        <H1>A Family of Innovators and Creators</H1>
+        <H1 center>A Family of Innovators and Creators</H1>
         <H2>Meet the executive team of 2020-2021</H2>
       </BackgroundImage>
       <Content>
