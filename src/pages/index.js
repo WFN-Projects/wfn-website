@@ -38,8 +38,6 @@ const IndexPage = () => {
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
       <BackgroundShading>
-
-
         <WhoWeAre>
           <WhoWeAreText>
             <H1>Who We Are 🚀</H1>
@@ -60,17 +58,15 @@ const IndexPage = () => {
             </div>
           </WhoWeAreVideo>
         </WhoWeAre>
-        {/* <JoinTheNetwork>
-        <Img draggable="false" style={{ transform: "translateX(10%)" }} imgStyle={{ width: "80%", height: "auto" }} fluid={data.joinTheNetwork.childImageSharp.fluid} />
-        <JoinTheNetworkText>
-          <H1>Join the Network 💡</H1>
-          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
-          <JoinTheNetworkButtons>
+        <JoinTheNetwork>
+          <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />
+          <JoinTheNetworkText>
+            <H1>Join the Network 💡</H1>
+            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
             <Button text="Become a Members" />
-          </JoinTheNetworkButtons>
-          <Button text="Join Our Discord" />
-        </JoinTheNetworkText>
-      </JoinTheNetwork> */}
+            <Button text="Join Our Discord" />
+          </JoinTheNetworkText>
+        </JoinTheNetwork>
       </BackgroundShading>
     </ThemeProvider >
   )
@@ -97,13 +93,10 @@ const WhoWeAreButtons = styled.div`
 `
 const JoinTheNetwork = styled.div`
   position: relative;
-`
-const JoinTheNetworkButtons = styled.div`
-  padding-bottom: 1em;
+  margin: 10%;
 `
 const JoinTheNetworkText = styled.div`
   position: absolute;
-  padding: 0 0 0 12em;
   bottom: 55%;
   width: 30%;
 `
