@@ -12,18 +12,14 @@ class Modal extends React.Component {
   }
 
   componentDidMount() {
-    const modalContentHeight = document.getElementById(`${this.props.name}_modalContent`.replace(/\s/g, "")).clientHeight
-    const modalHeight = document.getElementById(`${this.props.name}_modal`.replace(/\s/g, "")).clientHeight * 0.98
-
-    console.log(modalHeight, modalContentHeight)
-
-    if (modalContentHeight > modalHeight) { this.setState({ showArrow: true }) }
+    const modalContent = document.getElementById(`${this.props.name}_modalContent`.replace(/\s/g, ""))
+    if (modalContent.scrollHeight > modalContent.clientHeight) { this.setState({ showArrow: true }) }
   }
 
   render() {
     return (
       <ModalWrapper id={`${this.props.name}_modal`.replace(/\s/g, "")}>
-        <ModalContentWrapper id={`${this.props.name}_modalContent`.replace(/\s/g, "")}>
+        <ModalContentWrapper id={`${this.props.name}_modalContentWrapper`.replace(/\s/g, "")}>
           <HamburgerMenuContainer>
             <HamburgerMenu
               isOpen={true}
@@ -44,7 +40,7 @@ class Modal extends React.Component {
             </Arrow>
           }
           <ModalTitle>{this.props.name}</ModalTitle>
-          <ModalContent>
+          <ModalContent id={`${this.props.name}_modalContent`.replace(/\s/g, "")}>
             {this.props.content}
             <ProfilesWrapper>
               {this.props.teamMembers.edges.map(image => (
