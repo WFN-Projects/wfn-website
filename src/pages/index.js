@@ -38,6 +38,7 @@ const IndexPage = () => {
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
       <BackgroundShading>
+        <Content>
         <WhoWeAre>
           <WhoWeAreText>
             <H1>Who We Are 🚀</H1>
@@ -69,6 +70,7 @@ const IndexPage = () => {
             <Button text="Join Our Discord" />
           </JoinTheNetworkText>
         </JoinTheNetwork>
+        </Content>
       </BackgroundShading>
     </ThemeProvider >
   )
@@ -77,7 +79,7 @@ const IndexPage = () => {
 export default IndexPage
 
 const WhoWeAre = styled.div`
-  margin: 5%;
+  margin: 3vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -94,8 +96,17 @@ const WhoWeAreButtons = styled.div`
   gap: 1em;
 `
 const JoinTheNetwork = styled.div`
-  margin: 10%;
+  margin: 3vw;
+  position: relative;
 `
 const JoinTheNetworkText = styled.div`
-
+  position: absolute;
+  top: 0;
+  width: 50%;
 `
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: 0vh auto 0vh auto;
+`;
