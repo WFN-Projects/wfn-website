@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components";
 import HamburgerMenu from "react-hamburger-menu"
 import Profile from "./ProfilePic"
-import "boxicons"
-import gsap from "gsap"
 
 class Modal extends React.Component {
   constructor(props) {
@@ -11,14 +9,30 @@ class Modal extends React.Component {
     this.state = { showArrow: false }
   }
 
-  componentDidMount() {
+  determineShowArrow() {
     const modalContent = document.getElementById(`${this.props.name}_modalContent`.replace(/\s/g, ""))
-    if (modalContent.scrollHeight > modalContent.clientHeight) { this.setState({ showArrow: true }) }
+
+    if (modalContent.scrollHeight > modalContent.clientHeight) {
+      this.setState({ showArrow: true })
+    } else if (modalContent.scrollHeight <= modalContent.clientHeight) {
+      this.setState({ showArrow: false })
+    }
+  }
+
+  componentDidMount() {
+    this.determineShowArrow()
+
+    var resizeId
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeId);
+      resizeId = setTimeout(this.determineShowArrow.bind(this), 500);
+    })
   }
 
   render() {
     return (
       <ModalWrapper id={`${this.props.name}_modal`.replace(/\s/g, "")}>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'></link>
         <ModalContentWrapper id={`${this.props.name}_modalContentWrapper`.replace(/\s/g, "")}>
           <HamburgerMenuContainer>
             <HamburgerMenu
@@ -33,10 +47,11 @@ class Modal extends React.Component {
               animationDuration={0.5}
             />
           </HamburgerMenuContainer>
-          {this.state.showArrow && 
-            <Arrow 
-              onLoad={gsap.to(`#${this.props.name}_modalArrow`.replace(/\s/g, ""), {duration: 0.3, y:10, ease:"power0", repeat:-1, yoyo:true})}>
-              <box-icon id={`${this.props.name}_modalArrow`.replace(/\s/g, "")} name="down-arrow-circle"></box-icon>
+          { this.state.showArrow &&
+            <Arrow>
+              <i 
+                id={`${this.props.name}_modalArrow`.replace(/\s/g, "")} 
+                class='bx bx-down-arrow-circle bx-md' />
             </Arrow>
           }
           <ModalTitle>{this.props.name}</ModalTitle>
@@ -148,10 +163,11 @@ const ProfileBox = styled.div`
 const Arrow = styled.div`
   position: absolute;
   display: inline;
-  padding-bottom: 40px;
-  padding-right: 40px;
+  padding-bottom: 36px;
+  padding-right: 33px;
   bottom: 0;
   right: 0;
   z-index: 99;
   font-size: large;
+  color: #C54E9E;
 `;
