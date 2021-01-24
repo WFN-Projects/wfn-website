@@ -47,13 +47,14 @@ const IndexPage = () => {
           </WhoWeAreButtons>
         </WhoWeAreText>
         <WhoWeAreVideo>
-          <iframe
-            width="500"
-            height="300"
-            src="https://www.youtube.com/embed/hkdnz3mQoAg"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen />
+          <div className="container">
+            <iframe
+              className="responsive-iframe"
+              src="https://www.youtube.com/embed/hkdnz3mQoAg"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen />
+          </div>
         </WhoWeAreVideo>
       </WhoWeAre>
       {/* <JoinTheNetwork>
@@ -74,29 +75,26 @@ const IndexPage = () => {
 export default IndexPage
 
 const WhoWeAre = styled.div`
-  //margin: 5em 5em 5em 5em;
+  margin: 5%;
   display: flex;
   flex-wrap: wrap;
-  align-self: center;
   align-items: center;
-  align-content: center;
-  justify-content: center;
-  background-color: green;
+  //background-color: green;
 `
 const WhoWeAreText = styled.div`
   //margin: 0 0 3em 0;
   flex: 50%;
-  background-color: blue;
+  //background-color: blue;
 `
 const WhoWeAreVideo = styled.div`
   //margin: 0 0 3em 0;
   flex: 50%;
-  background-color: red;
+  //background-color: red;
 `
 const WhoWeAreButtons = styled.div`
   display: flex;
   flex-wrap: wrap;
-  background-color:purple;
+  //background-color:purple;
   gap: 1em;
 `
 const JoinTheNetwork = styled.div`
