@@ -2,42 +2,66 @@ import React from "react"
 import styled from "styled-components";
 import HamburgerMenu from "react-hamburger-menu"
 import Profile from "./ProfilePic"
+import "boxicons"
+import gsap from "gsap"
 
-const Modal = (props) => {
-  return (
-    <ModalWrapper id={`${props.name}_modal`.replace(/\s/g, "")}>
-      <ModalContentWrapper id={`${props.name}_modalContent`.replace(/\s/g, "")}>
-        <HamburgerMenuContainer>
-          <HamburgerMenu
-            isOpen={true}
-            menuClicked={props.closeModal}
-            width={20}
-            height={20}
-            strokeWidth={3}
-            rotate={0}
-            color="black"
-            borderRadius={0}
-            animationDuration={0.5}
-          />
-        </HamburgerMenuContainer>
-        <ModalTitle>{props.name}</ModalTitle>
-        <ModalContent>
-          {props.content}
-          <ProfilesWrapper>
-            {props.teamMembers.edges.map(image => (
-              <ProfileBox>
-                <Profile
-                  image={image.node.childImageSharp.fixed}
-                  name={image.node.base.replace(/\.[^/.]+$/, "").split("_")[0]}
-                  position={image.node.base.replace(/\.[^/.]+$/, "").split("_")[1]}
-                />
-              </ProfileBox>
-            ))}
-          </ProfilesWrapper>
-        </ModalContent>
-      </ModalContentWrapper>
-    </ModalWrapper>
-  )
+class Modal extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { showArrow: false }
+  }
+
+  componentDidMount() {
+    const modalContentHeight = document.getElementById(`${this.props.name}_modalContent`.replace(/\s/g, "")).clientHeight
+    const modalHeight = document.getElementById(`${this.props.name}_modal`.replace(/\s/g, "")).clientHeight * 0.98
+
+    console.log(modalHeight, modalContentHeight)
+
+    if (modalContentHeight > modalHeight) { this.setState({ showArrow: true }) }
+  }
+
+  render() {
+    return (
+      <ModalWrapper id={`${this.props.name}_modal`.replace(/\s/g, "")}>
+        <ModalContentWrapper id={`${this.props.name}_modalContent`.replace(/\s/g, "")}>
+          <HamburgerMenuContainer>
+            <HamburgerMenu
+              isOpen={true}
+              menuClicked={this.props.closeModal}
+              width={20}
+              height={20}
+              strokeWidth={3}
+              rotate={0}
+              color="black"
+              borderRadius={0}
+              animationDuration={0.5}
+            />
+          </HamburgerMenuContainer>
+          {this.state.showArrow && 
+            <Arrow 
+              onLoad={gsap.to(`#${this.props.name}_modalArrow`.replace(/\s/g, ""), {duration: 0.3, y:10, ease:"power0", repeat:-1, yoyo:true})}>
+              <box-icon id={`${this.props.name}_modalArrow`.replace(/\s/g, "")} name="down-arrow-circle"></box-icon>
+            </Arrow>
+          }
+          <ModalTitle>{this.props.name}</ModalTitle>
+          <ModalContent>
+            {this.props.content}
+            <ProfilesWrapper>
+              {this.props.teamMembers.edges.map(image => (
+                <ProfileBox>
+                  <Profile
+                    image={image.node.childImageSharp.fixed}
+                    name={image.node.base.replace(/\.[^/.]+$/, "").split("_")[0]}
+                    position={image.node.base.replace(/\.[^/.]+$/, "").split("_")[1]}
+                  />
+                </ProfileBox>
+              ))}
+            </ProfilesWrapper>
+          </ModalContent>
+        </ModalContentWrapper>
+      </ModalWrapper>
+    )
+  }
 }
 
 export default Modal
@@ -105,16 +129,6 @@ const ModalContent = styled.p`
   ::-webkit-scrollbar {
     -webkit-appearance: none;
   }
-  
-  ::-webkit-scrollbar:vertical {
-    width: 11px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 2px solid white; /* should match background, can't be transparent */
-    background-color: rgba(0, 0, 0, .5);
-  }
 `;
 
 const ProfilesWrapper = styled.div`
@@ -133,4 +147,15 @@ const ProfilesWrapper = styled.div`
 const ProfileBox = styled.div`
   width: 25%;
   min-width: 130px;
+`;
+
+const Arrow = styled.div`
+  position: absolute;
+  display: inline;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  font-size: large;
 `;
