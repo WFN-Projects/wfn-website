@@ -41,7 +41,9 @@ const IndexPage = () => {
         <WhoWeAre>
           <WhoWeAreText>
             <H1>Who We Are 🚀</H1>
-            <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
+            <div className="whoWeAreTextContainer">
+              <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
+            </div>
             <WhoWeAreButtons>
               <Button text="Our Initiatives" />
               <ButtonInverted text="Meet the Team" />
@@ -96,7 +98,5 @@ const JoinTheNetwork = styled.div`
   margin: 10%;
 `
 const JoinTheNetworkText = styled.div`
-  position: absolute;
-  bottom: 55%;
-  width: 30%;
+
 `
