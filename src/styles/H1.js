@@ -6,7 +6,6 @@ const StyledH1 = styled.h1`
     margin: 0;
     color: ${props => props.white ? "#FFFFFF":"#333333"}
 `;
-
 const H1 = ({center, white, children}) => {
     return <StyledH1 center={center} white={white}>{children}</StyledH1>
 };
