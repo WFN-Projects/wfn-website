@@ -37,3 +37,6 @@ export const P = styled.p`
     font-family: ${props => props.theme.font};
     line-height: 140%;
 `
+export const BackgroundShading = styled.div`
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(197, 0, 59, 0.04), rgba(197, 0, 59, 0.04)), #FFFFFF;
+`
