@@ -94,7 +94,6 @@ const WhoWeAreButtons = styled.div`
   gap: 1em;
 `
 const JoinTheNetwork = styled.div`
-  position: relative;
   margin: 10%;
 `
 const JoinTheNetworkText = styled.div`
