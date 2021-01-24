@@ -6,13 +6,16 @@ export const Theme = {
     fontMedium: "24px",
     fontSmall: "16px",
 }
+
 export const H2 = styled.h2`
     font-size: ${props => props.theme.fontLarge};
     font-weight: normal;
 `
+
 export const H3 = styled.h3`
     font-size: ${props => props.theme.fontMedium} 
 `
+
 export const P = styled.p`
     font-size: ${props => props.theme.fontSmall};
     font-family: ${props => props.theme.font};
