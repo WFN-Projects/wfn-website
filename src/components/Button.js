@@ -24,8 +24,8 @@ const StyledButton = styled.div`
   font-size: ${(props) => props.theme.fontMedium};
   padding-left: 15px;
   padding-right: 15px;
-  display: inline-block;
   line-height: 2em;
+  display: table;
   text-align: center;
   cursor: pointer;
 `;
