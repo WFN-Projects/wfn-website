@@ -32,31 +32,31 @@ const Team = () => {
         <SectionHeader>Portfolios</SectionHeader>
         <SubHeader>Click to learn more!</SubHeader>
         <Portfolios>
-          <Portfolio image={data.futureview.childImageSharp.fixed} name="Future View" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.futureview.childImageSharp.fixed} name="Future View" teamMembers={data.FutureViewTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.projects.childImageSharp.fixed} name="Projects" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.projects.childImageSharp.fixed} name="Projects" teamMembers={data.ProjectsTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.community.childImageSharp.fixed} name="Community" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.community.childImageSharp.fixed} name="Community" teamMembers={data.CommunityTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
           <Portfolio image={data.design.childImageSharp.fixed} name="Design" teamMembers={data.DesignTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.marketing.childImageSharp.fixed} name="Marketing" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.marketing.childImageSharp.fixed} name="Marketing" teamMembers={data.MarketingTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.education.childImageSharp.fixed} name="Education" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.education.childImageSharp.fixed} name="Education" teamMembers={data.EducationTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.finance.childImageSharp.fixed} name="Finance" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.finance.childImageSharp.fixed} name="Finance" teamMembers={data.FinanceTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.industry.childImageSharp.fixed} name="Industry" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.industry.childImageSharp.fixed} name="Industry" teamMembers={data.IndustryTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
-          <Portfolio image={data.operations.childImageSharp.fixed} name="Operations" teamMembers={data.DesignTeam}>
+          <Portfolio image={data.operations.childImageSharp.fixed} name="Operations" teamMembers={data.OperationsTeam}>
             Design is the channel through which WFN communicates. Through graphic design, illustration, motion, and interaction design, we craft the experiences that make WFN unique. This year, along with building the brand of our club, we are dedicated to building a design community at Western. This includes running design-focused educationals and offering design co-working sessions. We spend our time telling stories — here’s hoping you’ll be a part of ours.
           </Portfolio>
         </Portfolios>
