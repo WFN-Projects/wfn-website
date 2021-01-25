@@ -62,8 +62,8 @@ class Modal extends React.Component {
                 <ProfileBox>
                   <Profile
                     image={image.node.childImageSharp.fixed}
-                    name={image.node.base.replace(/\.[^/.]+$/, "").split("_")[0]}
-                    position={image.node.base.replace(/\.[^/.]+$/, "").split("_")[1]}
+                    name={image.node.base.replace(/\.[^/.]+$/, "").split("_")[1]}
+                    position={image.node.base.replace(/\.[^/.]+$/, "").split("_")[2]}
                   />
                 </ProfileBox>
               ))}
@@ -145,7 +145,7 @@ const ModalContent = styled.p`
 const ProfilesWrapper = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: left;
   overflow: scroll;
   width: 100%;
   margin-top: 2vh;
