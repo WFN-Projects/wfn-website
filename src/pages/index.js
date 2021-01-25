@@ -3,8 +3,9 @@ import { ThemeProvider } from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
-import BackgroundImage from "../components/BackgroundImage.js"
-import { Theme, device, H2, H3, P, BackgroundShading } from "../styles/Global.js"
+import BackgroundImage from "../components/BackgroundImage"
+import ButtonWhite from "../components/ButtonWhite"
+import { Theme, device, H2, H3, P, BackgroundShading } from "../styles/Global"
 import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -12,8 +13,6 @@ import "../styles/Global.css"
 import Carousel from "react-bootstrap/Carousel"
 import "bootstrap/dist/css/bootstrap.min.css"
 import slide1 from "../images/EventsCarousel/futureView.png"
-import slide2 from "../images/EventsCarousel/futureView2.png"
-import slide3 from "../images/EventsCarousel/futureView3.png"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,6 +26,14 @@ const IndexPage = () => {
         }
       }
       joinTheNetwork: file(relativePath: {eq: "JoinTheNetwork.png"}) {
+        id
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      futureView: file(relativePath: {eq: "FutureView.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -77,14 +84,11 @@ const IndexPage = () => {
           <div className="eventsCarousel">
             <Carousel>
               <Carousel.Item>
-                <img
-                  src={slide1}
-                  alt="First slide"
-                />
+                <Img draggable="false" fluid={data.futureView.childImageSharp.fluid}/>
                 <Carousel.Caption>
                   <H2>Future View Pitch Day</H2>
                   <H3>February 17 / Virtual</H3>
-                  <Button text="test"/>
+                  <Button text="Register"/>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
