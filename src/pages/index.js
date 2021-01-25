@@ -37,8 +37,8 @@ const IndexPage = () => {
         <H1 center white>Western Founders Network</H1>
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
-      <Content>
-        <BackgroundShading>
+      <BackgroundShading>
+        <Content>
           <WhoWeAre>
             <WhoWeAreText>
               <H1>Who We Are 🚀</H1>
@@ -71,9 +71,9 @@ const IndexPage = () => {
               <Button text="Join Our Discord" />
             </JoinTheNetworkText>
           </JoinTheNetwork>
-        </BackgroundShading>
-      </Content>
-    </ThemeProvider >
+        </Content>
+      </BackgroundShading>
+    </ThemeProvider>
   )
 }
 
