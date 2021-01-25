@@ -67,6 +67,7 @@ const IndexPage = () => {
             <H1>Join the Network 💡</H1>
             <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
             <Button text="Become a Member" />
+            <div style={{padding: "0.5em"}}></div>
             <Button text="Join Our Discord" />
           </JoinTheNetworkText>
         </JoinTheNetwork>
@@ -101,7 +102,7 @@ const JoinTheNetwork = styled.div`
 `
 const JoinTheNetworkText = styled.div`
   position: absolute;
-  top: 0;
+  top: 5em;
   width: 50%;
 `
 const Content = styled.div`
