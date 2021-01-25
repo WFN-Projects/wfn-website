@@ -79,6 +79,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "OperationsTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -91,6 +92,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "MarketingTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -103,6 +105,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "IndustryTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -115,6 +118,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "FutureViewTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -127,6 +131,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "FinanceTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -139,6 +144,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "EducationTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -151,6 +157,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "ProjectsTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -163,6 +170,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "DesignTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
@@ -175,6 +183,7 @@ const Query = () => {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
           relativeDirectory: { eq: "CommunityTeam" }
         }
+        sort: { order: ASC, fields: [base]}
       ) {
         edges {
           node {
