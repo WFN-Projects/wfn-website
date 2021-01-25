@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage.js"
-import { Theme, H2, P, BackgroundShading } from "../styles/Global.js"
+import { Theme, device, H2, P, BackgroundShading } from "../styles/Global.js"
 import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -45,8 +45,8 @@ const IndexPage = () => {
         <H1 center white>Western Founders Network</H1>
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
-      <BackgroundShading>
-        <Content>
+      <Content>
+        <BackgroundShading>
           <WhoWeAre>
             <WhoWeAreText>
               <H1>Who We Are 🚀</H1>
@@ -79,8 +79,8 @@ const IndexPage = () => {
               <Button text="Join Our Discord" />
             </JoinTheNetworkText>
           </JoinTheNetwork>
-        </Content>
-      </BackgroundShading>
+        </BackgroundShading>
+      </Content>
     </ThemeProvider>
   )
 }
@@ -111,11 +111,12 @@ const JoinTheNetwork = styled.div`
 const JoinTheNetworkText = styled.div`
   position: absolute;
   top: 5em;
-  width: 50%;
+  width: 100%;
+  @media ${device.laptopL} {
+    width:50%;
+  }
 `
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1300px;
-  margin: 0vh auto 0vh auto;
 `;
