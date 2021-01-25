@@ -4,14 +4,16 @@ import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage.js"
-import { Theme, device, H2, P, BackgroundShading } from "../styles/Global.js"
+import { Theme, device, H2, H3, P, BackgroundShading } from "../styles/Global.js"
 import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
 import Carousel from "react-bootstrap/Carousel"
-import 'bootstrap/dist/css/bootstrap.min.css'
-
+import "bootstrap/dist/css/bootstrap.min.css"
+import slide1 from "../images/EventsCarousel/futureView.png"
+import slide2 from "../images/EventsCarousel/futureView2.png"
+import slide3 from "../images/EventsCarousel/futureView3.png"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -72,6 +74,21 @@ const IndexPage = () => {
               </div>
             </WhoWeAreVideo>
           </WhoWeAre>
+          <div className="eventsCarousel">
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  src={slide1}
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <H2>Future View Pitch Day</H2>
+                  <H3>February 17 / Virtual</H3>
+                  <Button text="test"/>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+          </div>
           <JoinTheNetwork>
             {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
             <JoinTheNetworkText>

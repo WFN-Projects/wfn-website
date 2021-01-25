@@ -25,7 +25,7 @@ const StyledButton = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   line-height: 2em;
-  display: table;
+  display: inline-block;
   text-align: center;
   cursor: pointer;
 `;
