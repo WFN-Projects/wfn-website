@@ -110,7 +110,7 @@ const JoinTheNetwork = styled.div`
 `
 const JoinTheNetworkText = styled.div`
   position: absolute;
-  top: 5em;
+  top: 15%;
   width: 100%;
   @media ${device.laptopL} {
     width:50%;
