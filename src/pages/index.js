@@ -12,7 +12,6 @@ import styled from "styled-components"
 import "../styles/Global.css"
 import Carousel from "react-bootstrap/Carousel"
 import "bootstrap/dist/css/bootstrap.min.css"
-import slide1 from "../images/EventsCarousel/futureView.png"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -84,7 +83,7 @@ const IndexPage = () => {
           <div className="eventsCarousel">
             <Carousel>
               <Carousel.Item>
-                <Img draggable="false" fluid={data.futureView.childImageSharp.fluid}/>
+                <Img fluid={data.futureView.childImageSharp.fluid}/>
                 <Carousel.Caption>
                   <H2>Future View Pitch Day</H2>
                   <H3>February 17 / Virtual</H3>
