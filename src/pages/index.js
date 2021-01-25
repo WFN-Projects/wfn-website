@@ -9,6 +9,9 @@ import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
+import Carousel from "react-bootstrap/Carousel"
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
