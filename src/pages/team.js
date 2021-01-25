@@ -24,10 +24,10 @@ const Team = () => {
         <H2>Meet the executive team of 2020-2021</H2>
       </BackgroundImage>
       <Content>
-        <SectionHeader>Co-Presidents</SectionHeader>
+        <SectionHeader>Presidents</SectionHeader>
         <Presidents>
-          <Profile image={data.profile.childImageSharp.fixed} name="Amanda Adam" position="President" />
-          <Profile image={data.profile.childImageSharp.fixed} name="Amanda Adam" position="President" />
+          <Profile image={data.amandaAdam.childImageSharp.fixed} name="Amanda Adam" position="President" />
+          <Profile image={data.krishGandhi.childImageSharp.fixed} name="Krish Gandhi" position="President" />
         </Presidents>
         <SectionHeader>Portfolios</SectionHeader>
         <SubHeader>Click to learn more!</SubHeader>

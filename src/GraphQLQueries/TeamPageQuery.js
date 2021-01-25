@@ -31,7 +31,15 @@ const Query = () => {
           }
         }
       }
-      profile: file(relativePath: {eq: "profilePicImges/AmandaAdam.png"}) {
+      amandaAdam: file(relativePath: {eq: "profilePicImges/AmandaAdam.png"}) {
+        id
+        childImageSharp {
+          fixed(quality:100, width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      krishGandhi: file(relativePath: {eq: "profilePicImges/KrishGandhi.jpg"}) {
         id
         childImageSharp {
           fixed(quality:100, width: 150) {
