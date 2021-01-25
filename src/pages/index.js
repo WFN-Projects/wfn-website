@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, {useState, useEffect} from "react"
 import { ThemeProvider } from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
@@ -31,6 +31,14 @@ const IndexPage = () => {
       }
     }
   `)
+  const [isLargeEnough, setLargeEnough] = useState(window.innerWidth > 1440);
+  const updateMedia = () => {
+    setLargeEnough(window.innerWidth > 1140);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
@@ -62,7 +70,7 @@ const IndexPage = () => {
             </WhoWeAreVideo>
           </WhoWeAre>
           <JoinTheNetwork>
-            {true && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
+            {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
             <JoinTheNetworkText>
               <H1>Join the Network 💡</H1>
               <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
