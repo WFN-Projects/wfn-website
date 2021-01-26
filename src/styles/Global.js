@@ -33,7 +33,6 @@ export const device = {
     maxDesktop: `(max-width: ${size.desktop})`,
     maxDesktopL: `(max-width: ${size.desktop})`
 }
-
 export const H2 = styled.h2`
     font-size: ${props => props.theme.fontLarge};
     font-weight: normal;

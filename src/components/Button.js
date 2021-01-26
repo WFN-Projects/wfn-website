@@ -28,5 +28,5 @@ const StyledButton = styled.div`
   display: inline-block;
   text-align: center;
   cursor: pointer;
-`;
+`
 

@@ -29,4 +29,4 @@ const StyledButtonWhite = styled.div`
   display: inline-block;
   text-align: center;
   cursor: pointer;
-`;
+`
