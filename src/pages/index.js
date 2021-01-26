@@ -50,14 +50,15 @@ const IndexPage = () => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
+  console.log(isLargeEnough);
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
-        <H1 center white>Western Founders Network</H1>
-        <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
-      </BackgroundImage>
-      <Content>
-        <BackgroundShading>
+      <BackgroundShading>
+        <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
+          <H1 center white>Western Founders Network</H1>
+          <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
+        </BackgroundImage>
+        <Content>
           <WhoWeAre>
             <WhoWeAreText>
               <H1>Who We Are 🚀</H1>
@@ -80,18 +81,19 @@ const IndexPage = () => {
               </div>
             </WhoWeAreVideo>
           </WhoWeAre>
-          <div className="eventsCarousel">
+          <UpcomingEvents>
+            <H1>Upcoming Events 📅</H1>
             <Carousel>
               <Carousel.Item>
-                <Img fluid={data.futureView.childImageSharp.fluid}/>
+                <Img fluid={data.futureView.childImageSharp.fluid} />
                 <Carousel.Caption>
                   <H2>Future View Pitch Day</H2>
                   <H3>February 17 / Virtual</H3>
-                  <Button text="Register"/>
+                  <Button text="Register" />
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-          </div>
+          </UpcomingEvents>
           <JoinTheNetwork>
             {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
             <JoinTheNetworkText>
@@ -102,22 +104,30 @@ const IndexPage = () => {
               <Button text="Join Our Discord" />
             </JoinTheNetworkText>
           </JoinTheNetwork>
-        </BackgroundShading>
-      </Content>
+        </Content>
+      </BackgroundShading>
     </ThemeProvider>
   )
 }
 
 export default IndexPage
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 8vw 12vw 0 12vw;
+`
 const WhoWeAre = styled.div`
-  margin: 3vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 8vw;
 `
 const WhoWeAreText = styled.div`
   flex: 50%;
+  @media ${device.maxMobileL} {
+    margin-bottom: 8vw;
+  }
 `
 const WhoWeAreVideo = styled.div`
   flex: 50%;
@@ -128,18 +138,19 @@ const WhoWeAreButtons = styled.div`
   gap: 1em;
 `
 const JoinTheNetwork = styled.div`
-  margin: 3vw;
   position: relative;
 `
 const JoinTheNetworkText = styled.div`
   position: absolute;
   top: 15%;
   width: 100%;
-  @media ${device.laptopL} {
+  @media ${device.minLaptopL} {
     width:50%;
   }
 `
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+const UpcomingEvents = styled.div`
+  width: 100%;
+  margin: auto;
+  margin-bottom: 8vw;
+`
+
