@@ -10,8 +10,6 @@ import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
-import Carousel from "react-bootstrap/Carousel"
-import "bootstrap/dist/css/bootstrap.min.css"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -83,16 +81,6 @@ const IndexPage = () => {
           </WhoWeAre>
           <UpcomingEvents>
             <H1>Upcoming Events 📅</H1>
-            <Carousel>
-              <Carousel.Item>
-                <Img fluid={data.futureView.childImageSharp.fluid} />
-                <Carousel.Caption>
-                  <H2>Future View Pitch Day</H2>
-                  <H3>February 17 / Virtual</H3>
-                  <Button text="Register" />
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
           </UpcomingEvents>
           <JoinTheNetwork>
             {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
