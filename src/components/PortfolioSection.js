@@ -62,4 +62,5 @@ const PortfolioWrapper = styled.div`
   align-items: center;
   max-width: 300px;
   flex: 1 1 30%; 
+  cursor: pointer;
 `;
