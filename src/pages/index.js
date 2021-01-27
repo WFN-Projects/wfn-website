@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { ThemeProvider } from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
@@ -9,6 +9,7 @@ import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
+import useMedia from "use-media"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -36,15 +37,9 @@ const IndexPage = () => {
       }
     }
   `)
-  const [isLargeEnough, setLargeEnough] = useState(window.innerWidth > 1440);
-  const updateMedia = () => {
-    setLargeEnough(window.innerWidth > 1140);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-  console.log(isLargeEnough);
+
+  const isLargeEnough = useMedia({minWidth: 1440});
+
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundShading>
