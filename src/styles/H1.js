@@ -7,10 +7,10 @@ const StyledH1 = styled.h1`
     font-weight: bold;
     color: ${props => props.white ? "white":"black"};
     margin: 0em;
-`;
+`
 
 const H1 = ({center, white, children}) => {
     return <StyledH1 center={center} white={white}>{children}</StyledH1>
-};
+}
 
-export default H1;
+export default H1

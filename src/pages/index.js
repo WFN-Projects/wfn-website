@@ -63,7 +63,7 @@ const IndexPage = () => {
           <Button text="Join Our Discord" />
         </JoinTheNetworkText>
       </JoinTheNetwork>
-    </ThemeProvider >
+    </ThemeProvider>
   )
 }
 
