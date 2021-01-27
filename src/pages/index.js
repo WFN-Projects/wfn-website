@@ -13,8 +13,7 @@ import "../styles/Global.css"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query Images {
-      headerBackground: file(relativePath: {eq: "HeaderBackground.png"}) {
-        id
+      indexBackground: file(relativePath: {eq: "IndexBackground.png"}) {
         childImageSharp {
           fluid(quality:100) {
             ...GatsbyImageSharpFluid
@@ -22,7 +21,6 @@ const IndexPage = () => {
         }
       }
       joinTheNetwork: file(relativePath: {eq: "JoinTheNetwork.png"}) {
-        id
         childImageSharp {
           fluid(quality:100) {
             ...GatsbyImageSharpFluid
@@ -33,7 +31,7 @@ const IndexPage = () => {
   `)
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
+      <BackgroundImage fluid={data.indexBackground.childImageSharp.fluid}>
         <H1 center>Western Founders Network</H1>
         <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
       </BackgroundImage>
