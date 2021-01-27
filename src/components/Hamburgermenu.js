@@ -4,8 +4,6 @@ import Button from "./Button"
 import HamburgerMenu from "react-hamburger-menu"
 import { gsap } from "gsap"
 import { Link } from "gatsby"
-
-
 class Hamburger extends React.Component {
   constructor(props) {
     super(props)
@@ -75,8 +73,7 @@ const HamburgerButtonContainer = styled.div`
   right: 0;
   padding-top: 34px;
   padding-right: 4vw;
-`;
-
+`
 const HamburgerContainer = styled.div`
   position: fixed;
   width: 100vw;
@@ -92,4 +89,4 @@ const HamburgerContainer = styled.div`
   justify-content: center;
   background-color: rgba(0,0,0,0.95);
   visibility: hidden;
-`;
+`
