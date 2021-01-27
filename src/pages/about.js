@@ -25,12 +25,20 @@ const AboutUsPage = () => {
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.aboutUsBackground.childImageSharp.fluid}>
-        <H1 center white>About Us</H1>
+        <H1 center >About Us</H1>
         <H2>Technology. Business. Entrepreneurship.</H2>
       </BackgroundImage>
+      <Stats>
+        <H1 white>600+ <br/> Members</H1>
+      </Stats>
     </ThemeProvider>
 
   )
 }
 
 export default AboutUsPage
+
+const Stats = styled.div`
+  display: flex;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 87.01%), #333333;
+`
