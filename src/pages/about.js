@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage"
-import { Theme, H2, P } from "../styles/Global.js"
+import { Theme, H2, P, device } from "../styles/Global.js"
 import H1 from "../styles/H1"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -43,8 +43,10 @@ export default AboutUsPage
 
 const Stats = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 4% 5%;
+  @media ${device.maxTablet} {
+    width: 100%;
+    display: inline-block;
+  }
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 87.01%), #333333;
 `
