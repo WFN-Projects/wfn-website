@@ -150,7 +150,7 @@ const ModalContent = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
-  max-height: 98%;
+  max-height: 96%;
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
