@@ -1,21 +1,16 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components"
-import Button from "../components/Button";
-import ButtonInverted from "../components/ButtonInverted";
 import Profile from "../components/ProfilePic";
 import BackgroundImage from "../components/BackgroundImage";
-import { Theme, H2, P } from "../styles/Global.js";
+import { Theme, H2 } from "../styles/Global.js";
 import H1 from "../styles/H1"
-import Img from "gatsby-image";
 import Portfolio from "../components/PortfolioSection"
 import "../styles/Global.css";
 import Query from "../GraphQLQueries/TeamPageQuery"
 
 const Team = () => {
   const data = Query()
-  console.log(data)
 
   return (
     <ThemeProvider theme={Theme}>

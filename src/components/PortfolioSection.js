@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components";
-import Img from "gatsby-image"
 import Profile from "./ProfilePic"
 import Modal from "./Modal"
 import gsap from "gsap"
@@ -13,7 +12,6 @@ class Portfolio extends React.Component {
   }
 
   openModal() {
-    console.log("clicked", this.props.name)
     document.body.style.height = "100vh"
     document.body.style.overflow = "hidden"
     var tl = gsap.timeline()
