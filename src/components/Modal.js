@@ -56,7 +56,7 @@ class Modal extends React.Component {
             </Arrow>
           }
           <ModalTitleWrapper>
-            <SmallMarble fixed={this.props.marble} />
+            <SmallMarble fixed={this.props.marble} draggable={false}/>
             <ModalTitle>{this.props.name}</ModalTitle>
           </ModalTitleWrapper>
           <ModalContent id={`${this.props.name}_modalContent`.replace(/\s/g, "")}>

@@ -6,7 +6,7 @@ const Profile = (props) => {
   return (
     <ProfileWrapper onClick={props.onClick}>
       <ProfileImageWrapper>
-        <ProfileImage loading="eager" fixed={props.image} />
+        <ProfileImage loading="eager" fixed={props.image} draggable={false}/>
       </ProfileImageWrapper>
       <ProfileName>{props.name}</ProfileName>
       {props.position && <ProfilePosition>{props.position}</ProfilePosition>}
