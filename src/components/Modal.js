@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components";
 import HamburgerMenu from "react-hamburger-menu"
 import Profile from "./ProfilePic"
+import Img from 'gatsby-image'
 
 class Modal extends React.Component {
   constructor(props) {
@@ -54,7 +55,10 @@ class Modal extends React.Component {
                 class='bx bx-down-arrow-circle bx-md' />
             </Arrow>
           }
-          <ModalTitle>{this.props.name}</ModalTitle>
+          <ModalTitleWrapper>
+            <SmallMarble fixed={this.props.marble} />
+            <ModalTitle>{this.props.name}</ModalTitle>
+          </ModalTitleWrapper>
           <ModalContent id={`${this.props.name}_modalContent`.replace(/\s/g, "")}>
             {this.props.content}
             <ProfilesWrapper>
@@ -124,9 +128,19 @@ const ModalTitle = styled.p`
   font-weight: bold;
   font-size: 24px;
   line-height: 26px;
-  margin: 0;
+  margin: 0 0 0 16px;
   color: #333333;
   display: inline-block;
+`;
+
+const SmallMarble = styled(Img)`
+  width: 40px !important;
+  height: 40px !important;
+`;
+
+const ModalTitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const ModalContent = styled.p`

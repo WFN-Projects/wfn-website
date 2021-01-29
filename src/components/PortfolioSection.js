@@ -47,7 +47,8 @@ class Portfolio extends React.Component {
           teamMembers={this.props.teamMembers} 
           closeModal={this.handleClick.bind(this)} 
           name={this.props.name} 
-          content={this.props.children} />
+          content={this.props.children} 
+          marble={this.props.image} />
       </PortfolioWrapper>
     )
   }
