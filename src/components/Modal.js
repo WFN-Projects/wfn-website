@@ -107,6 +107,7 @@ const ModalWrapper = styled.div`
   visibility: hidden;
   overflow: scroll;
   z-index: 99;
+  cursor: auto;
 `;
 
 const ModalContentWrapper = styled.div`
