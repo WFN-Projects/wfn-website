@@ -7,8 +7,7 @@ import gsap from "gsap"
 class Portfolio extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {modalOpen: false}
-    this.modal = React.createRef()
+    this.state = { modalOpen: false }
   }
 
   openModal() {
@@ -17,7 +16,7 @@ class Portfolio extends React.Component {
     var tl = gsap.timeline()
     tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 1})
     tl.to(`#${this.props.name}_modalContentWrapper`.replace(/\s/g, ""), {duration: 0.25, opacity: 1, scale: 1, ease: "back"})
-    this.setState({modalOpen: true})
+    this.setState({ modalOpen: true })
   } 
 
   closeModal() {
@@ -26,7 +25,7 @@ class Portfolio extends React.Component {
     tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 0})
     document.body.style.height = null
     document.body.style.overflow = null
-    this.setState({modalOpen: false})
+    this.setState({ modalOpen: false })
   }
 
   handleClick() {
@@ -46,7 +45,8 @@ class Portfolio extends React.Component {
           closeModal={this.handleClick.bind(this)} 
           name={this.props.name} 
           content={this.props.children} 
-          marble={this.props.image} />
+          marble={this.props.image}
+        />
       </PortfolioWrapper>
     )
   }

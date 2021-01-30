@@ -9,7 +9,9 @@ const Profile = (props) => {
         <ProfileImage loading="eager" fixed={props.image} draggable={false}/>
       </ProfileImageWrapper>
       <ProfileName>{props.name}</ProfileName>
-      {props.position && <ProfilePosition>{props.position}</ProfilePosition>}
+      {props.position && 
+        <ProfilePosition>{props.position}</ProfilePosition>
+      }
     </ProfileWrapper>
   )
 }
@@ -30,8 +32,8 @@ const ProfileImageWrapper = styled.div`
 `;
 
 const ProfileImage = styled(Img)`
-  clip-path: circle(); // Should ask pics to be submitted as cicle PNGs
-  width: 110px;         // Has to be set a bit wider to work properly in Safari
+  clip-path: circle();
+  width: 110px;
   height: 109.58px;
 `;
 

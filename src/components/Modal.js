@@ -42,17 +42,15 @@ class Modal extends React.Component {
               width={20}
               height={20}
               strokeWidth={3}
-              rotate={0}
               color="black"
-              borderRadius={0}
-              animationDuration={0.5}
             />
           </HamburgerMenuContainer>
           { this.state.showArrow &&
             <Arrow>
               <i 
                 id={`${this.props.name}_modalArrow`.replace(/\s/g, "")} 
-                class='bx bx-down-arrow-circle bx-md' />
+                class='bx bx-down-arrow-circle bx-md' 
+              />
             </Arrow>
           }
           <ModalTitleWrapper>
@@ -121,6 +119,7 @@ const ModalContentWrapper = styled.div`
   position: relative;
   opacity: 0;
   transform: scale(0, 0);
+  max-width: 1000px;
 `;
 
 const ModalTitle = styled.p`
