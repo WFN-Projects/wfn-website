@@ -36,7 +36,10 @@ class NavButton extends React.Component {
         return (
           <SubMenuRow>
             <td>
-              <Link to={`/`} style={{textDecoration: "none", color: "black"}}>
+              <Link 
+                to={"/" + element.replace(" ", "").toLowerCase()}
+                style={{textDecoration: "none", color: "black"}}
+              >
                 {element}
               </Link>
             </td>
@@ -57,7 +60,8 @@ class NavButton extends React.Component {
         </Link>
         <SubMenuTable 
           id={`${this.props.mainOption}_submenu`} 
-          className="submenu">
+          className="submenu"
+        >
           {subOptions}
         </SubMenuTable>
       </div>
