@@ -2,12 +2,29 @@ import React from "react"
 import styled from "styled-components";
 import HamburgerMenu from "react-hamburger-menu"
 import Profile from "./ProfilePic"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
+import gsap from "gsap"
 
 class Modal extends React.Component {
   constructor(props) {
     super(props)
     this.state = { showArrow: false }
+  }
+
+  openModal() {
+    document.body.style.height = "100vh"
+    document.body.style.overflow = "hidden"
+    var tl = gsap.timeline()
+    tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 1})
+    tl.to(`#${this.props.name}_modalContentWrapper`.replace(/\s/g, ""), {duration: 0.25, opacity: 1, scale: 1, ease: "back"})
+  } 
+
+  closeModal() {
+    var tl = gsap.timeline()
+    tl.to(`#${this.props.name}_modalContentWrapper`.replace(/\s/g, ""), {duration: 0.25, opacity: 0, scale: 0, ease: "power2"})
+    tl.to(`#${this.props.name}_modal`.replace(/\s/g, ""), {duration: 0.15, autoAlpha: 0})
+    document.body.style.height = null
+    document.body.style.overflow = null
   }
 
   determineShowArrow() {
@@ -39,7 +56,7 @@ class Modal extends React.Component {
           <HamburgerMenuContainer>
             <HamburgerMenu
               isOpen={true}
-              menuClicked={this.props.closeModal}
+              menuClicked={this.closeModal.bind(this)}
               width={20}
               height={20}
               strokeWidth={3}
