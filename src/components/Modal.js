@@ -12,7 +12,8 @@ class Modal extends React.Component {
 
   determineShowArrow() {
     const modalContent = document.getElementById(`${this.props.name}_modalContent`.replace(/\s/g, ""))
-
+    if (!modalContent) { return }
+    
     if (modalContent.scrollHeight > modalContent.clientHeight) {
       this.setState({ showArrow: true })
     } else if (modalContent.scrollHeight <= modalContent.clientHeight) {
