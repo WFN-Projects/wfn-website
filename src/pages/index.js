@@ -91,24 +91,24 @@ const IndexPage = () => {
 
 export default IndexPage
 
-const Content = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   margin: 8vw 12vw 0 12vw;
 `
-const WhoWeAre = styled.div`
+export const WhoWeAre = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 8vw;
 `
-const WhoWeAreText = styled.div`
+export const WhoWeAreText = styled.div`
   flex: 50%;
   @media ${device.maxMobileL} {
     margin-bottom: 8vw;
   }
 `
-const WhoWeAreVideo = styled.div`
+export const WhoWeAreVideo = styled.div`
   flex: 50%;
 `
 const WhoWeAreButtons = styled.div`
