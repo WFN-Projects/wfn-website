@@ -56,20 +56,25 @@ const AboutUsPage = () => {
           <WhoWeAre>
             <WhoWeAreText>
               <H1>Club Mission 🎯</H1>
-              <P>Founders Network is a community built on the passion of those excited to shape our future. We focus on the following three pillars: Technology, Business, and Entrepreneurship. We are the club that strategizes how to bring you the valuable skills and insider knowledge you need to reach your ideals. The insights, connections, and community available only outside of standard lectures and networking events. Our goal is to ensure that you never leave a WFN event without discovering something that brings you closer to your goals and leaves you hungry for more. Whether you’re mastering your first technology like Python, or seeking to change the fabric of society, Founders Network is the community for you. We are curious, skilled and ready to be at the leading edge of technology and business revolutions.  </P>
+              <div className="whoWeAreTextContainer">
+                <P>Founders Network is a community built on the passion of those excited to shape our future. We focus on the following three pillars: Technology, Business, and Entrepreneurship. We are the club that strategizes how to bring you the valuable skills and insider knowledge you need to reach your ideals. The insights, connections, and community available only outside of standard lectures and networking events. Our goal is to ensure that you never leave a WFN event without discovering something that brings you closer to your goals and leaves you hungry for more. Whether you’re mastering your first technology like Python, or seeking to change the fabric of society, Founders Network is the community for you. We are curious, skilled and ready to be at the leading edge of technology and business revolutions.  </P>
+              </div>
             </WhoWeAreText>
             <WhoWeAreVideo>
-              <Img draggable="false" fluid={data.clubMission.childImageSharp.fluid} />
+              <Img className="rounded" draggable="false" fluid={data.clubMission.childImageSharp.fluid} />
             </WhoWeAreVideo>
           </WhoWeAre>
           <WhoWeAre>
             <WhoWeAreVideo>
-              <Img draggable="false" fluid={data.meetOurTeam.childImageSharp.fluid} />
+              <Img className="rounded" draggable="false" fluid={data.meetOurTeam.childImageSharp.fluid} />
             </WhoWeAreVideo>
             <WhoWeAreText>
               <H1>Meet Our Team</H1>
-              <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus nunc id arcu ultricies ut massa nunc. Vulputate leo velit, est dictum et amet quam ac. Malesuada quisque diam consectetur non. Tortor metus, volutpat mauris ultrices imperdiet turpis. Adipiscing malesuada aliquam mauris posuere a, nibh ornare. Ut amet, consectetur sapien enim consequat nam. Neque dignissim morbi feugiat blandit id.
+              {/* need to add some spacking here. */}
+              {/* <div className="whoWeAreTextContainer"> */}
+                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus nunc id arcu ultricies ut massa nunc. Vulputate leo velit, est dictum et amet quam ac. Malesuada quisque diam consectetur non. Tortor metus, volutpat mauris ultrices imperdiet turpis. Adipiscing malesuada aliquam mauris posuere a, nibh ornare. Ut amet, consectetur sapien enim consequat nam. Neque dignissim morbi feugiat blandit id.
             Id ultricies nunc turpis eleifend pellentesque habitant feugiat mattis elementum. Cras.</P>
+              {/* </div> */}
             </WhoWeAreText>
           </WhoWeAre>
         </Content>

@@ -44,3 +44,6 @@ body {
 .whoWeAreTextContainer {
     width: 90%;
 }
+.rounded {
+    border-radius: 8px;
+}
