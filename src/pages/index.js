@@ -6,6 +6,7 @@ import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage"
 import { Theme, device, H2, P, BackgroundShading } from "../styles/Global"
 import H1 from "../styles/H1"
+import TextMediaDiv from "../components/TextMediaDiv"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
@@ -38,7 +39,7 @@ const IndexPage = () => {
     }
   `)
 
-  const isLargeEnough = useMedia({minWidth: 1440});
+  const isLargeEnough = useMedia({ minWidth: 1440 });
 
   return (
     <ThemeProvider theme={Theme}>
@@ -48,18 +49,18 @@ const IndexPage = () => {
           <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
         </BackgroundImage>
         <Content>
-          <WhoWeAre>
-            <WhoWeAreText>
-              <H1>Who We Are 🚀</H1>
+          <TextMediaDiv>
+            <TextDiv>
               <div className="whoWeAreTextContainer">
+                <H1>Who We Are 🚀</H1>
                 <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
+                <WhoWeAreButtons>
+                  <Button text="Our Initiatives" />
+                  <ButtonInverted text="Meet the Team" />
+                </WhoWeAreButtons>
               </div>
-              <WhoWeAreButtons>
-                <Button text="Our Initiatives" />
-                <ButtonInverted text="Meet the Team" />
-              </WhoWeAreButtons>
-            </WhoWeAreText>
-            <WhoWeAreVideo>
+            </TextDiv>
+            <MediaDiv>
               <div className="container">
                 <iframe
                   className="responsive-iframe"
@@ -68,8 +69,8 @@ const IndexPage = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen />
               </div>
-            </WhoWeAreVideo>
-          </WhoWeAre>
+            </MediaDiv>
+          </TextMediaDiv>
           <UpcomingEvents>
             <H1>Upcoming Events 📅</H1>
           </UpcomingEvents>
@@ -96,19 +97,13 @@ export const Content = styled.div`
   flex-direction: column;
   margin: 8vw 12vw 0 12vw;
 `
-export const WhoWeAre = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 8vw;
-`
-export const WhoWeAreText = styled.div`
+export const TextDiv = styled.div`
   flex: 50%;
   @media ${device.maxMobileL} {
     margin-bottom: 8vw;
   }
 `
-export const WhoWeAreVideo = styled.div`
+export const MediaDiv = styled.div`
   flex: 50%;
 `
 const WhoWeAreButtons = styled.div`
