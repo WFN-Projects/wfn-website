@@ -12,15 +12,7 @@ import BackgroundImage from "../components/BackgroundImage.js"
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
     query Join {
-      hero: file(relativePath: {eq: "test.jpg"}) {
-        id
-        childImageSharp {
-          fluid(quality:100) {
-            ...GatsbyImageSharpFluid
-          }
-        },
-      }
-      image1: file(relativePath: {eq: "HeaderBackground.png"}) {
+      becomeAMember: file(relativePath: {eq: "BecomeAMember.png"}) {
         id
         childImageSharp {
           fluid(quality:100) {
@@ -33,7 +25,7 @@ const JoinUs = () => {
 
   return (
     <ThemeProvider theme={Theme}>
-      <BackgroundImage fluid={data.hero.childImageSharp.fluid}>
+      <BackgroundImage fluid={data.becomeAMember.childImageSharp.fluid}>
         <H1 center white>Become a Member</H1>
         <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
         <Button text="Get Your Membership" />
@@ -41,21 +33,21 @@ const JoinUs = () => {
       <H1 center>Why WFN?</H1>
       <WhyWFN>
         <WhyWFNCard>
-          <WhyWFMImg fluid={data.image1.childImageSharp.fluid} />
+          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
           <H3>Community</H3>
           <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </P>
         </WhyWFNCard>
         <WhyWFNCard>
-          <WhyWFMImg fluid={data.image1.childImageSharp.fluid} />
+          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
           <H3>Learning</H3>
           <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </P>
         </WhyWFNCard>
         <WhyWFNCard>
-          <WhyWFMImg fluid={data.image1.childImageSharp.fluid} />
+          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
           <H3>Exclusive Access</H3>
           <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
