@@ -12,6 +12,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import StatsItem from "../components/StatsItem"
 import "../styles/Global.css"
+import TextDivContainer from "../components/TextDivContainer"
 
 const AboutUsPage = () => {
   const data = useStaticQuery(graphql`
@@ -45,7 +46,6 @@ const AboutUsPage = () => {
         <H1 center white>About Us</H1>
         <H2>Technology. Business. Entrepreneurship.</H2>
       </BackgroundImage>
-
       <Stats>
         <StatsItem top="600+" bottom="Members" />
         <StatsItem top="35+" bottom="Events" />
@@ -56,10 +56,10 @@ const AboutUsPage = () => {
         <Content>
           <TextMediaDiv>
             <TextDiv>
-            <div className="whoWeAreTextContainer">
-              <H1>Club Mission 🎯</H1>
+              <TextDivContainer right>
+                <H1>Club Mission 🎯</H1>
                 <P>Founders Network is a community built on the passion of those excited to shape our future. We focus on the following three pillars: Technology, Business, and Entrepreneurship. We are the club that strategizes how to bring you the valuable skills and insider knowledge you need to reach your ideals. The insights, connections, and community available only outside of standard lectures and networking events. Our goal is to ensure that you never leave a WFN event without discovering something that brings you closer to your goals and leaves you hungry for more. Whether you’re mastering your first technology like Python, or seeking to change the fabric of society, Founders Network is the community for you. We are curious, skilled and ready to be at the leading edge of technology and business revolutions.  </P>
-              </div>
+              </TextDivContainer>
             </TextDiv>
             <MediaDiv>
               <Img className="rounded" draggable="false" fluid={data.clubMission.childImageSharp.fluid} />
@@ -70,12 +70,12 @@ const AboutUsPage = () => {
               <Img className="rounded" draggable="false" fluid={data.meetOurTeam.childImageSharp.fluid} />
             </MediaDiv>
             <TextDiv>
-              <div className="whoWeAreTextContainerLeft">
+              <TextDivContainer left>
                 <H1>Meet Our Team</H1>
                 <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus nunc id arcu ultricies ut massa nunc. Vulputate leo velit, est dictum et amet quam ac. Malesuada quisque diam consectetur non. Tortor metus, volutpat mauris ultrices imperdiet turpis. Adipiscing malesuada aliquam mauris posuere a, nibh ornare. Ut amet, consectetur sapien enim consequat nam. Neque dignissim morbi feugiat blandit id.
             Id ultricies nunc turpis eleifend pellentesque habitant feugiat mattis elementum. Cras.</P>
-                <Button text="Team"/>
-              </div>
+                <Button text="Team" />
+              </TextDivContainer>
             </TextDiv>
           </TextMediaDiv>
         </Content>
