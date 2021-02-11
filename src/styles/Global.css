@@ -42,5 +42,11 @@ body {
     height: 100%;
 }
 .whoWeAreTextContainer {
-    width: 90%;
+    margin-right: 10%;
+}
+.whoWeAreTextContainerLeft {
+    margin-left: 10%;
+}
+.rounded {
+    border-radius: 8px;
 }
