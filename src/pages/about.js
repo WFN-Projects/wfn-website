@@ -7,7 +7,7 @@ import BackgroundImage from "../components/BackgroundImage"
 import { Theme, H2, P, device, BackgroundShading } from "../styles/Global.js"
 import { WhoWeAre, WhoWeAreText, WhoWeAreVideo, Content } from "./index"
 import H1 from "../styles/H1"
-import TextMedia from "../styles/TextMedia"
+import TextMediaDiv from "../styles/TextMediaDiv"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import StatsItem from "../components/StatsItem"
@@ -54,7 +54,7 @@ const AboutUsPage = () => {
       </Stats>
       <BackgroundShading>
         <Content>
-          <TextMedia>
+          <TextMediaDiv>
             <WhoWeAreText>
               <H1>Club Mission 🎯</H1>
               <div className="whoWeAreTextContainer">
@@ -64,8 +64,8 @@ const AboutUsPage = () => {
             <WhoWeAreVideo>
               <Img className="rounded" draggable="false" fluid={data.clubMission.childImageSharp.fluid} />
             </WhoWeAreVideo>
-          </TextMedia>
-          <TextMedia left>
+          </TextMediaDiv>
+          <TextMediaDiv left>
             <WhoWeAreVideo>
               <Img className="rounded" draggable="false" fluid={data.meetOurTeam.childImageSharp.fluid} />
             </WhoWeAreVideo>
@@ -74,9 +74,10 @@ const AboutUsPage = () => {
                 <H1>Meet Our Team</H1>
                 <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus nunc id arcu ultricies ut massa nunc. Vulputate leo velit, est dictum et amet quam ac. Malesuada quisque diam consectetur non. Tortor metus, volutpat mauris ultrices imperdiet turpis. Adipiscing malesuada aliquam mauris posuere a, nibh ornare. Ut amet, consectetur sapien enim consequat nam. Neque dignissim morbi feugiat blandit id.
             Id ultricies nunc turpis eleifend pellentesque habitant feugiat mattis elementum. Cras.</P>
+                <Button text="Team"/>
               </div>
             </WhoWeAreText>
-          </TextMedia>
+          </TextMediaDiv>
         </Content>
       </BackgroundShading>
     </ThemeProvider>

@@ -1,17 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 
-const TextMedia = ({left, children}) => {
+const TextMediaDiv = ({left, children}) => {
     return (
-        <StyledTextMedia left={left}>{children}</StyledTextMedia>
+        <StyledTextMediaDiv left={left}>{children}</StyledTextMediaDiv>
     )
 }
 
-export default TextMedia
+export default TextMediaDiv
 
-const StyledTextMedia = styled.div`
+const StyledTextMediaDiv = styled.div`
   display: flex;
-  background-color: blue;
   flex-wrap: ${props => props.left ? "wrap-reverse":"wrap"};
   align-items: center;
   margin-bottom: 8vw;
