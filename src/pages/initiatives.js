@@ -19,7 +19,14 @@ import { Content } from "../pages/index"
 const InitiativesPage = () => {
     const data = useStaticQuery(graphql`
         query Initiatives {
-            squiggle: file(relativePath: {eq: "squiggleL.png"}) {
+            squiggleL: file(relativePath: {eq: "SquiggleL.png"}) {
+                childImageSharp {
+                    fluid(quality:100) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+            squiggleR: file(relativePath: {eq: "SquiggleR.png"}) {
                 childImageSharp {
                     fluid(quality:100) {
                         ...GatsbyImageSharpFluid
@@ -48,11 +55,12 @@ const InitiativesPage = () => {
     return (
         <ThemeProvider theme={Theme}>
             <BackgroundShading>
-                <BackgroundImage fluid={data.initiatives.childImageSharp.fluid}>
+                {/* <BackgroundImage fluid={data.initiatives.childImageSharp.fluid}>
                     <H1 center white>Our Initiatives</H1>
-                </BackgroundImage>
+                </BackgroundImage> */}
                 <div className="random">
-                    {isLargeEnough && <Img className="squiggle" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggle.childImageSharp.fluid}/> }
+                    {isLargeEnough && <Img className="squiggleL" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleL.childImageSharp.fluid}/> }
+                    {isLargeEnough && <Img className="squiggleR" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleR.childImageSharp.fluid}/> }
                     <Content>
                         <H1 center>View Our Initiatives</H1>
                         <ButtonRow>

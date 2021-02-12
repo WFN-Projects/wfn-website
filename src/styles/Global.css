@@ -59,9 +59,14 @@ body {
         height: 511px;
     }
 }
-.squiggle {
+.squiggleL {
     left:-100px;
     width:465px;
+}
+.squiggleR {
+    right:0;
+    top:15%;
+    width:442.3px;
 }
 .random {
     position:relative;
