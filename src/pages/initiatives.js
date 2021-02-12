@@ -55,9 +55,9 @@ const InitiativesPage = () => {
     return (
         <ThemeProvider theme={Theme}>
             <BackgroundShading>
-                {/* <BackgroundImage fluid={data.initiatives.childImageSharp.fluid}>
+                <BackgroundImage fluid={data.initiatives.childImageSharp.fluid}>
                     <H1 center white>Our Initiatives</H1>
-                </BackgroundImage> */}
+                </BackgroundImage>
                 <div className="random">
                     {isLargeEnough && <Img className="squiggleL" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleL.childImageSharp.fluid}/> }
                     {isLargeEnough && <Img className="squiggleR" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleR.childImageSharp.fluid}/> }
