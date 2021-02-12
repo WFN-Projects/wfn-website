@@ -50,3 +50,12 @@ body {
 .rounded {
     border-radius: 8px;
 }
+.overview {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    @media only screen and (min-width: 1024px) {
+        width: 310px;
+        height: 511px;
+    }
+}

@@ -42,15 +42,15 @@ const InitiativesPage = () => {
                     <H1 center white>Our Initiatives</H1>
                 </BackgroundImage>
                 <Content>
-                    <H1 center>View Our Initiatives</H1>
+                    {/* <H1 center>View Our Initiatives</H1>
                     <ButtonRow>
                         <Button className="buttonThing" text="Upcoming" />
                         <Button className="buttonThing" text="Flagship" />
                         <Button className="buttonThing" text="Community" />
-                    </ButtonRow>
+                    </ButtonRow> */}
                     <H1 center>Overview</H1>
                     <OverviewCard>
-                        <Img fluid={data.competitions.childImageSharp.fluid} objectFit="nones" />
+                        <Img className="overview" fluid={data.competitions.childImageSharp.fluid} objectFit="cover" />
                         <OverviewText>
                             <H2 center white bold>Competitions</H2>
                             <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
@@ -79,13 +79,17 @@ const ButtonRow = styled.div`
 `
 const OverviewCard = styled.div`
     position: relative;
-    margin: 2.5% 0 2.5% 0;
-    //background-color:red;
+    margin: 2.5% auto 2.5% auto;
+    @media ${device.minLaptop} {
+        height: auto;
+        width: 100%;
+    }
+    height: 511px; //Hmm maybe there's a better way than hard coding these pixels
+    min-width: 310px;
 `
 const OverviewText = styled.div`
     position: absolute;
     top: 0%;
     left: 10%;
     width: 80%;
-    //background-color:blue;
 `
