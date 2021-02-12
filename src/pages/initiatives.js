@@ -13,12 +13,19 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
 import useMedia from "use-media"
-import Image from "../images/Competitions.png"
+import Image from "../images/squiggleL.png"
 import { Content } from "../pages/index"
 
 const InitiativesPage = () => {
     const data = useStaticQuery(graphql`
         query Initiatives {
+            squiggle: file(relativePath: {eq: "squiggleL.png"}) {
+                childImageSharp {
+                    fluid(quality:100) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
             initiatives: file(relativePath: {eq: "Initiatives.png"}) {
                 childImageSharp {
                     fluid(quality:100) {
@@ -35,28 +42,34 @@ const InitiativesPage = () => {
             }
         }
     `)
+    
+    const isLargeEnough = useMedia({minWidth: 1440})
+
     return (
         <ThemeProvider theme={Theme}>
             <BackgroundShading>
                 <BackgroundImage fluid={data.initiatives.childImageSharp.fluid}>
                     <H1 center white>Our Initiatives</H1>
                 </BackgroundImage>
-                <Content>
-                    {/* <H1 center>View Our Initiatives</H1>
-                    <ButtonRow>
-                        <Button className="buttonThing" text="Upcoming" />
-                        <Button className="buttonThing" text="Flagship" />
-                        <Button className="buttonThing" text="Community" />
-                    </ButtonRow> */}
-                    <H1 center>Overview</H1>
-                    <OverviewCard>
-                        <Img className="overview" fluid={data.competitions.childImageSharp.fluid} objectFit="cover" />
-                        <OverviewText>
-                            <H2 center white bold>Competitions</H2>
-                            <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
-                        </OverviewText>
-                    </OverviewCard>
-                </Content>
+                <div className="random">
+                    {isLargeEnough && <Img className="squiggle" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggle.childImageSharp.fluid}/> }
+                    <Content>
+                        <H1 center>View Our Initiatives</H1>
+                        <ButtonRow>
+                            <Button text="Upcoming" />
+                            <Button text="Flagship" />
+                            <Button text="Community" />
+                        </ButtonRow>
+                        <H1 center>Overview</H1>
+                        <OverviewCard>
+                            <Img className="overview" fluid={data.competitions.childImageSharp.fluid} objectFit="cover" />
+                            <OverviewText>
+                                <H2 center white bold>Competitions</H2>
+                                <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                            </OverviewText>
+                        </OverviewCard>
+                    </Content>
+                </div>
             </BackgroundShading>
         </ThemeProvider>
     )
@@ -69,12 +82,11 @@ const ButtonRow = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 3% 0 3% 0;
+    margin: 3% 0 10% 0;
     gap: 2%;
-    @media ${device.maxTablet} {
+    @media ${device.maxLaptop} {
         display: grid;
         row-gap: 10%;
-        background-color:red;
     }
 `
 const OverviewCard = styled.div`
@@ -84,8 +96,8 @@ const OverviewCard = styled.div`
         height: auto;
         width: 100%;
     }
-    height: 511px; //Hmm maybe there's a better way than hard coding these pixels
-    min-width: 310px;
+    height: 511px;
+    width: 310px;
 `
 const OverviewText = styled.div`
     position: absolute;
