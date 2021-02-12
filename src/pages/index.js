@@ -96,6 +96,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   margin: 8vw 12vw 0 12vw;
+  //background-color:blue;
 `
 export const TextDiv = styled.div`
   flex: 50%;
