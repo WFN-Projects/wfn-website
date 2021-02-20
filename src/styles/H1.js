@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-const StyledH1 = styled.h1`
+export const StyledH1 = styled.h1`
     font-size: ${props => props.theme.fontLarge};
     text-align: ${props => props.center ? "center":"initial"};
     font-weight: bold;

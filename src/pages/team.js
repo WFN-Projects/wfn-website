@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components"
 import Profile from "../components/ProfilePic";
 import BackgroundImage from "../components/BackgroundImage";
 import { Theme, H2 } from "../styles/Global.js";
-import H1 from "../styles/H1"
+import { StyledH1 } from "../styles/H1"
 import Portfolio from "../components/PortfolioSection"
 import "../styles/Global.css";
 import Query from "../GraphQLQueries/TeamPageQuery"
@@ -18,12 +18,12 @@ const Team = () => {
         <H2>Meet the executive team of 2020-2021</H2>
       </BackgroundImage>
       <Content>
-        <SectionHeader>Presidents</SectionHeader>
+        <SectionHeader center={true}>Presidents</SectionHeader>
         <Presidents>
           <Profile image={data.amandaAdam.childImageSharp.fixed} name="Amanda Adam" position="President" />
           <Profile image={data.krishGandhi.childImageSharp.fixed} name="Krish Gandhi" position="President" />
         </Presidents>
-        <SectionHeader>Portfolios</SectionHeader>
+        <SectionHeader center={true} >Portfolios</SectionHeader>
         <SubHeader>Click to learn more!</SubHeader>
         <Portfolios>
           <Portfolio image={data.futureview.childImageSharp.fixed} name="Future View" teamMembers={data.FutureViewTeam}>
@@ -66,20 +66,11 @@ const Content = styled.div`
   margin-right: 5vw;
 `;
 
-const SectionHeader = styled.p`
-  height: 54px;
-  font-family: Archivo;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 39px;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 0;
+const SectionHeader = styled(StyledH1)`
+  margin: revert;
 `;
 
-const SubHeader = styled.p`
-  font-family: Archivo;
+const SubHeader = styled(H2)`
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
