@@ -1,6 +1,5 @@
 import * as React from "react";
-import { ThemeProvider } from "styled-components";
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import Profile from "../components/ProfilePic";
 import BackgroundImage from "../components/BackgroundImage";
 import { Theme, H2 } from "../styles/Global.js";

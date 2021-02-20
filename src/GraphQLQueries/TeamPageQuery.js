@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React from 'react'
+import React from "react"
 
 export const PortfolioProfileFragment = graphql`
   fragment portfolioProfile on File {
@@ -11,7 +11,6 @@ export const PortfolioProfileFragment = graphql`
     }
   }
   fragment marble on File {
-    id
     childImageSharp {
       fixed(quality:100, width: 150, height: 150, webpQuality: 100) {
         ...GatsbyImageSharpFixed
@@ -24,7 +23,6 @@ const Query = () => {
   const data = useStaticQuery(graphql`
     query Team {
       headerBackground: file(relativePath: {eq: "teamPicture.png"}) {
-        id
         childImageSharp {
           fluid(quality:100) {
             ...GatsbyImageSharpFluid
@@ -32,7 +30,6 @@ const Query = () => {
         }
       }
       amandaAdam: file(relativePath: {eq: "profilePicImges/AmandaAdam.png"}) {
-        id
         childImageSharp {
           fixed(quality:100, width: 150) {
             ...GatsbyImageSharpFixed
@@ -40,7 +37,6 @@ const Query = () => {
         }
       }
       krishGandhi: file(relativePath: {eq: "profilePicImges/KrishGandhi.jpg"}) {
-        id
         childImageSharp {
           fixed(quality:100, width: 150) {
             ...GatsbyImageSharpFixed
