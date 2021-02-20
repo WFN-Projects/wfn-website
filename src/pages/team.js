@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components"
 import Profile from "../components/ProfilePic";
 import BackgroundImage from "../components/BackgroundImage";
 import { Theme, H2 } from "../styles/Global.js";
-import { StyledH1 } from "../styles/H1"
+import H1, { StyledH1 } from "../styles/H1"
 import Portfolio from "../components/PortfolioSection"
 import "../styles/Global.css";
 import Query from "../GraphQLQueries/TeamPageQuery"
