@@ -8,18 +8,25 @@ import H1 from "../styles/H1"
 import { Theme , H3, P} from "../styles/Global"
 import "../styles/Global.css"
 import BackgroundImage from "../components/BackgroundImage.js"
+import FamilyCard from "../components/Family"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
     query Join {
       becomeAMember: file(relativePath: {eq: "BecomeAMember.png"}) {
-        id
         childImageSharp {
           fluid(quality:100) {
             ...GatsbyImageSharpFluid
           }
         },
       }
+      family:file(relativePath: {eq: "Family.png"}) {
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        },
+      } 
     }
   `)
 
@@ -54,6 +61,12 @@ const JoinUs = () => {
           </P>
         </WhyWFNCard>
       </WhyWFN>
+      <H1 center>Hear it from the family ❤️</H1>
+      <FamilyCard 
+        height="247px"
+        width="181px"
+        fluid={data.family.childImageSharp.fluid}
+      ></FamilyCard>
     </ThemeProvider>
   )
 }
@@ -68,15 +81,13 @@ const PageSubTitle = styled.p`
   line-height: 140%;
   text-align: center;
   max-width: 787px;
-`;
-
+`
 const WhyWFN = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 5vw;
-`;
-
+`
 const WhyWFNCard = styled.div`
   width: 30%;
   min-width: 300px;
@@ -86,8 +97,7 @@ const WhyWFNCard = styled.div`
   @media only screen and (max-width: 664px) {
     width: 80%;
   }
-`;
-
+`
 const WhyWFMImg = styled(Img)`
   border-radius: 8px;
-`;
+`
