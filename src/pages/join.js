@@ -63,6 +63,7 @@ const JoinUs = () => {
           </WhyWFNCard>
         </WhyWFN>
         <H1 center>Hear it from the family ❤️</H1>
+        <div style={{margin:"auto"}}>
         <StyledHeartGrid>
           <BM>
             <FamilyCard fluid={data.family.childImageSharp.fluid} />
@@ -89,6 +90,8 @@ const JoinUs = () => {
             <FamilyCard fluid={data.family.childImageSharp.fluid} />
           </FR>
         </StyledHeartGrid>
+        </div>
+        
       </Content>
     </ThemeProvider>
   )
@@ -123,40 +126,50 @@ const WhyWFMImg = styled(Img)`
   border-radius: 8px;
 `
 const StyledHeartGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(5, 196px);
-    grid-template-rows: repeat(5, 135px);
-    gap: 0px 0px;
-    grid-template-areas:
-    ". lt . rt ."
-    "fl lt tm rt fr"
-    "fl lb tm rb fr"
-    ". lb bm rb ."
-    ". . bm . .";
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(5, 196px);
+  grid-template-rows: repeat(5, 135px);
+  gap: 0px 0px;
+  grid-template-areas:
+  ". lt . rt ."
+  "fl lt tm rt fr"
+  "fl lb tm rb fr"
+  ". lb bm rb ."
+  ". . bm . .";
 `
 const BM = styled.div`
-  grid-area:bm;
+  grid-area: bm;
+  place-self: center;
 `
 const TM = styled.div`
-  grid-area:tm;
+  grid-area: tm;
+  place-self: center;
 `
 const LT = styled.div`
-  grid-area:lt;
+  grid-area: lt;
+  place-self: center;
 `
 const LB = styled.div`
-  grid-area:lb;
+  grid-area: lb;
+  place-self: center;
 `
 const FL = styled.div`
-  grid-area:fl;
+  grid-area: fl;
+  place-self: center;
 `
 const RT = styled.div`
-  grid-area:rt;
+  grid-area: rt;
+  place-self: center;
 `
 const RB = styled.div`
-  grid-area:rb;
+  grid-area: rb;
+  place-self: center;
 `
 const FR = styled.div`
-  grid-area:fr;
+  grid-area: fr;
+  place-self: center;
 `
 const Content = styled.div`
   margin: 8vw 12vw 0 12vw;
