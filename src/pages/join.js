@@ -38,56 +38,58 @@ const JoinUs = () => {
         <Button text="Get Your Membership" />
       </BackgroundImage>
       <H1 center>Why WFN?</H1>
-      <WhyWFN>
-        <WhyWFNCard>
-          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
-          <H3>Community</H3>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+      <Content>
+        <WhyWFN>
+          <WhyWFNCard>
+            <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
+            <H3>Community</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </P>
-        </WhyWFNCard>
-        <WhyWFNCard>
-          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
-          <H3>Learning</H3>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+          </WhyWFNCard>
+          <WhyWFNCard>
+            <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
+            <H3>Learning</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </P>
-        </WhyWFNCard>
-        <WhyWFNCard>
-          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
-          <H3>Exclusive Access</H3>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+          </WhyWFNCard>
+          <WhyWFNCard>
+            <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
+            <H3>Exclusive Access</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
           </P>
-        </WhyWFNCard>
-      </WhyWFN>
-      <H1 center>Hear it from the family ❤️</H1>
-      <StyledHeartGrid>
-        <BM>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </BM>
-        <TM>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </TM>
-        <LT>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </LT>
-        <LB>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </LB>
-        <FL>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </FL>
-        <RT>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </RT>
-        <RB>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </RB>
-        <FR>
-          <FamilyCard fluid={data.family.childImageSharp.fluid} />
-        </FR>
-      </StyledHeartGrid>
+          </WhyWFNCard>
+        </WhyWFN>
+        <H1 center>Hear it from the family ❤️</H1>
+        <StyledHeartGrid>
+          <BM>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </BM>
+          <TM>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </TM>
+          <LT>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </LT>
+          <LB>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </LB>
+          <FL>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </FL>
+          <RT>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </RT>
+          <RB>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </RB>
+          <FR>
+            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+          </FR>
+        </StyledHeartGrid>
+      </Content>
     </ThemeProvider>
   )
 }
@@ -107,7 +109,6 @@ const WhyWFN = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 5vw;
 `
 const WhyWFNCard = styled.div`
   width: 30%;
@@ -156,4 +157,7 @@ const RB = styled.div`
 `
 const FR = styled.div`
   grid-area:fr;
+`
+const Content = styled.div`
+  margin: 8vw 12vw 0 12vw;
 `
