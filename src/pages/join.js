@@ -63,10 +63,11 @@ const JoinUs = () => {
       </WhyWFN>
       <H1 center>Hear it from the family ❤️</H1>
       <FamilyCard 
-        height="247px"
         width="181px"
+        height="247px"
         fluid={data.family.childImageSharp.fluid}
-      ></FamilyCard>
+      >
+      </FamilyCard>
     </ThemeProvider>
   )
 }
