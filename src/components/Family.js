@@ -11,7 +11,11 @@ const FamilyCard = ({fluid}) => {
                 <FlipCardFront>
                     <Img className="rounded" draggable="false" fluid={fluid}/>
                 </FlipCardFront>
-                <FlipCardBack>Going to TCC was the best experience of my life! There were many kind mentors and volunteers who helped me and I would recommend this to everyone.</FlipCardBack>
+                <FlipCardBack>
+                    <p>
+                    Going to TCC was the best experience of my life! There were many kind mentors and volunteers who helped me and I would recommend this to everyone.
+                    </p>
+                </FlipCardBack>
             </FlipCardInner>
         </FlipCard>
     )
@@ -20,22 +24,18 @@ const FamilyCard = ({fluid}) => {
 export default FamilyCard
 
 const FlipCard = styled.div`
-    background-color: transparent;
+    position: relative;
     width: 181px;
     height: 247px;
-    &:hover {
-        transform: rotateY(180deg);
-    }
 `
 const FlipCardInner = styled.div`
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
+    transition: all 0.5s ease;
     transform-style: preserve-3d;
     &:hover {
-        transform: rotateY(180deg);
+        transform:rotateY(180deg);
     }
 `
 const FlipCardFront = styled.div`
@@ -44,7 +44,6 @@ const FlipCardFront = styled.div`
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    color: black;
 `
 const FlipCardBack = styled.div`
     position: absolute;
@@ -52,8 +51,13 @@ const FlipCardBack = styled.div`
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background-color: rgba(152, 148, 148, 0.33);
+    transform: rotateY(180deg);
+    background: #333333;
+    border-radius:8px;
     color: white;
-    /*transform: rotateY(180deg); Removing this somewhat works*/
-    border-radius: 8px;
+    p {
+        text-align: justify;
+        margin: 30px;
+    }
+    
 `
