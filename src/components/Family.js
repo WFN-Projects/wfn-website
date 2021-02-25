@@ -34,6 +34,8 @@ const FlipCardInner = styled.div`
     height: 100%;
     transition: all 0.5s ease;
     transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     &:hover {
         transform:rotateY(180deg);
     }
