@@ -66,7 +66,7 @@ const JoinUs = () => {
         <div style={{margin:"auto"}}>
         <StyledHeartGrid>
           <BM>
-            <FamilyCard fluid={data.family.childImageSharp.fluid} />
+            <FamilyCard fluid={data.family.childImageSharp.fluid}>Going to TCC was the best experience of my life! There were many kind mentors and volunteers who helped me and I would recommend this to everyone.</FamilyCard>
           </BM>
           <TM>
             <FamilyCard fluid={data.family.childImageSharp.fluid} />

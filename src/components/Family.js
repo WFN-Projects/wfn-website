@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import test from "../images/Family.png"
 
-const FamilyCard = ({fluid}) => {
+const FamilyCard = ({fluid, children}) => {
     return (
         <FlipCard>
             <FlipCardInner>
@@ -13,7 +13,7 @@ const FamilyCard = ({fluid}) => {
                 </FlipCardFront>
                 <FlipCardBack>
                     <p>
-                    Going to TCC was the best experience of my life! There were many kind mentors and volunteers who helped me and I would recommend this to everyone.
+                        {children}
                     </p>
                 </FlipCardBack>
             </FlipCardInner>
