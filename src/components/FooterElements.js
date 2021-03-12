@@ -14,6 +14,9 @@ export const FooterContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterInner = styled.section`
@@ -26,6 +29,9 @@ export const FooterInner = styled.section`
   margin-bottom: 24px;
   padding: 24px;
   color: ___CSS_0___;
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterLinkDiv = styled.div`
@@ -37,6 +43,9 @@ export const FooterLinkDiv = styled.div`
   margin-bottom: 0px;
   padding: 0px;
   color: ___CSS_0___;
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+  }
 `
 export const FooterFormDiv = styled.div`
   display: flex;
@@ -47,6 +56,9 @@ export const FooterFormDiv = styled.div`
   margin-bottom: 0px;
   padding: 0px;
   color: ___CSS_0___;
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+  }
 `
 export const InnerFormDiv = styled.div`
   float: left;
@@ -59,6 +71,9 @@ export const InnerFormDiv = styled.div`
   padding: 0px;
   width: 100%;
   color: ___CSS_0___;
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+  }
 `
 export const InnerButtonDiv = styled.div`
   float: right;
@@ -71,6 +86,9 @@ export const InnerButtonDiv = styled.div`
   padding: 0px;
   min-width: 240px;
   color: ___CSS_0___;
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+  }
 `
 
 export const FooterLinkSec = styled.section`
@@ -83,17 +101,10 @@ export const FooterLinkSec = styled.section`
   margin-bottom: 0px;
   padding: 0px;
   color: ___CSS_0___;
-`
-
-
-export const Form = styled.form`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 300px) {
     flex-direction: column;
   }
-`;
+`
 
 export const SocialMediaWrap = styled.div`
   display: flex;
@@ -101,9 +112,6 @@ export const SocialMediaWrap = styled.div`
   align-items: center;
   margin: 10px 0px 10px 0px;
   width: 300px;
-  @media screen and (max-width: 300px) {
-    flex-direction: column;
-  }
 `;
 
 

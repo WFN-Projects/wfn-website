@@ -3,22 +3,12 @@ import Button from "./Button";
 import { Link } from "gatsby"
 import {
   FooterContainer,
-  FooterSubscription,
-  FooterSubHeading,
-  FooterSubText,
-  FormInput,
   FooterInner,
-  FooterLeft,
-  FooterLink,
   FooterLinkDiv,
   FooterLinkSec,
   FooterFormDiv,
   InnerFormDiv,
   InnerButtonDiv,
-  FooterLinksContainer,
-  FooterLinksWrapper,
-  FooterLinkTitle,
-  SocialMedia,
   SocialMediaWrap,
   StyledLink
 } from "./FooterElements";
@@ -96,11 +86,11 @@ const Footer = () => {
               <H4>About us</H4>
                 <StyledLink to="/"><P>Club Mission</P></StyledLink>
                 <StyledLink to="/"><P>Team</P></StyledLink>
-                <StyledLink to="/"><P>Initiatives</P></StyledLink>
+                <StyledLink to="/initiatives"><P>Initiatives</P></StyledLink>
             </FooterLinkSec>
             <FooterLinkSec>
               <H4>Join us</H4>
-              <StyledLink to="/"><P>Buy a Membership</P></StyledLink>
+              <StyledLink to="/join"><P>Buy a Membership</P></StyledLink>
               <StyledLink to="/"><P>Become a Sponsor</P></StyledLink>
             </FooterLinkSec>
           </FooterLinkDiv>
