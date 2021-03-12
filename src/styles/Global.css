@@ -50,3 +50,8 @@ body {
 .rounded {
     border-radius: 8px;
 }
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
