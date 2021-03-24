@@ -59,8 +59,8 @@ const InitiativesPage = () => {
                     <H1 center white>Our Initiatives</H1>
                 </BackgroundImage>
                 <div className="random">
-                    {isLargeEnough && <Img className="squiggleL" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleL.childImageSharp.fluid}/> }
-                    {isLargeEnough && <Img className="squiggleR" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleR.childImageSharp.fluid}/> }
+                    {isLargeEnough && <Img className="squiggleL" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleL.childImageSharp.fluid}/>}
+                    {isLargeEnough && <Img className="squiggleR" style={{position:"absolute"}} objectFit="fill" fluid={data.squiggleR.childImageSharp.fluid}/>}
                     <Content>
                         <H1 center>View Our Initiatives</H1>
                         <ButtonRow>
