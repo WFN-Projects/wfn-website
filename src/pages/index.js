@@ -11,6 +11,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
 import useMedia from "use-media"
+import Footer from "../components/Footer";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -84,6 +85,7 @@ const IndexPage = () => {
               <Button text="Join Our Discord" />
             </JoinTheNetworkText>
           </JoinTheNetwork>
+          <Footer />
         </Content>
       </BackgroundShading>
     </ThemeProvider>

@@ -13,6 +13,7 @@ import styled from "styled-components"
 import StatsItem from "../components/StatsItem"
 import "../styles/Global.css"
 import TextDivContainer from "../components/TextDivContainer"
+import Footer from "../components/Footer"
 
 const AboutUsPage = () => {
   const data = useStaticQuery(graphql`
@@ -78,6 +79,7 @@ const AboutUsPage = () => {
               </TextDivContainer>
             </TextDiv>
           </TextMediaDiv>
+          <Footer />
         </Content>
       </BackgroundShading>
     </ThemeProvider>

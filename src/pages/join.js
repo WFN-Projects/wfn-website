@@ -8,6 +8,7 @@ import H1 from "../styles/H1"
 import { Theme , H3, P} from "../styles/Global"
 import "../styles/Global.css"
 import BackgroundImage from "../components/BackgroundImage.js"
+import Footer from "../components/Footer"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
@@ -54,11 +55,22 @@ const JoinUs = () => {
           </P>
         </WhyWFNCard>
       </WhyWFN>
+      <FooterContainer>
+        <Footer />
+      </FooterContainer>
     </ThemeProvider>
   )
 }
 
 export default JoinUs
+
+const FooterContainer = styled.div`
+  width: 75%;
+  min-width: 75%;
+  max-width: 75%;
+  margin: auto;
+  padding: 0;
+`
 
 const PageSubTitle = styled.p`
   font-family: Archivo;
