@@ -14,7 +14,7 @@ const Team = () => {
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.headerBackground.childImageSharp.fluid}>
-        <H1 center>A Family of Innovators and Creators</H1>
+        <H1 center white>A Family of Innovators and Creators</H1>
         <H2>Meet the executive team of 2020-2021</H2>
       </BackgroundImage>
       <Content>
@@ -62,6 +62,7 @@ const Team = () => {
 export default Team
 
 const Content = styled.div`
+  margin-top: 5vh;
   margin-left: 5vw;
   margin-right: 5vw;
 `;
