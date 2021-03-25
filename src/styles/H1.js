@@ -7,7 +7,7 @@ const H1 = ({center, white, children}) => {
 
 export default H1
 
-const StyledH1 = styled.h1`
+export const StyledH1 = styled.h1`
     font-size: ${props => props.theme.fontXLarge};
     text-align: ${props => props.center ? "center":"initial"};
     margin: 0;
