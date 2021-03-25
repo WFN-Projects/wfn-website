@@ -2,8 +2,6 @@ import styled from "styled-components"
 import React from "react"
 import { gsap, TimelineMax } from "gsap"
 import { Link } from "gatsby"
-
-
 class NavButton extends React.Component {
   constructor(props) {
     super(props)
@@ -47,7 +45,6 @@ class NavButton extends React.Component {
         )
       })
     }
-
     return (
       <div 
         role="button"
@@ -78,10 +75,9 @@ const NavButtonText = styled.div`
   margin-right: 25px;
   align-items: center;
   font-family: ${(props) => props.theme.font};
-  font-size: ${(props) => props.theme.fontButton};
+  font-size: ${(props) => props.theme.fontMedium};
   text-decoration: none;
-`;
-
+`
 const SubMenuTable = styled.table`
   border-radius: 8px;
   min-width: 5em;
@@ -94,8 +90,7 @@ const SubMenuTable = styled.table`
   padding-left: 10px;
   padding-right: 10px;
   border-spacing: 5px;
-`;
-
+`
 const SubMenuRow = styled.tr`
   cursor: pointer;
-`;
+`

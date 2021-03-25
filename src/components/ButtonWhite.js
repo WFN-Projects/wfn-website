@@ -2,23 +2,24 @@ import styled from "styled-components"
 import React from "react"
 import { Link } from "gatsby"
 
-const Button = (props) => {
+const ButtonWhite = (props) => {
   return (
     <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}}>
-      <StyledButton>
+      <StyledButtonWhite>
         {props.text}
-      </StyledButton>
+      </StyledButtonWhite>
     </Link>
   )
 }
 
-export default Button
+export default ButtonWhite
 
-const StyledButton = styled.div`
+const StyledButtonWhite = styled.div`
   min-width: 8em;
   height: 2em;
-  border: none;
-  background: linear-gradient(160.67deg, #FFE9B3 -3.1%, #C54E9E 77.92%);
+  border: 30em;
+  border-color: white;
+  background: none;
   border-radius: 8px;
   color: white;
   font-size: ${(props) => props.theme.fontMedium};
@@ -29,4 +30,3 @@ const StyledButton = styled.div`
   text-align: center;
   cursor: pointer;
 `
-

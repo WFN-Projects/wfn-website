@@ -7,11 +7,11 @@ import Hamburger from "./Hamburgermenu"
 import NavButton from "./Navbutton"
 import ClientOnly from "./ClientOnly"
 import Logo from "../images/Logo.png"
-
+import { Theme } from "../styles/Global"
 
 const Header = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <Container>
         <Link to="/"><img src={Logo} width="100" height="34" alt=""/></Link>
         <ClientOnly>
@@ -43,14 +43,6 @@ const Header = () => {
 
 export default Header
 
-const theme = {
-  font: "sans-serif",
-  fontLarge: "54px",
-  fontMedium: "36px",
-  fontButton: "24px",
-  fontSmall: "16px",
-};
-
 const Container = styled.div`
   height: 4vh;
   max-height: 65px;
@@ -68,10 +60,9 @@ const Container = styled.div`
       font-size: large;
     }
   }
-`;
-
+`
 const NavButtonContainer = styled.div`
   margin-left: auto;
   margin-right: 25px;
   display: flex;
-`;
+`
