@@ -26,13 +26,18 @@ var yt = require('../images/yt.svg')
 
 const Input = styled.input`
   padding: 0.5em;
-  margin-right:10px;
+  margin-right: 1rem;
   height: 48px;
   background: #FFFFFF;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 8px;
   width: 100%;
+
+  @media screen and (max-width: 600px) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 `;
 
 class Form extends React.Component {
@@ -78,7 +83,7 @@ const Footer = () => {
               <Form />
             </InnerFormDiv>
             <InnerButtonDiv>
-              <Button style="align-self: right" link="/join" text="Become a Member"/>
+              <Button link="/join" text="Become a Member"/>
             </InnerButtonDiv>
           </FooterFormDiv>
           <FooterLinkDiv>
