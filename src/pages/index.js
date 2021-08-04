@@ -117,7 +117,6 @@ const JoinTheNetwork = styled.div`
   position: relative;
 `
 const JoinTheNetworkText = styled.div`
-  position: absolute;
   top: 15%;
   width: 100%;
   @media ${device.minLaptopL} {
