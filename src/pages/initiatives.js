@@ -157,7 +157,7 @@ const OverviewCard = styled.div`
     border-radius: 8px;
     margin-top: 2vh;
     @media ${device.maxLaptop} {
-      height: 50vh;
+      height: 75vh;
     }
 `
 const OverviewText = styled.div`
