@@ -9,7 +9,7 @@ export const StyledLink = styled(props => <Link {...props} />)`
 
 export const FooterContainer = styled.div`
   background-color: ___CSS_0___;
-  margin: 4rem 0 4rem 0;
+  margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
