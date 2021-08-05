@@ -8,6 +8,8 @@ import H1 from "../styles/H1"
 import { Theme , H3, P} from "../styles/Global"
 import "../styles/Global.css"
 import BackgroundImage from "../components/BackgroundImage.js"
+import Footer from "../components/Footer"
+import ContentWrapper from "../components/ContentWrapper"
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
@@ -22,6 +24,7 @@ const JoinUs = () => {
       }
     }
   `)
+  
 
   return (
     <ThemeProvider theme={Theme}>
@@ -30,30 +33,33 @@ const JoinUs = () => {
         <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
         <Button text="Get Your Membership" />
       </BackgroundImage>
-      <H1 center>Why WFN?</H1>
-      <WhyWFN>
-        <WhyWFNCard>
-          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
-          <H3>Community</H3>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
-          </P>
-        </WhyWFNCard>
-        <WhyWFNCard>
-          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
-          <H3>Learning</H3>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
-          </P>
-        </WhyWFNCard>
-        <WhyWFNCard>
-          <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
-          <H3>Exclusive Access</H3>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
-          </P>
-        </WhyWFNCard>
-      </WhyWFN>
+      <ContentWrapper>
+        <H1 center>Why WFN?</H1>
+        <WhyWFN>
+          <WhyWFNCard>
+            <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
+            <H3>Community</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+            </P>
+          </WhyWFNCard>
+          <WhyWFNCard>
+            <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
+            <H3>Learning</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+            </P>
+          </WhyWFNCard>
+          <WhyWFNCard>
+            <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
+            <H3>Exclusive Access</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+            </P>
+          </WhyWFNCard>
+        </WhyWFN>
+        <Footer />
+      </ContentWrapper>
     </ThemeProvider>
   )
 }
@@ -74,7 +80,7 @@ const WhyWFN = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 5vw;
+  padding-top: 5vw;
 `;
 
 const WhyWFNCard = styled.div`

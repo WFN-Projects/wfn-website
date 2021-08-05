@@ -50,25 +50,8 @@ body {
 .rounded {
     border-radius: 8px;
 }
-.overview {
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    @media only screen and (min-width: 1024px) {
-        width: 310px;
-        height: 511px;
-    }
-}
-.squiggleL {
-    left:-100px;
-    width:465px;
-}
-.squiggleR {
-    right:0;
-    top:15%;
-    width:442.3px;
-}
-.random {
-    position:relative;
-    padding: 1% 0 0 0;
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }

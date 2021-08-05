@@ -5,7 +5,7 @@ import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage"
 import { Theme, H2, P, device, BackgroundShading } from "../styles/Global.js"
-import { WhoWeAre, TextDiv, MediaDiv, Content } from "./index"
+import { WhoWeAre, TextDiv, MediaDiv } from "./index"
 import H1 from "../styles/H1"
 import TextMediaDiv from "../components/TextMediaDiv"
 import Img from "gatsby-image"
@@ -13,6 +13,8 @@ import styled from "styled-components"
 import StatsItem from "../components/StatsItem"
 import "../styles/Global.css"
 import TextDivContainer from "../components/TextDivContainer"
+import Footer from "../components/Footer"
+import ContentWrapper from "../components/ContentWrapper"
 
 const AboutUsPage = () => {
   const data = useStaticQuery(graphql`
@@ -53,7 +55,7 @@ const AboutUsPage = () => {
         <StatsItem top="1" bottom="Philosophy" />
       </Stats>
       <BackgroundShading>
-        <Content>
+        <ContentWrapper>
           <TextMediaDiv>
             <TextDiv>
               <TextDivContainer right>
@@ -78,7 +80,8 @@ const AboutUsPage = () => {
               </TextDivContainer>
             </TextDiv>
           </TextMediaDiv>
-        </Content>
+          <Footer />
+        </ContentWrapper>
       </BackgroundShading>
     </ThemeProvider>
   )
