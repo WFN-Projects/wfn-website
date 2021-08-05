@@ -11,6 +11,7 @@ import Img from "gatsby-image"
 import "../styles/Global.css"
 import useMedia from "use-media"
 import ContentWrapper from "../components/ContentWrapper"
+import Footer from "../components/Footer"
 
 const InitiativesPage = () => {
     const data = useStaticQuery(graphql`
@@ -79,12 +80,56 @@ const InitiativesPage = () => {
                 </ButtonRow>
                 <H1 center>Overview</H1>
               <OverviewCard>
-                <Img className="overview" fluid={data.competitions.childImageSharp.fluid} objectFit="cover" />
+                <Img
+                  fluid={data.competitions.childImageSharp.fluid} 
+                  style={{height: "100%", borderRadius: "8px"}}
+                />
                 <OverviewText>
                   <H2 center white bold>Competitions</H2>
                   <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
                 </OverviewText>
               </OverviewCard>
+              <OverviewCard>
+                <Img
+                  fluid={data.competitions.childImageSharp.fluid} 
+                  style={{height: "100%", borderRadius: "8px"}}
+                />
+                <OverviewText>
+                  <H2 center white bold>Educationals</H2>
+                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                </OverviewText>
+              </OverviewCard>
+              <OverviewCard>
+                <Img
+                  fluid={data.competitions.childImageSharp.fluid} 
+                  style={{height: "100%", borderRadius: "8px"}}
+                />
+                <OverviewText>
+                  <H2 center white bold>Programs</H2>
+                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                </OverviewText>
+              </OverviewCard>
+              <OverviewCard>
+                <Img
+                  fluid={data.competitions.childImageSharp.fluid} 
+                  style={{height: "100%", borderRadius: "8px"}}
+                />
+                <OverviewText>
+                  <H2 center white bold>Panels</H2>
+                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                </OverviewText>
+              </OverviewCard>
+              <OverviewCard>
+                <Img
+                  fluid={data.competitions.childImageSharp.fluid} 
+                  style={{height: "100%", borderRadius: "8px"}}
+                />
+                <OverviewText>
+                  <H2 center white bold>Community</H2>
+                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                </OverviewText>
+              </OverviewCard>
+              <Footer/>
             </ContentWrapper>
         </BackgroundShading>
       </ThemeProvider>
@@ -97,7 +142,7 @@ const ButtonRow = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 3% 0 10% 0;
     gap: 2%;
     @media ${device.maxLaptop} {
@@ -107,17 +152,21 @@ const ButtonRow = styled.div`
 `
 const OverviewCard = styled.div`
     position: relative;
-    margin: 2.5% auto 2.5% auto;
-    @media ${device.minLaptop} {
-        height: auto;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 2vh;
+    @media ${device.maxLaptop} {
+      height: 50vh;
     }
-    height: 511px;
-    width: 310px;
 `
 const OverviewText = styled.div`
     position: absolute;
-    top: 0%;
-    left: 10%;
-    width: 80%;
+    padding: 0 5% 0 5%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
 `
