@@ -11,6 +11,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import "../styles/Global.css"
 import useMedia from "use-media"
+import Footer from "../components/Footer";
+import ContentWrapper from "../components/ContentWrapper"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +50,7 @@ const IndexPage = () => {
           <H1 center white>Western Founders Network</H1>
           <H2>The largest technology, business, and entrepreneurship club at Western University.</H2>
         </BackgroundImage>
-        <Content>
+        <ContentWrapper>
           <TextMediaDiv>
             <TextDiv>
               <div className="whoWeAreTextContainer">
@@ -84,7 +86,8 @@ const IndexPage = () => {
               <Button text="Join Our Discord" />
             </JoinTheNetworkText>
           </JoinTheNetwork>
-        </Content>
+          <Footer />
+        </ContentWrapper>
       </BackgroundShading>
     </ThemeProvider>
   )
@@ -92,11 +95,6 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 8vw 12vw 0 12vw;
-`
 export const TextDiv = styled.div`
   flex: 50%;
   @media ${device.maxMobileL} {
@@ -115,7 +113,6 @@ const JoinTheNetwork = styled.div`
   position: relative;
 `
 const JoinTheNetworkText = styled.div`
-  position: absolute;
   top: 15%;
   width: 100%;
   @media ${device.minLaptopL} {

@@ -40,6 +40,16 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
     font-size: ${props => props.theme.fontMedium} 
 `
+
+export const H4 = styled.h4`
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+`
+
 export const P = styled.p`
     font-size: ${props => props.theme.fontSmall};
     font-family: ${props => props.theme.font};

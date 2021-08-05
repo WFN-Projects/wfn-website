@@ -7,6 +7,8 @@ import H1, { StyledH1 } from "../styles/H1"
 import Portfolio from "../components/PortfolioSection"
 import "../styles/Global.css";
 import Query from "../GraphQLQueries/TeamPageQuery"
+import Footer from "../components/Footer"
+import ContentWrapper from "../components/ContentWrapper"
 
 const Team = () => {
   const data = Query()
@@ -17,7 +19,7 @@ const Team = () => {
         <H1 center white>A Family of Innovators and Creators</H1>
         <H2>Meet the executive team of 2020-2021</H2>
       </BackgroundImage>
-      <Content>
+      <ContentWrapper>
         <SectionHeader center={true}>Presidents</SectionHeader>
         <Presidents>
           <Profile image={data.amandaAdam.childImageSharp.fixed} name="Amanda Adam" position="President" />
@@ -54,18 +56,13 @@ const Team = () => {
             As Operations, we keep WFN running cohesively. As a team, we manage the core functions by handling communication with the USC, coordinating amongst portfolios, leading the event proposal process, and troubleshooting inefficiencies. Besides being in charge of internal operations, we are also dedicated to showcasing newer initiatives; this year, Operations will be hosting our 2nd annual Product Design Sprint (in collaboration with Design), and will be taking initiative to take our annual Startup Panel to the next level. We are a team committed to ensuring WFN is strong from the inside-out and ready to expand our community and reach!
           </Portfolio>
         </Portfolios>
-      </Content>
+        <Footer/>
+      </ContentWrapper>
     </ThemeProvider>
   )
 }
 
 export default Team
-
-const Content = styled.div`
-  margin-top: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-`;
 
 const SectionHeader = styled(StyledH1)`
   margin: revert;
