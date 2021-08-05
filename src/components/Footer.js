@@ -90,7 +90,7 @@ const Footer = () => {
             <FooterLinkSec>
               <H4>About us</H4>
                 <StyledLink to="/"><P>Club Mission</P></StyledLink>
-                <StyledLink to="/"><P>Team</P></StyledLink>
+                <StyledLink to="/team"><P>Team</P></StyledLink>
                 <StyledLink to="/initiatives"><P>Initiatives</P></StyledLink>
             </FooterLinkSec>
             <FooterLinkSec>
