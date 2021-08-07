@@ -41,7 +41,7 @@ const IndexPage = () => {
           }
         }
       }
-      ProjectsTeam: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "ProjectsTeam"}}, sort: {order: ASC, fields: [base]}) {
+      Sponsors: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "Sponsors"}}, sort: {order: ASC, fields: [base]}) {
         edges {
           node {
             base
@@ -90,8 +90,11 @@ const IndexPage = () => {
           </TextMediaDiv>
           <UpcomingEvents>
             <H1>Upcoming Events 📅</H1>
-            <InfiniteScrollingCarousel elements={data.ProjectsTeam.edges} />
           </UpcomingEvents>
+          <TextMediaDiv>
+            <H1>Past Sponsors</H1>
+            <InfiniteScrollingCarousel elements={data.Sponsors.edges} />
+          </TextMediaDiv>
           <JoinTheNetwork>
             {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
             <JoinTheNetworkText>
