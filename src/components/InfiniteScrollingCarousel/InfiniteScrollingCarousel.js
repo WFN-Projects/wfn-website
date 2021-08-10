@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useLayoutEffect, useState } from "react"
 import { Element } from "./components/Element"
 import gsap from "gsap"
 
@@ -8,29 +8,42 @@ export const InfiniteScrollingCarousel = (props) => {
     return <Element fluid={image.node.childImageSharp.fluid}/>
   })
 
+  const [wasResized, setWasResized] = useState(false)
   const animatedDiv = useRef(null)
   const elementWrapper = useRef(null)
   const timeline = gsap.timeline({repeat: -1, repeatDelay: 0, paused: true})
 
-  useEffect(() => {
-    const setTimeline = () => {
-      timeline.clear({labels: false})
-      timeline
-        .from(animatedDiv.current, {x: 0, duration: 0})
-        .to(
-          animatedDiv.current, 
-          {
-            x: -elementWrapper.current.offsetWidth, 
-            duration: 15,
-            ease: "none",
-          }
-        )
-      timeline.play()
-    }
+  const setTimeline = () => {
+    timeline.clear()
+    timeline
+      .from(animatedDiv.current, {x: 0, duration: 0})
+      .to(
+        animatedDiv.current, 
+        {
+          x: -elementWrapper.current.offsetWidth, 
+          duration: 5,
+          ease: "none",
+        }
+      )
+    timeline.play()
+  }
 
+  const handleResize = () => {
+    console.log("joe")
+    setWasResized(!wasResized)
+  }
+
+  useLayoutEffect(() => {
     setTimeline()
-    window.addEventListener("resize", setTimeline)
-  }, [])
+    console.log("blog")
+  }, [wasResized])
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+  })
   
   return (
     <CarouselWrapper>
@@ -55,9 +68,9 @@ const CarouselWrapper = styled.div`
 `
 
 const ElementsWrapper = styled.div`
-  display: flex;
+  display: inline-flex;
   position: relative;
-  width: fit-content(100%);
+  width: 100%;
   justify-content: space-around;
 `
 
@@ -65,4 +78,5 @@ const AnimatedDiv = styled.div`
   width: 200%;
   position: relative;
   display: flex;
+  justify-content: space-around;
 `
