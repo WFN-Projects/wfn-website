@@ -13,6 +13,9 @@ import "../styles/Global.css"
 import useMedia from "use-media"
 import Footer from "../components/Footer";
 import ContentWrapper from "../components/ContentWrapper"
+import { 
+  InfiniteScrollingCarousel 
+} from "../components/InfiniteScrollingCarousel"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -35,6 +38,18 @@ const IndexPage = () => {
         childImageSharp {
           fluid(quality:100) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Sponsors: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "Sponsors"}}, sort: {order: ASC, fields: [base]}) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
@@ -76,6 +91,10 @@ const IndexPage = () => {
           <UpcomingEvents>
             <H1>Upcoming Events 📅</H1>
           </UpcomingEvents>
+          <TextMediaDiv>
+            <H1>Past Sponsors</H1>
+            <InfiniteScrollingCarousel elements={data.Sponsors.edges} />
+          </TextMediaDiv>
           <JoinTheNetwork>
             {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
             <JoinTheNetworkText>
