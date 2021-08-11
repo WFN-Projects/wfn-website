@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import React, { useRef, useEffect, useLayoutEffect, useState } from "react"
+import React, { useRef, useLayoutEffect } from "react"
 import { Element } from "./components/Element"
 import gsap from "gsap"
 
@@ -8,7 +8,6 @@ export const InfiniteScrollingCarousel = (props) => {
     return <Element fluid={image.node.childImageSharp.fluid}/>
   })
 
-  const [wasResized, setWasResized] = useState(false)
   const animatedDiv = useRef(null)
   const elementWrapper = useRef(null)
   const timeline = gsap.timeline({repeat: -1, repeatDelay: 0, paused: true})
@@ -21,28 +20,15 @@ export const InfiniteScrollingCarousel = (props) => {
         animatedDiv.current, 
         {
           x: -elementWrapper.current.offsetWidth, 
-          duration: 5,
+          duration: 10,
           ease: "none",
         }
       )
     timeline.play()
   }
 
-  const handleResize = () => {
-    console.log("joe")
-    setWasResized(!wasResized)
-  }
-
   useLayoutEffect(() => {
     setTimeline()
-    console.log("blog")
-  }, [wasResized])
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    }
   })
   
   return (
@@ -70,12 +56,12 @@ const CarouselWrapper = styled.div`
 const ElementsWrapper = styled.div`
   display: inline-flex;
   position: relative;
-  width: 100%;
+  width: 1600px;
   justify-content: space-around;
 `
 
 const AnimatedDiv = styled.div`
-  width: 200%;
+  width: 3200px;
   position: relative;
   display: flex;
   justify-content: space-around;
