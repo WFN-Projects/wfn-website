@@ -16,6 +16,7 @@ import ContentWrapper from "../components/ContentWrapper"
 import { 
   InfiniteScrollingCarousel 
 } from "../components/InfiniteScrollingCarousel"
+import { EventCard } from "../components/EventCard"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -90,6 +91,15 @@ const IndexPage = () => {
           </TextMediaDiv>
           <UpcomingEvents>
             <H1>Upcoming Events 📅</H1>
+            <EventCard fluid={data.indexBackground.childImageSharp.fluid}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
+            </EventCard>
+            <EventCard fluid={data.indexBackground.childImageSharp.fluid}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
+            </EventCard>
+            <EventCard fluid={data.indexBackground.childImageSharp.fluid}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
+            </EventCard>
           </UpcomingEvents>
           <TextMediaDiv>
             <H1>Past Sponsors</H1>
