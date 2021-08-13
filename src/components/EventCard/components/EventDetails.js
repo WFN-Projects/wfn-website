@@ -20,7 +20,7 @@ export const EventDetails = (props) => (
 
 const DetailsWrapper = styled.div`
   width: 45%;
-  min-width: 400px;
+  min-width: 350px;
   margin-top: 2em;
 `
 

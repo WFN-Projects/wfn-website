@@ -8,6 +8,6 @@ export const EventImage = (props) => (
 
 const EventImgGatsby = styled(Img)`
   width: 45%;
-  min-width: 400px;
+  min-width: 350px;
   margin-top: 2em;
 `
