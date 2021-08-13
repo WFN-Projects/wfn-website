@@ -3,13 +3,17 @@ import styled from "styled-components"
 import { H2 as H2Style } from "../../../styles/Global"
 import Button from "../../Button"
 import ButtonInverted from "../../ButtonInverted"
+import { P } from "../../../styles/Global"
 
 export const EventDetails = (props) => (
   <DetailsWrapper>
-    <H2>Joe Joe Joe</H2>
+    <HeaderWrapper>
+      <H2>Joe Joe Joe</H2>
+      <P>{props.date}</P>
+    </HeaderWrapper>
     {props.children}
     <ButtonWrapper>
-      <Button text="Register" />
+      <Button text="Register" link={props.link} />
     </ButtonWrapper>
   </DetailsWrapper>
 )
@@ -27,4 +31,11 @@ const ButtonWrapper = styled.div`
 
 const H2 = styled(H2Style)`
   margin-top: 0;
+  display: inline-block;
+`
+
+const HeaderWrapper = styled.div`
+  p:first-of-type {
+    float: right;
+  }
 `
