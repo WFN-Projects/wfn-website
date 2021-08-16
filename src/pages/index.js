@@ -107,7 +107,7 @@ const IndexPage = () => {
               fluid={data.indexBackground.childImageSharp.fluid}
               date="Sep 1, 2021"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor 
             </EventCard>
           </UpcomingEvents>
           <TextMediaDiv>

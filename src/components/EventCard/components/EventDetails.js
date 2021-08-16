@@ -12,6 +12,7 @@ export const EventDetails = (props) => (
       <P>{props.date}</P>
     </HeaderWrapper>
     {props.children}
+    <div style={{flex: 1}}></div>
     <ButtonWrapper>
       <Button text="Register" link={props.link} />
     </ButtonWrapper>
@@ -22,11 +23,13 @@ const DetailsWrapper = styled.div`
   width: 45%;
   min-width: 350px;
   margin-top: 2em;
+  display: flex;
+  flex-direction: column;
 `
 
 const ButtonWrapper = styled.div`
   margin-top: 1em;
-  float: right;
+  margin-left: auto;
 `
 
 const H2 = styled(H2Style)`
