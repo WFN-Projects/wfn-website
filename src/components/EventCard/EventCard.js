@@ -18,4 +18,9 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: auto;
+  @media only screen and (max-width: 800px) {
+    > div {
+      width: 100%;
+    }
+  }
 `
