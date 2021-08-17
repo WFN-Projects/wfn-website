@@ -2,6 +2,7 @@ import styled from "styled-components"
 import React from "react"
 import { gsap, TimelineMax } from "gsap"
 import { Link } from "gatsby"
+
 class NavButton extends React.Component {
   constructor(props) {
     super(props)
@@ -26,7 +27,10 @@ class NavButton extends React.Component {
   }
 
   render() {
-    const linkStyle = {textDecoration: "none", color: this.props.color ? this.props.color : "white"}
+    const linkStyle = {
+      textDecoration: "none", 
+      color: this.props.color ? this.props.color : "white"
+    }
     
     var subOptions = []
     if (this.props.subOptions) {
@@ -45,13 +49,14 @@ class NavButton extends React.Component {
         )
       })
     }
+
     return (
-      <div 
+      <NavButtonContainer
         role="button"
-        tabIndex={0}
-        style={{display: "flex", flexDirection: "column", alignItems: "center"}} 
+        tabIndex={0} 
         onMouseEnter={this.showSubmenu.bind(this)}
-        onMouseLeave={this.closeSubMenu.bind(this)}>
+        onMouseLeave={this.closeSubMenu.bind(this)}
+      >
         <Link to={`/${this.props.mainOption.toLowerCase()}`} style={linkStyle}>
           <NavButtonText><p>{this.props.mainOption}</p></NavButtonText>
         </Link>
@@ -61,12 +66,21 @@ class NavButton extends React.Component {
         >
           {subOptions}
         </SubMenuTable>
-      </div>
+      </NavButtonContainer> 
     )
   }
 }
 
 export default NavButton
+
+const NavButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  :focus { 
+    outline: none !important;
+  }
+`
 
 const NavButtonText = styled.div`
   border: none;
