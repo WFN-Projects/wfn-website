@@ -134,13 +134,13 @@ const IndexPage = () => {
 export default IndexPage
 
 export const TextDiv = styled.div`
-  flex: 50%;
-  @media ${device.maxMobileL} {
-    margin-bottom: 8vw;
+  width: 45%;
+  @media only screen and (max-width: 800px) {
+    margin-bottom: 1em;
   }
 `
 export const MediaDiv = styled.div`
-  flex: 50%;
+  width: 45%;
 `
 const WhoWeAreButtons = styled.div`
   display: flex;

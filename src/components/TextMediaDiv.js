@@ -13,5 +13,11 @@ const StyledTextMediaDiv = styled.div`
   display: flex;
   flex-wrap: ${props => props.left ? "wrap-reverse":"wrap"};
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 8vw;
+  @media only screen and (max-width: 800px) {
+    > div {
+      width: 100%;
+    }
+  }
 `
