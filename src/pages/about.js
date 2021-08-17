@@ -76,7 +76,7 @@ const AboutUsPage = () => {
                 <H1>Meet Our Team</H1>
                 <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus nunc id arcu ultricies ut massa nunc. Vulputate leo velit, est dictum et amet quam ac. Malesuada quisque diam consectetur non. Tortor metus, volutpat mauris ultrices imperdiet turpis. Adipiscing malesuada aliquam mauris posuere a, nibh ornare. Ut amet, consectetur sapien enim consequat nam. Neque dignissim morbi feugiat blandit id.
             Id ultricies nunc turpis eleifend pellentesque habitant feugiat mattis elementum. Cras.</P>
-                <Button text="Team" />
+                <Button text="Team" link="/team"/>
               </TextDivContainer>
             </TextDiv>
           </TextMediaDiv>

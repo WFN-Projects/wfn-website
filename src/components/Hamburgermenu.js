@@ -52,10 +52,25 @@ class Hamburger extends React.Component {
         </HamburgerButtonContainer>
         <HamburgerContainer id="hamburgerContainer">
           <div id="hamburgerOptions">
-            <div onClick={this.clickedLink}><Link to="/about" style={linkStyle}><p>About</p></Link></div>
-            <div onClick={this.clickedLink}><Link to="/initiatives" style={linkStyle}><p>Initiatives</p></Link></div>
-            <div onClick={this.clickedLink}><Link to="https://www.google.com/" style={linkStyle}><p>Blog</p></Link></div>
-            <div onClick={this.clickedLink}><Button link="/join" text="Become a Member"/></div>
+            <div onClick={this.clickedLink}>
+              <Link to="/about" style={linkStyle}><p>About</p></Link>
+            </div>
+            <div onClick={this.clickedLink}>
+              <Link to="/initiatives" style={linkStyle}>
+                <p>Initiatives</p>
+              </Link>
+            </div>
+            <div onClick={this.clickedLink}>
+              <Link to="https://www.google.com/" style={linkStyle}>
+                <p>Blog</p>
+              </Link>
+            </div>
+            <div onClick={this.clickedLink}>
+              <Button 
+                link="https://www.westernusc.store/product/western-founders-network/" 
+                text="Become a Member" 
+              />
+            </div>
           </div>
         </HamburgerContainer>
       </>
