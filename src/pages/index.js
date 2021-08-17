@@ -1,14 +1,13 @@
 import React from "react"
-import { ThemeProvider } from "styled-components"
+import styled,  { ThemeProvider } from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage"
-import { Theme, device, H2, P, BackgroundShading } from "../styles/Global"
+import { Theme, H2, P, BackgroundShading } from "../styles/Global"
 import H1 from "../styles/H1"
 import TextMediaDiv from "../components/TextMediaDiv"
 import Img from "gatsby-image"
-import styled from "styled-components"
 import "../styles/Global.css"
 import useMedia from "use-media"
 import Footer from "../components/Footer";
@@ -57,7 +56,7 @@ const IndexPage = () => {
     }
   `)
 
-  const isLargeEnough = useMedia({ minWidth: 1440 });
+  const isLargeEnough = useMedia({ minWidth: 800 });
 
   return (
     <ThemeProvider theme={Theme}>
@@ -115,14 +114,14 @@ const IndexPage = () => {
             <InfiniteScrollingCarousel elements={data.Sponsors.edges} />
           </TextMediaDiv>
           <JoinTheNetwork>
-            {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
-            <JoinTheNetworkText>
+            <div>
               <H1>Join the Network 💡</H1>
               <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
               <Button text="Become a Member" />
               <div style={{ padding: "0.5em" }}></div>
               <Button text="Join Our Discord" />
-            </JoinTheNetworkText>
+            </div>
+            {isLargeEnough && <Img imgStyle={{ borderRadius: "8px" }} draggable="false" fluid={data.futureView.childImageSharp.fluid} />}
           </JoinTheNetwork>
           <Footer />
         </ContentWrapper>
@@ -148,13 +147,16 @@ const WhoWeAreButtons = styled.div`
   gap: 1em;
 `
 const JoinTheNetwork = styled.div`
-  position: relative;
-`
-const JoinTheNetworkText = styled.div`
-  top: 15%;
-  width: 100%;
-  @media ${device.minLaptopL} {
-    width:50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div { 
+    width: 45%; 
+  }
+  @media only screen and (max-width: 800px) {
+    > div {
+      width: 100%;
+    }
   }
 `
 const UpcomingEvents = styled.div`
