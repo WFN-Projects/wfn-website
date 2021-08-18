@@ -17,7 +17,7 @@ import styled, { ThemeProvider } from "styled-components"
 import { P, H4 } from "../styles/Global"
 
 
-var Logo = require('../images/LogoBlack.png')
+var Logo = require('../images/WfnLogo.png')
 var fb = require('../images/facebook.svg')
 var ig = require('../images/instagram.svg')
 var linkedin = require('../images/linkedin.svg')
@@ -65,7 +65,7 @@ const Footer = () => {
     <ThemeProvider theme={Theme}>
       <FooterContainer>
         <FooterInner>
-        <img src={Logo} width="186" height="93" alt="logo"/>
+        <img src={Logo} style={{alignSelf: "flex-start"}} height="100" alt="logo"/>
         <P>communications@foundersnetwork.ca <br />1151 Richmond St, London, ON N6A 3K7</P>
         <SocialMediaWrap>
           <Link to="https://www.facebook.com/westernfoundersnetwork/"><img src={fb} width="28.5" height="35" alt="Facebook"/></Link>
