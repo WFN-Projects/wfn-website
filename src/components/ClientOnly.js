@@ -5,7 +5,7 @@ const ClientOnly = ({ children }) => {
 
   useEffect(() => {
     setHasMounted(true)
-  })
+  }, [])
 
   if (!hasMounted) { 
     return null 
