@@ -28,7 +28,10 @@ const Header = () => {
                       <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
                       <NavButton mainOption="Blog"/> 
                     </NavButtonContainer>
-                    <Button link="/join" text="Become a Member"/>
+                    <Button 
+                      link="https://www.westernusc.store/product/western-founders-network/" 
+                      text="Become a Member"
+                    />
                   </>
                 }
                 {matches.mobile && <Hamburger/>} 

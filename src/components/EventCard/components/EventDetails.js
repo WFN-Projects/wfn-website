@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { H2 as H2Style } from "../../../styles/Global"
 import Button from "../../Button"
-import ButtonInverted from "../../ButtonInverted"
 import { P } from "../../../styles/Global"
 
 export const EventDetails = (props) => (
@@ -21,7 +20,6 @@ export const EventDetails = (props) => (
 
 const DetailsWrapper = styled.div`
   width: 45%;
-  min-width: 350px;
   margin-top: 2em;
   display: flex;
   flex-direction: column;

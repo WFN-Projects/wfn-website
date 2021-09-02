@@ -1,14 +1,13 @@
 import React from "react"
-import { ThemeProvider } from "styled-components"
+import styled,  { ThemeProvider } from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Button from "../components/Button"
 import ButtonInverted from "../components/ButtonInverted"
 import BackgroundImage from "../components/BackgroundImage"
-import { Theme, device, H2, P, BackgroundShading } from "../styles/Global"
+import { Theme, H2, P, BackgroundShading } from "../styles/Global"
 import H1 from "../styles/H1"
 import TextMediaDiv from "../components/TextMediaDiv"
 import Img from "gatsby-image"
-import styled from "styled-components"
 import "../styles/Global.css"
 import useMedia from "use-media"
 import Footer from "../components/Footer";
@@ -57,7 +56,7 @@ const IndexPage = () => {
     }
   `)
 
-  const isLargeEnough = useMedia({ minWidth: 1440 });
+  const isLargeEnough = useMedia({ minWidth: 800 });
 
   return (
     <ThemeProvider theme={Theme}>
@@ -73,8 +72,8 @@ const IndexPage = () => {
                 <H1>Who We Are 🚀</H1>
                 <P>Western Founders Network is a community of <b>creatives and innovators</b>. Wielding the forces of <b>technology, entrepreneurship, and business,</b> our members convert long-term goals into practical and creative plans for action. Our club enables those with a <b>drive</b>, alongside a community of like-minded peers, to have an impact by opening the door to new skillsets and frameworks of thoughts, such as through our educational and flagship conferences.</P>
                 <WhoWeAreButtons>
-                  <Button text="Our Initiatives" />
-                  <ButtonInverted text="Meet the Team" />
+                  <Button text="Our Initiatives" link="/initiatives"/>
+                  <ButtonInverted text="Meet the Team" link="/team" />
                 </WhoWeAreButtons>
               </div>
             </TextDiv>
@@ -115,14 +114,14 @@ const IndexPage = () => {
             <InfiniteScrollingCarousel elements={data.Sponsors.edges} />
           </TextMediaDiv>
           <JoinTheNetwork>
-            {isLargeEnough && <Img draggable="false" fluid={data.joinTheNetwork.childImageSharp.fluid} />}
-            <JoinTheNetworkText>
+            <div>
               <H1>Join the Network 💡</H1>
               <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
               <Button text="Become a Member" />
               <div style={{ padding: "0.5em" }}></div>
               <Button text="Join Our Discord" />
-            </JoinTheNetworkText>
+            </div>
+            {isLargeEnough && <Img imgStyle={{ borderRadius: "8px" }} draggable="false" fluid={data.futureView.childImageSharp.fluid} />}
           </JoinTheNetwork>
           <Footer />
         </ContentWrapper>
@@ -134,13 +133,13 @@ const IndexPage = () => {
 export default IndexPage
 
 export const TextDiv = styled.div`
-  flex: 50%;
-  @media ${device.maxMobileL} {
-    margin-bottom: 8vw;
+  width: 45%;
+  @media only screen and (max-width: 800px) {
+    margin-bottom: 1em;
   }
 `
 export const MediaDiv = styled.div`
-  flex: 50%;
+  width: 45%;
 `
 const WhoWeAreButtons = styled.div`
   display: flex;
@@ -148,13 +147,16 @@ const WhoWeAreButtons = styled.div`
   gap: 1em;
 `
 const JoinTheNetwork = styled.div`
-  position: relative;
-`
-const JoinTheNetworkText = styled.div`
-  top: 15%;
-  width: 100%;
-  @media ${device.minLaptopL} {
-    width:50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div { 
+    width: 45%; 
+  }
+  @media only screen and (max-width: 800px) {
+    > div {
+      width: 100%;
+    }
   }
 `
 const UpcomingEvents = styled.div`
