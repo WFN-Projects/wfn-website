@@ -34,6 +34,7 @@ const ElementsWrapper = styled.div`
   position: relative;
   width: 100em;
   justify-content: space-around;
+  -webkit-backface-visibility: hidden;
 `
 
 const animation = keyframes`

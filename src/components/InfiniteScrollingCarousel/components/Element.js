@@ -9,5 +9,6 @@ export const Element = (props) => (
 const ElementWrapper = styled(Img)`
   width: 10em;
   height: 10em;
-  margin: 0 1em 0 1em
+  margin: 0 1em 0 1em;
+  -webkit-transform: translate3d(0, 0, 0);
 `
