@@ -13,13 +13,13 @@ export const EventCard = (props) => (
 )
 
 const CardWrapper = styled.div`
-  max-width: 1000px;
   display: flex;
+  min-height: 18em;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: auto;
   @media only screen and (max-width: 800px) {
-    > div {
+    > .event-details, .event-image {
       width: 100%;
     }
   }

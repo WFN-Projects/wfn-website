@@ -5,7 +5,7 @@ import Button from "../../Button"
 import { P } from "../../../styles/Global"
 
 export const EventDetails = (props) => (
-  <DetailsWrapper>
+  <DetailsWrapper className="event-details">
     <HeaderWrapper>
       <H2>Joe Joe Joe</H2>
       <P>{props.date}</P>
