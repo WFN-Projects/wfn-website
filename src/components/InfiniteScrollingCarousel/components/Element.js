@@ -3,7 +3,11 @@ import React from "react"
 import Img from "gatsby-image"
 
 export const Element = (props) => (
-  <ElementWrapper fluid={props.fluid} imgStyle={{ objectFit: "contain" }}/>
+  <ElementWrapper 
+    fluid={props.fluid} 
+    imgStyle={{ objectFit: "contain" }} 
+    loading="eager"
+  />
 )
 
 const ElementWrapper = styled(Img)`
