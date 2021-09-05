@@ -41,6 +41,27 @@ const IndexPage = () => {
           }
         }
       }
+      tccPromo: file(relativePath: {eq: "TCC Promo.png"}) {
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pitchTheFuturePromo: file(relativePath: {eq: "Pitch the Future Promo.png"}) {
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      innovatorsNetworkPromo: file(relativePath: {eq: "Innovators Network Promo.png"}) {
+        childImageSharp {
+          fluid(quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       Sponsors: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "Sponsors"}}, sort: {order: ASC, fields: [base]}) {
         edges {
           node {
@@ -91,19 +112,19 @@ const IndexPage = () => {
           <UpcomingEvents>
             <H1>Upcoming Events 📅</H1>
             <EventCard 
-              fluid={data.indexBackground.childImageSharp.fluid}
+              fluid={data.tccPromo.childImageSharp.fluid}
               date="Sep 1, 2021"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
             </EventCard>
             <EventCard 
-              fluid={data.indexBackground.childImageSharp.fluid}
+              fluid={data.pitchTheFuturePromo.childImageSharp.fluid}
               date="Sep 1, 2021"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
             </EventCard>
             <EventCard 
-              fluid={data.indexBackground.childImageSharp.fluid}
+              fluid={data.innovatorsNetworkPromo.childImageSharp.fluid}
               date="Sep 1, 2021"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor 
