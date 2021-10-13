@@ -15,7 +15,7 @@ const Button = (props) => {
     )
 
   return (
-    <a href={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}} target="_blank" rep="noreferrer">
+    <a href={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}} target="_blank" rel="noreferrer">
       <StyledButton>
         {props.text}
       </StyledButton>
