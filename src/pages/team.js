@@ -19,7 +19,7 @@ const Team = () => {
         <H1 center white>
           A Family of Innovators and Creators
         </H1>
-        <H2>Meet the executive team of 2020-2021</H2>
+        <H2>Meet our executive team</H2>
       </BackgroundImage>
       <ContentWrapper>
         <SectionHeader center={true}>Presidents</SectionHeader>
