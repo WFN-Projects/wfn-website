@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Button = (props) => {
-  const internal = /^\/(?!\/)/.test(props.link)
+  const internal = /^\/(?!\/)/.test(props.link ? props.link : '/')
 
   if (internal)
     return (
