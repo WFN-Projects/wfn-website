@@ -24,8 +24,8 @@ const Header = () => {
                 {matches.desktop && 
                   <>
                     <NavButtonContainer>
-                      <NavButton mainOption="About" subOptions={["Our Mission", "Team"]}/> 
-                      <NavButton mainOption="Initiatives" subOptions={["Upcoming", "Community", "Flagship"]}/> 
+                      <NavButton mainOption="About" subOptions={["Team"]}/> 
+                      <NavButton mainOption="Initiatives"/> 
                       <NavButton mainOption="Blog"/> 
                     </NavButtonContainer>
                     <Button 
