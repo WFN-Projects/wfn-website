@@ -1,11 +1,11 @@
-import styled from "styled-components";
-import * as React from "react";
-import { Link } from 'gatsby';
+import styled from 'styled-components'
+import * as React from 'react'
+import { Link } from 'gatsby'
 
-export const StyledLink = styled(props => <Link {...props} />)`
+export const StyledLink = styled((props) => <Link {...props} />)`
   color: black;
   text-decoaration: none;
-`;
+`
 
 export const FooterContainer = styled.div`
   background-color: ___CSS_0___;
@@ -19,7 +19,7 @@ export const FooterContainer = styled.div`
   @media screen and (max-width: 971px) {
     justify-content: left;
   }
-`;
+`
 
 export const FooterInner = styled.section`
   display: flex;
@@ -34,7 +34,7 @@ export const FooterInner = styled.section`
   :not(:last-child) {
     margin-right: 4em;
   }
-`;
+`
 
 export const FooterLinkDiv = styled.div`
   display: flex;
@@ -101,6 +101,4 @@ export const SocialMediaWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 10px 0px 10px 0px;
-`;
-
-
+`

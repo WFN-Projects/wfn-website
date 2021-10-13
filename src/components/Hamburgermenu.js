@@ -1,29 +1,29 @@
-import styled from "styled-components"
-import React from "react"
-import Button from "./Button"
-import HamburgerMenu from "react-hamburger-menu"
-import { gsap } from "gsap"
-import { Link } from "gatsby"
+import styled from 'styled-components'
+import React from 'react'
+import Button from './Button'
+import HamburgerMenu from 'react-hamburger-menu'
+import { gsap } from 'gsap'
+import { Link } from 'gatsby'
 class Hamburger extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {isOpen: false}
+    this.state = { isOpen: false }
     this.isOpen = false
   }
 
   handleClick() {
     var tl = gsap.timeline()
-    if (!this.state.isOpen) { 
+    if (!this.state.isOpen) {
       window.scroll(0, 0)
-      document.body.style.height = "100vh"
-      document.body.style.overflow = "hidden"
-      tl.to("#hamburgerContainer", {duration: 0.15, autoAlpha: 1})
-      this.setState({isOpen: true})
+      document.body.style.height = '100vh'
+      document.body.style.overflow = 'hidden'
+      tl.to('#hamburgerContainer', { duration: 0.15, autoAlpha: 1 })
+      this.setState({ isOpen: true })
     } else {
       document.body.style.height = null
       document.body.style.overflow = null
-      tl.to("#hamburgerContainer", {duration: 0.25, autoAlpha: 0})
-      this.setState({isOpen: false})
+      tl.to('#hamburgerContainer', { duration: 0.25, autoAlpha: 0 })
+      this.setState({ isOpen: false })
     }
   }
 
@@ -33,7 +33,7 @@ class Hamburger extends React.Component {
   }
 
   render() {
-    const linkStyle = {textDecoration: "none", color: "white"}
+    const linkStyle = { textDecoration: 'none', color: 'white' }
 
     return (
       <>
@@ -45,30 +45,32 @@ class Hamburger extends React.Component {
             height={20}
             strokeWidth={3}
             rotate={0}
-            color="white"
+            color='white'
             borderRadius={0}
             animationDuration={0.5}
           />
         </HamburgerButtonContainer>
-        <HamburgerContainer id="hamburgerContainer">
-          <div id="hamburgerOptions">
+        <HamburgerContainer id='hamburgerContainer'>
+          <div id='hamburgerOptions'>
             <div onClick={this.clickedLink}>
-              <Link to="/about" style={linkStyle}><p>About</p></Link>
+              <Link to='/about' style={linkStyle}>
+                <p>About</p>
+              </Link>
             </div>
             <div onClick={this.clickedLink}>
-              <Link to="/initiatives" style={linkStyle}>
+              <Link to='/initiatives' style={linkStyle}>
                 <p>Initiatives</p>
               </Link>
             </div>
             <div onClick={this.clickedLink}>
-              <Link to="https://www.google.com/" style={linkStyle}>
+              <Link to='https://www.google.com/' style={linkStyle}>
                 <p>Blog</p>
               </Link>
             </div>
             <div onClick={this.clickedLink}>
-              <Button 
-                link="https://www.westernusc.store/product/western-founders-network/" 
-                text="Become a Member" 
+              <Button
+                link='https://www.westernusc.store/product/western-founders-network/'
+                text='Become a Member'
               />
             </div>
           </div>
@@ -93,7 +95,7 @@ const HamburgerContainer = styled.div`
   position: fixed;
   width: 100vw;
   height: 101vh;
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -102,6 +104,6 @@ const HamburgerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.95);
+  background-color: rgba(0, 0, 0, 0.95);
   visibility: hidden;
 `

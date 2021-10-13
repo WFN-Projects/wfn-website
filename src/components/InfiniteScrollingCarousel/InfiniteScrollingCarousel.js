@@ -1,21 +1,17 @@
-import styled, { keyframes } from "styled-components"
-import React from "react"
-import { Element } from "./components/Element"
+import styled, { keyframes } from 'styled-components'
+import React from 'react'
+import { Element } from './components/Element'
 
 export const InfiniteScrollingCarousel = (props) => {
-  const elements = props.elements.map(image => {
-    return <Element fluid={image.node.childImageSharp.fluid}/>
+  const elements = props.elements.map((image) => {
+    return <Element fluid={image.node.childImageSharp.fluid} />
   })
-  
+
   return (
     <CarouselWrapper>
       <AnimatedDiv>
-          <ElementsWrapper>
-            {elements}
-          </ElementsWrapper>
-          <ElementsWrapper>
-            {elements}
-          </ElementsWrapper>
+        <ElementsWrapper>{elements}</ElementsWrapper>
+        <ElementsWrapper>{elements}</ElementsWrapper>
       </AnimatedDiv>
     </CarouselWrapper>
   )
@@ -25,7 +21,13 @@ const CarouselWrapper = styled.div`
   overflow: hidden;
   width: 100%;
   mask-image: linear-gradient(
-    to right, transparent, black, black, black, black, transparent
+    to right,
+    transparent,
+    black,
+    black,
+    black,
+    black,
+    transparent
   );
 `
 

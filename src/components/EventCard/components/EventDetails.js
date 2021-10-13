@@ -1,18 +1,18 @@
-import React from "react"
-import styled from "styled-components"
-import { H2 as H2Style, P } from "../../../styles/Global"
-import Button from "../../Button"
+import React from 'react'
+import styled from 'styled-components'
+import { H2 as H2Style, P } from '../../../styles/Global'
+import Button from '../../Button'
 
 export const EventDetails = (props) => (
-  <DetailsWrapper className="event-details">
+  <DetailsWrapper className='event-details'>
     <HeaderWrapper>
       <H2>{props.title}</H2>
       <P>{props.date}</P>
     </HeaderWrapper>
     {props.children}
-    <div style={{flex: 1}}></div>
+    <div style={{ flex: 1 }}></div>
     <ButtonWrapper>
-      <Button text="Register" link={props.link} />
+      <Button text='Register' link={props.link} />
     </ButtonWrapper>
   </DetailsWrapper>
 )
