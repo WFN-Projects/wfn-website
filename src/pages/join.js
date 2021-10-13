@@ -1,37 +1,42 @@
-import * as React from "react"
-import styled from "styled-components"
-import { ThemeProvider } from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import Button from "../components/Button"
-import H1 from "../styles/H1"
-import { Theme , H3, P} from "../styles/Global"
-import "../styles/Global.css"
-import BackgroundImage from "../components/BackgroundImage.js"
-import Footer from "../components/Footer"
-import ContentWrapper from "../components/ContentWrapper"
+import * as React from 'react'
+import styled from 'styled-components'
+import { ThemeProvider } from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import Button from '../components/Button'
+import H1 from '../styles/H1'
+import { Theme, H3, P } from '../styles/Global'
+import '../styles/Global.css'
+import BackgroundImage from '../components/BackgroundImage.js'
+import Footer from '../components/Footer'
+import ContentWrapper from '../components/ContentWrapper'
 
 const JoinUs = () => {
   const data = useStaticQuery(graphql`
     query Join {
-      becomeAMember: file(relativePath: {eq: "BecomeAMember.png"}) {
+      becomeAMember: file(relativePath: { eq: "BecomeAMember.png" }) {
         id
         childImageSharp {
-          fluid(quality:100) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
-        },
+        }
       }
     }
   `)
-  
 
   return (
     <ThemeProvider theme={Theme}>
       <BackgroundImage fluid={data.becomeAMember.childImageSharp.fluid}>
-        <H1 center white>Become a Member</H1>
-        <PageSubTitle>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.</PageSubTitle>
-        <Button text="Get Your Membership" />
+        <H1 center white>
+          Become a Member
+        </H1>
+        <PageSubTitle>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel
+          tellus egestas porttitor cum sollicitudin. Eget auctor faucibus
+          sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis.
+        </PageSubTitle>
+        <Button text='Get Your Membership' />
       </BackgroundImage>
       <ContentWrapper>
         <H1 center>Why WFN?</H1>
@@ -40,21 +45,27 @@ const JoinUs = () => {
             <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
             <H3>Community</H3>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel
+              tellus egestas porttitor cum sollicitudin. Eget auctor faucibus
+              sapien, lorem ut adipiscing.
             </P>
           </WhyWFNCard>
           <WhyWFNCard>
             <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
             <H3>Learning</H3>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel
+              tellus egestas porttitor cum sollicitudin. Eget auctor faucibus
+              sapien, lorem ut adipiscing.
             </P>
           </WhyWFNCard>
           <WhyWFNCard>
             <WhyWFMImg fluid={data.becomeAMember.childImageSharp.fluid} />
             <H3>Exclusive Access</H3>
             <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel
+              tellus egestas porttitor cum sollicitudin. Eget auctor faucibus
+              sapien, lorem ut adipiscing.
             </P>
           </WhyWFNCard>
         </WhyWFN>
@@ -74,14 +85,14 @@ const PageSubTitle = styled.p`
   line-height: 140%;
   text-align: center;
   max-width: 787px;
-`;
+`
 
 const WhyWFN = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 5vw;
-`;
+`
 
 const WhyWFNCard = styled.div`
   width: 30%;
@@ -92,8 +103,8 @@ const WhyWFNCard = styled.div`
   @media only screen and (max-width: 664px) {
     width: 80%;
   }
-`;
+`
 
 const WhyWFMImg = styled(Img)`
   border-radius: 8px;
-`;
+`
