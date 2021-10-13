@@ -72,13 +72,13 @@ const InitiativesPage = () => {
                 />
               }
             <ContentWrapper>
-                <H1 center>View Our Initiatives</H1>
-                <ButtonRow>
-                  <Button text="Upcoming" />
-                  <Button text="Flagship" />
-                  <Button text="Community" />
-                </ButtonRow>
-                <H1 center>Overview</H1>
+              {/* <H1 center>View Our Initiatives</H1>
+              <ButtonRow>
+                <Button text="Upcoming" />
+                <Button text="Flagship" />
+                <Button text="Community" />
+              </ButtonRow> */}
+              <H1 center>Overview</H1>
               <OverviewCard>
                 <Img
                   fluid={data.competitions.childImageSharp.fluid} 
@@ -86,7 +86,11 @@ const InitiativesPage = () => {
                 />
                 <OverviewText>
                   <H2 center white bold>Competitions</H2>
-                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                  <center>
+                    <P white>
+                      Got that competitive itch? Look no further! Every year, Western Founders Network hosts multiple competitive events including the Technology Case Competition and Product Design Sprint. They’re a great way to network and develop your skills in a competitive environment!
+                    </P>
+                  </center>
                 </OverviewText>
               </OverviewCard>
               <OverviewCard>
@@ -96,7 +100,11 @@ const InitiativesPage = () => {
                 />
                 <OverviewText>
                   <H2 center white bold>Educationals</H2>
-                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                  <center>
+                    <P white>
+                      Interested in how to create your own cryptocurrency? What about using HTML or how to get TikTok famous? Look out for our educationals throughout the year, where you can get the chance to delve deeper into various topics! 
+                    </P>
+                  </center>
                 </OverviewText>
               </OverviewCard>
               <OverviewCard>
@@ -106,7 +114,11 @@ const InitiativesPage = () => {
                 />
                 <OverviewText>
                   <H2 center white bold>Programs</H2>
-                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                  <center>
+                    <P white>
+                      Our events and programs lie at the intersection of business, tech and entrepreneurship. Whether it’s Pitch the Future or Startup Showcase, we have something for everyone! Look around and see what interests you!
+                    </P>
+                  </center>
                 </OverviewText>
               </OverviewCard>
               <OverviewCard>
@@ -116,7 +128,11 @@ const InitiativesPage = () => {
                 />
                 <OverviewText>
                   <H2 center white bold>Panels</H2>
-                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                  <center>
+                    <P white>
+                      Listen to some experts! Whether it’s on recruiting or technology, attendees are able to expand their network and gain knowledgeable insight through experts and industry leaders. Come out and satisfy your curiosities!
+                    </P>
+                  </center>
                 </OverviewText>
               </OverviewCard>
               <OverviewCard>
@@ -126,7 +142,11 @@ const InitiativesPage = () => {
                 />
                 <OverviewText>
                   <H2 center white bold>Community</H2>
-                  <P white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.</P>
+                  <center>
+                    <P white>
+                      We’re not a club, we’re a family. At Western Founders Network, we emphasize the importance of a close-knit community, where we all support and encourage each other. Join the Founders Fam, we’d love to see you around!
+                    </P>
+                  </center>
                 </OverviewText>
               </OverviewCard>
               <Footer/>

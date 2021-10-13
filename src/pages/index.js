@@ -114,20 +114,23 @@ const IndexPage = () => {
             <EventCard 
               fluid={data.tccPromo.childImageSharp.fluid}
               date="Sep 1, 2021"
+              title="Technology Case Competion"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
+              The Technology Case Competition has run in partnership with IBM for the past five years, now established as one of the largest technology-based competitions in Canada. The 500+ person event brings in top recruiters from the heart of the tech industry offering consulting opportunities using their infrastructure. This is a core event for those who thrive on innovation and growth.
             </EventCard>
             <EventCard 
               fluid={data.pitchTheFuturePromo.childImageSharp.fluid}
               date="Sep 1, 2021"
+              title="Pitch The Future"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
+              Pitch the Future is currently the largest technology and business conference at Western, doubling in size each year. Attendees gain direct insight into the future of technology through the eyes of seven experts and industry leaders, three hands-on workshops, and an open panel discussion. Topics, experts, and sponsors are selected to provide connections and cutting-edge knowledge to serve hundreds of attendees’ interests and curiosity.
             </EventCard>
             <EventCard 
               fluid={data.innovatorsNetworkPromo.childImageSharp.fluid}
               date="Sep 1, 2021"
+              title="Product Design Sprint"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor 
+              At the Product Design Sprint you will work with a team to design a prototype for a digital product (website, mobile app) within 24 hours! Through interactive workshops and networking opportunities we encourage students to learn more about the connection between tech, design and business.
             </EventCard>
           </UpcomingEvents>
           <TextMediaDiv>
@@ -137,7 +140,9 @@ const IndexPage = () => {
           <JoinTheNetwork>
             <div>
               <H1>Join the Network 💡</H1>
-              <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet ipsum turpis, sit amet volutpat urna egestas sit amet. Sed id ante at augue ullamcorper tincidunt a sed est. Quisque accumsan mattis massa, sit amet tincidunt erat commodo blandit. Duis aliquam, arcu vel euismod rutrum, urna arcu pellentesque mauris, eget iaculis massa nulla eget est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut sed erat ullamcorper neque lacinia lacinia eget quis  </P>
+              <P>
+              We’re Western Founders Network (WFN) — one of Canada’s largest university tech clubs with over 600 members. Every year, we host Canada’s largest Technology Case Competition (TCC), Western University's largest tech conference (Future View) and largest design competition (Product Design Sprint) and over 30 other events and programs. We do this all to connect people passionate about tech — look around to see how you can be involved.
+              </P>
               <Button text="Become a Member" />
               <div style={{ padding: "0.5em" }}></div>
               <Button text="Join Our Discord" />
