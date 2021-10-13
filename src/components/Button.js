@@ -3,12 +3,23 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Button = (props) => {
+  const internal = /^\/(?!\/)/.test(props.link)
+
+  if (internal)
+    return (
+      <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}}>
+        <StyledButton>
+          {props.text}
+        </StyledButton>
+      </Link>
+    )
+
   return (
-    <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}}>
+    <a href={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}} target="_blank" rep="noreferrer">
       <StyledButton>
         {props.text}
       </StyledButton>
-    </Link>
+    </a>
   )
 }
 
