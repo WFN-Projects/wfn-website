@@ -6,7 +6,7 @@ import { EventImage } from "./components/EventImage";
 export const EventCard = (props) => (
   <CardWrapper>
     <EventImage fluid={props.fluid} />
-    <EventDetails date={props.date}>
+    <EventDetails date={props.date} title={props.title}>
       {props.children}
     </EventDetails>
   </CardWrapper>

@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { H2 as H2Style } from "../../../styles/Global"
+import { H2 as H2Style, P } from "../../../styles/Global"
 import Button from "../../Button"
-import { P } from "../../../styles/Global"
 
 export const EventDetails = (props) => (
   <DetailsWrapper className="event-details">
     <HeaderWrapper>
-      <H2>Joe Joe Joe</H2>
+      <H2>{props.title}</H2>
       <P>{props.date}</P>
     </HeaderWrapper>
     {props.children}
@@ -32,11 +31,11 @@ const ButtonWrapper = styled.div`
 
 const H2 = styled(H2Style)`
   margin-top: 0;
-  display: inline-block;
+  margin-bottom: 0;
 `
 
 const HeaderWrapper = styled.div`
   p:first-of-type {
-    float: right;
+    font-weight: bold;
   }
 `
