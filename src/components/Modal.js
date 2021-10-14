@@ -169,6 +169,7 @@ const ModalContentWrapper = styled.div`
   opacity: 0;
   transform: scale(0, 0);
   max-width: 1000px;
+  will-change: opacity, scale;
 `
 
 const ModalTitle = styled.p`
