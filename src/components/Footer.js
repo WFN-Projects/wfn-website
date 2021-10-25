@@ -15,7 +15,7 @@ import {
 import { Theme } from "../styles/Global"
 import styled, { ThemeProvider } from "styled-components"
 import { P, H4 } from "../styles/Global"
-
+import FooterSignup from "./FooterSignup";
 
 var Logo = require('../images/WfnLogo.png')
 var fb = require('../images/facebook.svg')
@@ -78,14 +78,15 @@ const Footer = () => {
         </FooterInner>
         <FooterInner>
           <H4>JOIN OUR NEWSLETTER</H4>
-          <FooterFormDiv>
+          <FooterSignup/>
+          {/* <FooterFormDiv>
             <InnerFormDiv>
               <Form />
             </InnerFormDiv>
             <InnerButtonDiv>
               <Button link="/join" text="Become a Member"/>
             </InnerButtonDiv>
-          </FooterFormDiv>
+          </FooterFormDiv> */}
           <FooterLinkDiv>
             <FooterLinkSec>
               <H4>About us</H4>
