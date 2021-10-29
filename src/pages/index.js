@@ -113,13 +113,13 @@ const IndexPage = () => {
             <H1>Upcoming Events 📅</H1>
             <EventCard 
               fluid={data.tccPromo.childImageSharp.fluid}
-              date="Sep 1, 2021"
+              date="Jan 22, 2022"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
             </EventCard>
             <EventCard 
               fluid={data.pitchTheFuturePromo.childImageSharp.fluid}
-              date="Sep 1, 2021"
+              date="Mar 5, 2022"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam vel tellus egestas porttitor cum sollicitudin. Eget auctor faucibus sapien, lorem ut adipiscing. Egestas maecenas amet, nam venenatis. Sed vestibulum porta elementum est. Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta elementum est.Sed vestibulum porta.
             </EventCard>
