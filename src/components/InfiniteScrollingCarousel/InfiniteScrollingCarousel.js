@@ -1,10 +1,10 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react'
-import { Element } from './components/Element'
+import { CarouselElement } from './components/CarouselElement'
 
 export const InfiniteScrollingCarousel = (props) => {
   const elements = props.elements.map((image) => {
-    return <Element fluid={image.node.childImageSharp.fluid} />
+    return <CarouselElement fluid={image.node.childImageSharp.fluid} />
   })
 
   return (

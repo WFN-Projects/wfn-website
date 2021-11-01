@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import React from 'react'
 import Img from 'gatsby-image'
 
-export const Element = (props) => (
+export const CarouselElement = (props) => (
   <ElementWrapper
     fluid={props.fluid}
     imgStyle={{ objectFit: 'contain' }}
