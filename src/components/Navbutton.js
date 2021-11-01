@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import React from "react"
-import { gsap, TimelineMax } from "gsap"
-import { Link } from "gatsby"
+import styled from 'styled-components'
+import React from 'react'
+import { gsap, TimelineMax } from 'gsap'
+import { Link } from 'gatsby'
 
 class NavButton extends React.Component {
   constructor(props) {
@@ -11,36 +11,42 @@ class NavButton extends React.Component {
 
   showSubmenu() {
     if (this.props.subOptions) {
-      var tl = new TimelineMax({paused: true})  
-      tl.to(`#${this.props.mainOption}_submenu`, {duration: 0.15, autoAlpha: 1})
+      var tl = new TimelineMax({ paused: true })
+      tl.to(`#${this.props.mainOption}_submenu`, {
+        duration: 0.15,
+        autoAlpha: 1,
+      })
     }
 
-    if (this.isOpen === false && tl) { 
-      tl.play() 
+    if (this.isOpen === false && tl) {
+      tl.play()
       this.isOpen = true
     }
-  } 
-  
+  }
+
   closeSubMenu() {
-    gsap.to(`#${this.props.mainOption}_submenu`, {duration: 0.15, autoAlpha: 0})  
+    gsap.to(`#${this.props.mainOption}_submenu`, {
+      duration: 0.15,
+      autoAlpha: 0,
+    })
     this.isOpen = false
   }
 
   render() {
     const linkStyle = {
-      textDecoration: "none", 
-      color: this.props.color ? this.props.color : "white"
+      textDecoration: 'none',
+      color: this.props.color ? this.props.color : 'white',
     }
-    
+
     var subOptions = []
     if (this.props.subOptions) {
-      subOptions = this.props.subOptions.map(element => {
+      subOptions = this.props.subOptions.map((element) => {
         return (
           <SubMenuRow>
             <td>
-              <Link 
-                to={"/" + element.replace(" ", "").toLowerCase()}
-                style={{textDecoration: "none", color: "black"}}
+              <Link
+                to={'/' + element.replace(' ', '').toLowerCase()}
+                style={{ textDecoration: 'none', color: 'black' }}
               >
                 {element}
               </Link>
@@ -52,21 +58,23 @@ class NavButton extends React.Component {
 
     return (
       <NavButtonContainer
-        role="button"
-        tabIndex={0} 
+        role='button'
+        tabIndex={0}
         onMouseEnter={this.showSubmenu.bind(this)}
         onMouseLeave={this.closeSubMenu.bind(this)}
       >
         <Link to={`/${this.props.mainOption.toLowerCase()}`} style={linkStyle}>
-          <NavButtonText><p>{this.props.mainOption}</p></NavButtonText>
+          <NavButtonText>
+            <p>{this.props.mainOption}</p>
+          </NavButtonText>
         </Link>
-        <SubMenuTable 
-          id={`${this.props.mainOption}_submenu`} 
-          className="submenu"
+        <SubMenuTable
+          id={`${this.props.mainOption}_submenu`}
+          className='submenu'
         >
           {subOptions}
         </SubMenuTable>
-      </NavButtonContainer> 
+      </NavButtonContainer>
     )
   }
 }
@@ -77,7 +85,7 @@ const NavButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  :focus { 
+  :focus {
     outline: none !important;
   }
 `

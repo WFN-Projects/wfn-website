@@ -1,19 +1,17 @@
-import React from "react"
-import styled from "styled-components"
-import Img from "gatsby-image"
-import Header from "./Header"
+import React from 'react'
+import styled from 'styled-components'
+import Img from 'gatsby-image'
+import Header from './Header'
 
 const BackgroundImage = (props) => {
-  const color = props.headerColor ? props.headerColor : "white"
-  return(
+  const color = props.headerColor ? props.headerColor : 'white'
+  return (
     <div>
-      <CustomImage fluid={props.fluid}/>
+      <CustomImage fluid={props.fluid} />
       <Overlay>
         <Header textColor={color} />
         <TextBoxContainer>
-          <TextBox>
-            {props.children}
-          </TextBox>
+          <TextBox>{props.children}</TextBox>
         </TextBoxContainer>
       </Overlay>
     </div>
