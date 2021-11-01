@@ -161,7 +161,7 @@ const IndexPage = () => {
             </EventCard>
             <EventCard
               fluid={data.innovatorsNetworkPromo.childImageSharp.fluid}
-              date='Sep 1, 2021'
+              date='Early January'
               title='Product Design Sprint'
             >
               At the Product Design Sprint you will work with a team to design a
