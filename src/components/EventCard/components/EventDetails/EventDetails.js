@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { H2 as H2Style, P } from '../../../styles/Global'
-import Button from '../../Button'
+import { H2 as H2Style, P } from '../../../../styles/Global'
+import Button from '../../../Button'
 
 export const EventDetails = (props) => (
   <DetailsWrapper className='event-details'>
