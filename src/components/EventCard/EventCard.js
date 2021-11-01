@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { EventDetails } from './components/EventDetails'
-import { EventImage } from './components/EventImage'
+import { EventDetails, EventImage } from './components'
 
 export const EventCard = (props) => (
   <CardWrapper>
