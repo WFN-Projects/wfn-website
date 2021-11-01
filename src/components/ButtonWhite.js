@@ -1,13 +1,14 @@
-import styled from "styled-components"
-import React from "react"
-import { Link } from "gatsby"
+import styled from 'styled-components'
+import React from 'react'
+import { Link } from 'gatsby'
 
 const ButtonWhite = (props) => {
   return (
-    <Link to={props.link ? props.link : "/"} style={{textDecoration: "none", color: "white"}}>
-      <StyledButtonWhite>
-        {props.text}
-      </StyledButtonWhite>
+    <Link
+      to={props.link ? props.link : '/'}
+      style={{ textDecoration: 'none', color: 'white' }}
+    >
+      <StyledButtonWhite>{props.text}</StyledButtonWhite>
     </Link>
   )
 }

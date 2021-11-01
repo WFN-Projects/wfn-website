@@ -1,42 +1,46 @@
-import styled, { ThemeProvider } from "styled-components"
-import React, { Fragment } from "react"
-import Button from "./Button"
-import Media from "react-media"
-import { Link } from "gatsby"
-import Hamburger from "./Hamburgermenu"
-import NavButton from "./Navbutton"
-import ClientOnly from "./ClientOnly"
-import Logo from "../images/Logo.png"
-import { Theme } from "../styles/Global"
+import styled, { ThemeProvider } from 'styled-components'
+import React, { Fragment } from 'react'
+import Button from './Button'
+import Media from 'react-media'
+import { Link } from 'gatsby'
+import Hamburger from './Hamburgermenu'
+import NavButton from './Navbutton'
+import ClientOnly from './ClientOnly'
+import Logo from '../images/Logo.png'
+import { Theme } from '../styles/Global'
 
 const Header = () => {
   return (
     <ThemeProvider theme={Theme}>
       <Container>
-        <Link to="/"><img src={Logo} width="100" height="34" alt=""/></Link>
+        <Link to='/'>
+          <img src={Logo} width='100' height='34' alt='' />
+        </Link>
         <ClientOnly>
-          <Media queries={{
-            mobile: "(max-width: 680px)",
-            desktop: "(min-width: 680.01px)", 
-          }}>
-            {matches => (
+          <Media
+            queries={{
+              mobile: '(max-width: 680px)',
+              desktop: '(min-width: 680.01px)',
+            }}
+          >
+            {(matches) => (
               <Fragment>
-                {matches.desktop && 
+                {matches.desktop && (
                   <>
                     <NavButtonContainer>
-                      <NavButton mainOption="About" subOptions={["Team"]}/> 
-                      <NavButton mainOption="Initiatives"/> 
-                      <NavButton mainOption="Blog"/> 
+                      <NavButton mainOption='About' subOptions={['Team']} />
+                      <NavButton mainOption='Initiatives' />
+                      <NavButton mainOption='Blog' />
                     </NavButtonContainer>
-                    <Button 
-                      link="https://www.westernusc.store/product/western-founders-network/" 
-                      text="Become a Member"
+                    <Button
+                      link='https://www.westernusc.store/product/western-founders-network/'
+                      text='Become a Member'
                     />
                   </>
-                }
-                {matches.mobile && <Hamburger/>} 
+                )}
+                {matches.mobile && <Hamburger />}
               </Fragment>
-            )} 
+            )}
           </Media>
         </ClientOnly>
       </Container>
