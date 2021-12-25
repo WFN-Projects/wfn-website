@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import HamburgerMenu from 'react-hamburger-menu'
-import Profile from './ProfilePic'
+import Profile from '../ProfilePic/ProfilePic'
 import Img from 'gatsby-image'
 import gsap from 'gsap'
 
