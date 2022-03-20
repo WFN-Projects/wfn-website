@@ -30,6 +30,7 @@ export const FooterInner = styled.section`
   text-align: left;
   margin-bottom: 24px;
   color: ___CSS_0___;
+  min-width: 350px;
 
   :not(:last-child) {
     margin-right: 4em;
