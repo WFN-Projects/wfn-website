@@ -1,4 +1,5 @@
 [[redirects]]
   from = "/blog"
   to = "https://medium.com/@wfn"
+  force = true
   status = 302
