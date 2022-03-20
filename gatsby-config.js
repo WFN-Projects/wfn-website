@@ -11,6 +11,7 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
+    `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
