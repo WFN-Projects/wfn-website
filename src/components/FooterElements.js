@@ -30,6 +30,7 @@ export const FooterInner = styled.section`
   text-align: left;
   margin-bottom: 24px;
   color: ___CSS_0___;
+  min-width: 350px;
 
   :not(:last-child) {
     margin-right: 4em;
@@ -51,7 +52,7 @@ export const FooterFormDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between !important;
-  align-items: center;
+  align-content: center;
   flex-direction: row;
   text-align: left;
   margin-bottom: 0px;
@@ -59,28 +60,29 @@ export const FooterFormDiv = styled.div`
   color: ___CSS_0___;
 `
 export const InnerFormDiv = styled.div`
-  float: left;
-  display: flex;
-  align-items: left;
-  align-self: left;
-  flex-direction: row;
-  text-align: left;
-  margin: 0px;
-  padding: 0px;
-  width: 15em;
-  color: ___CSS_0___;
+  // float: left;
+  // display: flex;
+  // align-items: left;
+  // align-self: left;
+  // flex-direction: row;
+  // text-align: left;
+  // margin: 0px;
+  // padding: 0px;
+  // width: 15em;
+  // color: ___CSS_0___;
+  margin-right: 20px;
 `
 export const InnerButtonDiv = styled.div`
-  float: right;
-  display: flex;
-  align-items: right;
-  align-self: right;
-  flex-direction: row;
-  text-align: left;
-  margin: 0px;
-  padding: 0px;
-  min-width: 240px;
-  color: ___CSS_0___;
+  // float: right;
+  // display: flex;
+  // align-items: right;
+  // align-self: right;
+  // flex-direction: row;
+  // text-align: left;
+  // margin: 0px;
+  // padding: 0px;
+  // min-width: 240px;
+  // color: ___CSS_0___;
 `
 
 export const FooterLinkSec = styled.section`

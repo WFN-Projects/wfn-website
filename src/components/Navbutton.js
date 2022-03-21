@@ -44,12 +44,12 @@ class NavButton extends React.Component {
         return (
           <SubMenuRow>
             <td>
-              <Link
-                to={'/' + element.replace(' ', '').toLowerCase()}
+              <a
+                href={'/' + element.replace(' ', '').toLowerCase()}
                 style={{ textDecoration: 'none', color: 'black' }}
               >
                 {element}
-              </Link>
+              </a>
             </td>
           </SubMenuRow>
         )

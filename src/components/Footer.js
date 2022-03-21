@@ -93,7 +93,7 @@ const Footer = () => {
           <P>Copyright © 2021 Western Founders Network.</P>
         </FooterInner>
         <FooterInner>
-          <H4>JOIN OUR NEWSLETTER</H4>
+          {/* <H4>JOIN OUR NEWSLETTER</H4>
           <FooterFormDiv>
             <InnerFormDiv>
               <Form />
@@ -101,7 +101,7 @@ const Footer = () => {
             <InnerButtonDiv>
               <Button link='/join' text='Become a Member' />
             </InnerButtonDiv>
-          </FooterFormDiv>
+          </FooterFormDiv> */}
           <FooterLinkDiv>
             <FooterLinkSec>
               <H4>About us</H4>
@@ -117,12 +117,12 @@ const Footer = () => {
             </FooterLinkSec>
             <FooterLinkSec>
               <H4>Join us</H4>
-              <StyledLink to='/join'>
+              <StyledLink to='https://www.westernusc.store/product/western-founders-network/'>
                 <P>Buy a Membership</P>
               </StyledLink>
-              <StyledLink to='/'>
+              {/* <StyledLink to='/'>
                 <P>Become a Sponsor</P>
-              </StyledLink>
+              </StyledLink> */}
             </FooterLinkSec>
           </FooterLinkDiv>
         </FooterInner>

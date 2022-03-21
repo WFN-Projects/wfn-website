@@ -11,9 +11,11 @@ export const EventDetails = (props) => (
     </HeaderWrapper>
     {props.children}
     <div style={{ flex: 1 }}></div>
-    <ButtonWrapper>
-      <Button text='Register' link={props.link} />
-    </ButtonWrapper>
+    {props.link && 
+      <ButtonWrapper>
+        <Button text='Register' link={props.link} />
+      </ButtonWrapper>
+    }
   </DetailsWrapper>
 )
 

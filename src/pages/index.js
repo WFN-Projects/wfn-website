@@ -136,7 +136,7 @@ const IndexPage = () => {
             <H1>Upcoming Events 📅</H1>
             <EventCard
               fluid={data.tccPromo.childImageSharp.fluid}
-              date='Jan 22, 2022'
+              // date='Jan 22, 2022'
               title='Technology Case Competion'
             >
               The Technology Case Competition has run in partnership with IBM
@@ -148,7 +148,7 @@ const IndexPage = () => {
             </EventCard>
             <EventCard
               fluid={data.pitchTheFuturePromo.childImageSharp.fluid}
-              date='Mar 5, 2022'
+              // date='Mar 5, 2022'
               title='Pitch The Future'
             >
               Pitch the Future is currently the largest technology and business
@@ -161,7 +161,7 @@ const IndexPage = () => {
             </EventCard>
             <EventCard
               fluid={data.innovatorsNetworkPromo.childImageSharp.fluid}
-              date='Early January'
+              // date='Early January'
               title='Product Design Sprint'
             >
               At the Product Design Sprint you will work with a team to design a

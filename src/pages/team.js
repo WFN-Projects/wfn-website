@@ -25,8 +25,8 @@ const Team = () => {
         <SectionHeader center={true}>Presidents</SectionHeader>
         <Presidents>
           <Profile
-            image={data.amandaAdam.childImageSharp.fixed}
-            name='Amanda Adam'
+            image={data.jackPeplinski.childImageSharp.fixed}
+            name='Jack Peplinski'
             position='President'
           />
           <Profile
