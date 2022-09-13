@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Profile from './ProfilePic'
-import Modal from './Modal'
+import Profile from '../../ProfilePic/ProfilePic'
+import Modal from '../../Modal'
 
 class Portfolio extends React.Component {
   constructor(props) {
